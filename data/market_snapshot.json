@@ -1,0 +1,125 @@
+{
+  "fetched_utc": "2026-08-20T13:20:25.756032+00:00",
+  "universe": {
+    "XLRE": {
+      "price": 45.005,
+      "prev_close": 44.63,
+      "chg_pct": 0.84
+    },
+    "XLC": {
+      "price": 111.34,
+      "prev_close": 110.51,
+      "chg_pct": 0.75
+    },
+    "TSLA": {
+      "price": 351.16,
+      "prev_close": 336.89,
+      "chg_pct": 4.24
+    },
+    "MSFT": {
+      "price": 484.42,
+      "prev_close": 481.82,
+      "chg_pct": 0.54
+    },
+    "AVGO": {
+      "price": 361.55,
+      "prev_close": 379.945,
+      "chg_pct": -4.84
+    },
+    "XLI": {
+      "price": 181.94,
+      "prev_close": 183.51,
+      "chg_pct": -0.86
+    },
+    "XLK": {
+      "price": 183.64,
+      "prev_close": 185.59,
+      "chg_pct": -1.05
+    },
+    "XLY": {
+      "price": 118.59,
+      "prev_close": 116.39,
+      "chg_pct": 1.89
+    },
+    "AAPL": {
+      "price": 316.67,
+      "prev_close": 310.16,
+      "chg_pct": 2.1
+    },
+    "IWM": {
+      "price": 299.4,
+      "prev_close": 300.24,
+      "chg_pct": -0.28
+    },
+    "XLF": {
+      "price": 57.49,
+      "prev_close": 57.845,
+      "chg_pct": -0.61
+    },
+    "QQQ": {
+      "price": 711.58,
+      "prev_close": 717.76,
+      "chg_pct": -0.86
+    },
+    "NVDA": {
+      "price": 218.15,
+      "prev_close": 219.73,
+      "chg_pct": -0.72
+    },
+    "AMZN": {
+      "price": 263.37,
+      "prev_close": 259.43,
+      "chg_pct": 1.52
+    },
+    "SPY": {
+      "price": 764.63,
+      "prev_close": 767.365,
+      "chg_pct": -0.36
+    },
+    "XLE": {
+      "price": 63.565,
+      "prev_close": 63.665,
+      "chg_pct": -0.16
+    },
+    "XLU": {
+      "price": 44.025,
+      "prev_close": 44.01,
+      "chg_pct": 0.03
+    },
+    "XLP": {
+      "price": 86.52,
+      "prev_close": 85.56,
+      "chg_pct": 1.12
+    },
+    "META": {
+      "price": 544.56,
+      "prev_close": 543.6,
+      "chg_pct": 0.18
+    },
+    "XLB": {
+      "price": 52.52,
+      "prev_close": 51.775,
+      "chg_pct": 1.44
+    },
+    "DIA": {
+      "price": 534.24,
+      "prev_close": 532.96,
+      "chg_pct": 0.24
+    },
+    "VXX": {
+      "price": 19.05,
+      "prev_close": 19.635,
+      "chg_pct": -2.98
+    },
+    "XLV": {
+      "price": 175.7,
+      "prev_close": 169.715,
+      "chg_pct": 3.53
+    },
+    "GOOGL": {
+      "price": 344.795,
+      "prev_close": 344.03,
+      "chg_pct": 0.22
+    }
+  }
+}

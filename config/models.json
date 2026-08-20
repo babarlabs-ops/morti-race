@@ -1,0 +1,22 @@
+{
+  "race": {
+    "start_capital": 100000,
+    "target": 1000000,
+    "window_days": 365,
+    "mode": "paper",
+    "serving_layer": "openrouter",
+    "ledger": "virtual — marked to Alpaca IEX prices"
+  },
+  "models": [
+    {"id": "fable",    "name": "Fable",    "tier": "frontier", "model": "anthropic/claude-fable-5"},
+    {"id": "sol",      "name": "Sol",      "tier": "frontier", "model": "openai/gpt-5.6-sol"},
+    {"id": "grok",     "name": "Grok",     "tier": "frontier", "model": "x-ai/grok-4.6"},
+    {"id": "gemini",   "name": "Gemini",   "tier": "frontier", "model": "google/gemini-3.7-flash"},
+    {"id": "deepseek", "name": "DeepSeek", "tier": "open",     "model": "deepseek/deepseek-v4-pro"},
+    {"id": "qwen",     "name": "Qwen",     "tier": "open",     "model": "qwen/qwen3.8-max"},
+    {"id": "glm",      "name": "GLM",      "tier": "open",     "model": "z-ai/glm-5.3"},
+    {"id": "llama",    "name": "Llama",    "tier": "open",     "model": "meta-llama/llama-4-maverick"},
+    {"id": "mistral",  "name": "Mistral",  "tier": "open",     "model": "mistralai/mistral-medium-3-5"},
+    {"id": "kimi",     "name": "Kimi",     "tier": "open",     "model": "moonshotai/kimi-k3"}
+  ]
+}
