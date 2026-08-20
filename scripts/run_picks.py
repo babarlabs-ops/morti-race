@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Morti Race — fire the opening picks for all 10 models via OpenRouter.
+"""Morti Race — daily decision cycle.
 
-Robust: per-model timeout, incremental save (survives interruption), resumable.
+Each model reviews its current book (positions + P&L), forms a fresh daily
+thesis, and decides what to HOLD, SELL, or OPEN — equities, ETFs, crypto, and
+defined-risk options (long calls/puts). Robust: per-model timeout, incremental
+save, resumable.
 """
 import json, os, sys, urllib.request, urllib.error
 from datetime import datetime, timezone
@@ -29,18 +32,13 @@ def read(p):
 
 
 def call_model(model, system, user, key):
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
-        "temperature": 0.4,
-    }
-    data = json.dumps(payload).encode()
+    payload = {"model": model, "messages": [
+        {"role": "system", "content": system},
+        {"role": "user", "content": user},
+    ], "temperature": 0.4}
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
-        data=data,
+        data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
         method="POST",
     )
@@ -72,6 +70,30 @@ def extract_json(text):
     return None
 
 
+def current_book_summary(prev, mid):
+    """Render a model's current book as a compact text block."""
+    if not prev or mid not in prev.get("models", {}):
+        return "No open positions. This is your opening move.\n"
+    m = prev["models"][mid]
+    lines = [f"Equity: ${m.get('equity', 100000):,.2f}. Realized P&L: ${m.get('realized_pnl', 0):,.2f}."]
+    pos = m.get("positions", [])
+    if not pos:
+        lines.append("(no open positions — flat)")
+    else:
+        lines.append("Your open positions (marked to market):")
+        for p in pos:
+            if p.get("kind") == "option":
+                kind = "LONG CALL" if p.get("is_call") else "LONG PUT"
+                lines.append(f"  - {kind} {p['ticker']}: {p['contracts']} contracts, "
+                             f"strike ${p['strike']}, entry premium ${p['premium']:.2f}")
+            else:
+                side = p["side"].upper()
+                pnl = p.get("unrealized_pnl", 0)
+                lines.append(f"  - {side} {p['ticker']}: ${p.get('dollar', 0):,.0f} "
+                             f"(entry ${p['entry']:.2f}, last ${p['last']:.2f}, P&L {pnl:+,.2f})")
+    return "\n".join(lines) + "\n"
+
+
 def main():
     env = load_env(ENV_PATH)
     key = env.get("OPENROUTER_API_KEY")
@@ -87,31 +109,46 @@ def main():
     if os.path.exists(snap):
         market = "\n\nCURRENT MARKET SNAPSHOT (live data):\n" + read(snap)
 
+    prev = None
+    ledger_path = os.path.join(ROOT, "data", "ledger.json")
+    if os.path.exists(ledger_path):
+        try:
+            prev = json.loads(read(ledger_path))
+        except Exception:
+            prev = None
+
     system = (
         "You are Morti, an autonomous trader. Internalize this identity exactly:\n\n"
         + soul + "\n\nGUARDRAILS (machine-enforced limits):\n" + guardrails
     )
-    user_tpl = (
-        "You hold $100,000 paper capital and are racing to $1,000,000 within one year. "
-        "This is your OPENING move. Allocate your portfolio now.\n"
-        "Rules: ALL assets are fair game — US equities, ETFs, and crypto (BTC, ETH, SOL, "
-        "and other liquid coins). Trade whatever you predict will perform best. Up to 10 "
-        "positions. Allocations are percentages summing to at most 100 (leave the rest cash "
-        "if unsure). Long OR short.\n"
-        "For each position give: ticker, side (long/short), alloc_pct, one-line thesis, "
-        "stop_pct (e.g. -8), target_pct (e.g. +25).\n"
-        + market +
-        "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
-        "\"justification\":\"<2-4 sentences justifying your overall selection logic>\","
-        "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25}]}"
-    )
+
+    def user_prompt(mid):
+        book = current_book_summary(prev, mid)
+        return (
+            "You are racing $100,000 to $1,000,000 in one year. This is today's decision cycle.\n\n"
+            "YOUR CURRENT BOOK:\n" + book +
+            "\nDecide today's moves: which positions to HOLD, which to SELL, and what NEW "
+            "positions to OPEN (long, short, or swing).\n"
+            "Rules: ALL assets are fair game — US equities, ETFs, and crypto (BTC, ETH, SOL, "
+            "etc.). Defined-risk OPTIONS are allowed where the payoff justifies it (long calls "
+            "or long puts only). Up to 10 positions. Allocations are percentages of equity "
+            "summing to at most 100 (leave the rest cash if unsure).\n"
+            "For an equity/crypto position give: ticker, side (long/short), alloc_pct, one-line "
+            "thesis, stop_pct (e.g. -8), target_pct (e.g. +25).\n"
+            "For an option give: ticker (underlying), type (long_call/long_put), strike_pct "
+            "(e.g. 5 = 5% OTM), expiry_days (e.g. 30), alloc_pct, thesis.\n"
+            + market +
+            "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
+            "\"justification\":\"<2-4 sentences on your selection logic>\","
+            "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25} OR "
+            "{\"ticker\":\"NVDA\",\"type\":\"long_call\",\"strike_pct\":5,\"expiry_days\":30,\"alloc_pct\":5,\"thesis\":\"...\"}]}"
+        )
 
     outdir = os.path.join(ROOT, "data", "picks")
     os.makedirs(outdir, exist_ok=True)
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out = os.path.join(outdir, day + ".json")
 
-    # resume: load any prior partial results
     results = {}
     if os.path.exists(out):
         try:
@@ -130,7 +167,7 @@ def main():
             print(f"✓ skip {m['name']} (done)")
             continue
         print(f"→ {m['name']} ({m['model']})...", flush=True)
-        status, resp = call_model(m["model"], system, user_tpl, key)
+        status, resp = call_model(m["model"], system, user_prompt(mid), key)
         if status != 200:
             print(f"  FAIL {status}: {str(resp)[:160]}")
             results[mid] = {"model": m["name"], "tier": m["tier"], "error": str(resp)[:200]}
