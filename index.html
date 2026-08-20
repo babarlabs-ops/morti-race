@@ -21,7 +21,7 @@
 
   table.board { width:100%; border-collapse:separate; border-spacing:0; font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
   thead th { text-align:left; color:var(--muted); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:1.2px; padding:13px 15px; border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02); white-space:nowrap; }
-  thead th.num, td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  thead th.num, td.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
   thead th.num:first-child { text-align:center; }
   tr.model-row { cursor:pointer; transition:background .15s; }
   tr.model-row:hover { background:rgba(79,140,255,0.06); }
@@ -87,6 +87,7 @@
 <script>
 const fmtMoney = n => '$' + Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:0});
 const fmtPct = n => (n>=0?'+':'') + n.toFixed(2) + '%';
+const fmtPrice = n => { if (n == null) return '—'; const a = Math.abs(n); const d = a >= 1000 ? 2 : a >= 1 ? 2 : a >= 0.01 ? 4 : 6; return '$' + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d}); };
 
 function load() {
   fetch('/api/ledger').then(r => r.ok ? r.json() : Promise.reject('api'))
@@ -131,8 +132,8 @@ function render(d) {
         <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
         <td><b>${p.ticker}</b>${crypto}</td>
         <td class="num">${p.alloc_pct}%</td>
-        <td class="num">$${p.entry}</td>
-        <td class="num">$${p.last}</td>
+        <td class="num">${fmtPrice(p.entry)}</td>
+        <td class="num">${fmtPrice(p.last)}</td>
         <td class="num ${pc}">${ps}${fmtMoney(p.unrealized_pnl)} (${ps}${Math.abs(p.unrealized_pnl_pct).toFixed(1)}%)</td>
         <td class="h-thesis">${p.thesis || ''}</td>
       </tr>`;
