@@ -1,90 +1,84 @@
 {
-  "generated_utc": "2026-08-20T13:37:48.852932+00:00",
+  "generated_utc": "2026-08-20T15:25:37.908995+00:00",
   "results": {
     "fable": {
       "model": "Fable",
       "tier": "frontier",
       "picks": {
+        "thesis": "Consumer is cracking (WMT -9.5%, NKE, F, COST down) while AI capex, memory, and energy stay firm \u2014 long the strong, short discretionary, and buy depressed crypto beta while keeping dry powder.",
+        "justification": "Today's tape shows a clear rotation: retail/consumer names breaking on earnings while semis (MU +2.2%, MRVL +2.5%) and energy (XOM +1.9%) lead. I pair longs in structurally strong AI/energy names against a short in consumer discretionary as a funded hedge. ETH at ~0.032 ETH/BTC is historically cheap relative beta \u2014 that's the asymmetric leg. I hold 26% cash because an opening move earns size only after the market confirms the read; every position has a written invalidation.",
         "positions": [
-          {
-            "ticker": "XLV",
-            "side": "long",
-            "alloc_pct": 12,
-            "thesis": "Healthcare +3.5% on a rotation day out of tech \u2014 laggard sector breaking out with room to mean-revert higher after a year of underperformance.",
-            "stop_pct": -6,
-            "target_pct": 18
-          },
-          {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 12,
-            "thesis": "Consumer discretionary leading (XLY +1.9%) and AMZN combines that flow with AWS AI monetization \u2014 strongest risk/reward in megacap.",
-            "stop_pct": -9,
-            "target_pct": 30
-          },
-          {
-            "ticker": "GOOGL",
-            "side": "long",
-            "alloc_pct": 11,
-            "thesis": "Cheapest megacap on earnings multiple with Gemini/cloud catalysts; flat on a red tech day signals relative strength and quiet accumulation.",
-            "stop_pct": -9,
-            "target_pct": 30
-          },
-          {
-            "ticker": "AAPL",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "AAPL +2.1% against XLK -1.05% \u2014 clear breakout with institutional flow returning after long underperformance; ride the momentum.",
-            "stop_pct": -8,
-            "target_pct": 22
-          },
           {
             "ticker": "NVDA",
             "side": "long",
-            "alloc_pct": 10,
-            "thesis": "AI capex cycle intact; -0.7% pullback in the sector leader ahead of earnings is a buyable dip, sized so a miss is survivable.",
+            "alloc_pct": 12,
+            "thesis": "AI capex cycle intact and NVDA consolidating flat while peers rip \u2014 coiled ahead of next earnings catalyst.",
+            "stop_pct": -12,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Memory upcycle with HBM supply sold out; +2.2% leadership today confirms flow into the trade.",
             "stop_pct": -12,
             "target_pct": 35
           },
           {
-            "ticker": "AVGO",
+            "ticker": "GOOGL",
             "side": "long",
-            "alloc_pct": 7,
-            "thesis": "-4.8% single-day drop in a core AI-networking name with intact custom-silicon backlog \u2014 buy the overreaction, small size because the knife may keep falling.",
+            "alloc_pct": 10,
+            "thesis": "Cheapest mega-cap AI compounder; -1.6% dip in an uptrend is an entry, not a warning.",
             "stop_pct": -10,
             "target_pct": 25
           },
           {
-            "ticker": "XLB",
+            "ticker": "XLE",
             "side": "long",
-            "alloc_pct": 6,
-            "thesis": "Materials +1.4% confirming cyclical rotation breadth; cheap sector with rate-cut tailwind and nobody positioned for it.",
-            "stop_pct": -6,
+            "alloc_pct": 8,
+            "thesis": "Energy leading the tape (XOM +1.9%, SLB +1.1%) with sector underowned \u2014 momentum plus valuation.",
+            "stop_pct": -8,
+            "target_pct": 18
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "ETH/BTC at ~0.032 is near historic lows \u2014 mean-reversion long with multi-x asymmetry if crypto cycle continues.",
+            "stop_pct": -18,
+            "target_pct": 60
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Highest-beta liquid L1; if ETH reverts, SOL amplifies the move \u2014 sized small for the volatility.",
+            "stop_pct": -20,
+            "target_pct": 70
+          },
+          {
+            "ticker": "WMT",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "-9.5% single-day gap in a defensive quality staple overshoots base-rate earnings reactions \u2014 partial gap-fill trade, small size.",
+            "stop_pct": -7,
             "target_pct": 15
           },
           {
-            "ticker": "IWM",
+            "ticker": "XLY",
             "side": "short",
-            "alloc_pct": 7,
-            "thesis": "Small caps lagging on a rotation day (-0.3% vs defensives ripping) \u2014 refinancing wall and margin pressure make IWM the weakest index; also hedges my long book.",
+            "alloc_pct": 8,
+            "thesis": "Consumer discretionary rolling over on broad retail weakness (NKE, F, COST, TSLA all red) \u2014 short the sector, hedges my long book.",
             "stop_pct": -6,
             "target_pct": 12
-          },
-          {
-            "ticker": "XLI",
-            "side": "short",
-            "alloc_pct": 5,
-            "thesis": "Industrials -0.9% rolling over while defensives catch the bid \u2014 crowded soft-landing trade unwinding; second hedge against a broad risk-off leg.",
-            "stop_pct": -5,
-            "target_pct": 10
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 3344,
-        "completion_tokens": 1370,
-        "total_tokens": 4714,
-        "cost": 0.10194,
+        "prompt_tokens": 6203,
+        "completion_tokens": 1920,
+        "total_tokens": 8123,
+        "cost": 0.15803,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -93,12 +87,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.10194,
-          "upstream_inference_prompt_cost": 0.03344,
-          "upstream_inference_completions_cost": 0.0685
+          "upstream_inference_cost": 0.15803,
+          "upstream_inference_prompt_cost": 0.06203,
+          "upstream_inference_completions_cost": 0.096
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 452,
+          "reasoning_tokens": 908,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -108,84 +102,102 @@
       "model": "Sol",
       "tier": "frontier",
       "picks": {
+        "thesis": "Broad indices are soft, but capital is rotating into AI semiconductors, crypto exposure, and energy; I will own those relative-strength groups and avoid weakening consumer names.",
+        "justification": "The portfolio concentrates in liquid assets with identifiable secular demand and enough volatility to compound aggressively, while avoiding single-name post-earnings gaps such as WMT and DE. Direct crypto provides cleaner upside than chasing today's sharp moves in COIN and MSTR, and a modest energy allocation diversifies the otherwise technology-heavy book. Stops limit estimated portfolio loss to roughly 10% if every thesis fails concurrently, with 5% retained as cash.",
         "positions": [
           {
-            "ticker": "AAPL",
+            "ticker": "BTC",
             "side": "long",
             "alloc_pct": 20,
-            "thesis": "Strong relative strength against a weak index tape favors continued institutional momentum.",
-            "stop_pct": -8,
-            "target_pct": 30
+            "thesis": "Strength in crypto-linked equities while BTC holds near $72,000 points to improving risk appetite before a potential spot breakout.",
+            "stop_pct": -10,
+            "target_pct": 40
           },
           {
-            "ticker": "AMZN",
+            "ticker": "ETH",
             "side": "long",
-            "alloc_pct": 18,
-            "thesis": "Positive momentum during broad-market weakness signals accumulation and a potential breakout continuation.",
+            "alloc_pct": 13,
+            "thesis": "ETH offers higher-beta catch-up potential if crypto flows broaden beyond Bitcoin.",
+            "stop_pct": -12,
+            "target_pct": 55
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "SOL is the highest-beta liquid major and should outperform during a sustained expansion in crypto risk appetite.",
+            "stop_pct": -14,
+            "target_pct": 65
+          },
+          {
+            "ticker": "AMD",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AMD's resilience on a weak index day supports continued leadership from AI compute demand.",
             "stop_pct": -9,
             "target_pct": 32
           },
           {
-            "ticker": "GOOGL",
-            "side": "long",
-            "alloc_pct": 16,
-            "thesis": "Stable price action amid technology-sector selling offers favorable upside if leadership broadens.",
-            "stop_pct": -8,
-            "target_pct": 28
-          },
-          {
-            "ticker": "TSLA",
-            "side": "long",
-            "alloc_pct": 14,
-            "thesis": "High-beta relative-strength breakout provides the portfolio's primary asymmetric return opportunity.",
-            "stop_pct": -11,
-            "target_pct": 45
-          },
-          {
-            "ticker": "XLV",
-            "side": "long",
-            "alloc_pct": 14,
-            "thesis": "Powerful sector rotation into healthcare can sustain upside while reducing dependence on technology.",
-            "stop_pct": -7,
-            "target_pct": 22
-          },
-          {
-            "ticker": "META",
+            "ticker": "AVGO",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Holding positive while QQQ declines indicates relative strength with room for momentum expansion.",
+            "thesis": "Broadcom combines AI networking and custom-silicon exposure with positive relative strength.",
             "stop_pct": -8,
             "target_pct": 27
           },
           {
-            "ticker": "XLB",
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "TSM is the manufacturing bottleneck for advanced AI chips and is outperforming the broader technology tape.",
+            "stop_pct": -8,
+            "target_pct": 28
+          },
+          {
+            "ticker": "MRVL",
             "side": "long",
             "alloc_pct": 8,
-            "thesis": "Materials-sector strength against a soft broad tape supports a tactical rotation trade.",
+            "thesis": "MRVL's strong relative momentum reflects demand for AI networking and custom data-center silicon.",
+            "stop_pct": -10,
+            "target_pct": 38
+          },
+          {
+            "ticker": "QCOM",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "QCOM provides lower-momentum semiconductor exposure with upside from edge-AI adoption and a firm tape.",
+            "stop_pct": -8,
+            "target_pct": 24
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Energy-sector strength offers inflation-sensitive diversification while broad equities and consumer shares weaken.",
             "stop_pct": -7,
-            "target_pct": 21
+            "target_pct": 18
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2408,
-        "completion_tokens": 791,
-        "total_tokens": 3199,
-        "cost": 0.01247375,
+        "prompt_tokens": 4616,
+        "completion_tokens": 1063,
+        "total_tokens": 5679,
+        "cost": 0.030368125,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 2405,
-          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 4613,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.01247375,
-          "upstream_inference_prompt_cost": 0.00060875,
-          "upstream_inference_completions_cost": 0.011865
+          "upstream_inference_cost": 0.030368125,
+          "upstream_inference_prompt_cost": 0.014423125,
+          "upstream_inference_completions_cost": 0.015945
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 484,
+          "reasoning_tokens": 516,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -195,62 +207,88 @@
       "model": "Grok",
       "tier": "frontier",
       "picks": {
+        "thesis": "Rotational tape, not risk-off: AI infrastructure and energy are holding/leading while indices drift; buy that strength with hard stops, add a sized crypto sleeve, leave cash.",
+        "justification": "SPY/QQQ are mildly red and IWM is weaker, but XLE/XOM and memory (MU/MRVL) are bid \u2014 that is rotation, not a broad unwind. I will not chase COIN/MSTR/DE after 7\u20138% pops and I will not buy WMT\u2019s \u22129.5% air pocket without a named catalyst. Core is secular AI hardware plus energy FCF, crypto is convexity sized for its vol, and ~19% cash is dry powder if the tape actually breaks.",
         "positions": [
-          {
-            "ticker": "AVGO",
-            "side": "long",
-            "alloc_pct": 16,
-            "thesis": "AI ASIC/networking demand intact; 5% drop is a dislocation, not a cycle break.",
-            "stop_pct": -9,
-            "target_pct": 32
-          },
           {
             "ticker": "NVDA",
             "side": "long",
-            "alloc_pct": 16,
-            "thesis": "CUDA moat and GPU scarcity still price the next leg of AI capex.",
+            "alloc_pct": 12,
+            "thesis": "AI training/inference capex remains the highest-ROI spend; 217 consolidation is an entry, not a chase.",
+            "stop_pct": -8,
+            "target_pct": 35
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Sole advanced-node foundry for the AI stack; modest green at 416 is constructive, not extended.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Custom AI ASICs and networking monetize the same capex cycle with superior cash conversion.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "HBM/DRAM tightness is a multi-quarter pricing cycle; today\u2019s +2% is noise around the thesis.",
             "stop_pct": -10,
             "target_pct": 40
           },
           {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 12,
-            "thesis": "AWS reacceleration plus ads/retail mix shift not fully in the multiple.",
-            "stop_pct": -8,
-            "target_pct": 28
-          },
-          {
-            "ticker": "META",
-            "side": "long",
-            "alloc_pct": 12,
-            "thesis": "AI-driven ad leverage and buybacks; crowd still anchored to old scars.",
-            "stop_pct": -9,
-            "target_pct": 30
-          },
-          {
-            "ticker": "GOOGL",
+            "ticker": "XOM",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Search cash cow funding cloud/AI catch-up at a still-reasonable multiple.",
-            "stop_pct": -8,
-            "target_pct": 26
+            "thesis": "Energy relative strength plus fortress FCF while the oil complex is bid and equities drift.",
+            "stop_pct": -7,
+            "target_pct": 22
           },
           {
             "ticker": "MSFT",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Azure plus Copilot attach is the cleanest enterprise AI monetization path.",
-            "stop_pct": -8,
+            "thesis": "Azure/AI monetization on a fortress balance sheet; slight red is a better entry than chasing strength.",
+            "stop_pct": -7,
             "target_pct": 25
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "AWS + ads + retail operating leverage; \u22122% is a dip, not a thesis break.",
+            "stop_pct": -8,
+            "target_pct": 28
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "COIN/MSTR leading implies a crypto bid returning; BTC is the cleaner asymmetric vehicle at 72k.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Higher-torque follow-through to a crypto bid if BTC holds; sized smaller for vol.",
+            "stop_pct": -15,
+            "target_pct": 50
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2666,
-        "completion_tokens": 3750,
-        "total_tokens": 6416,
-        "cost": 0.02764,
+        "prompt_tokens": 5051,
+        "completion_tokens": 3466,
+        "total_tokens": 8517,
+        "cost": 0.030706,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 128,
@@ -259,12 +297,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.02764,
-          "upstream_inference_prompt_cost": 0.00514,
-          "upstream_inference_completions_cost": 0.0225
+          "upstream_inference_cost": 0.030706,
+          "upstream_inference_prompt_cost": 0.00991,
+          "upstream_inference_completions_cost": 0.020796
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 3438,
+          "reasoning_tokens": 2806,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -274,62 +312,80 @@
       "model": "Gemini",
       "tier": "frontier",
       "picks": {
+        "thesis": "Capitalize on high-beta crypto proxy momentum, semiconductor relative strength, and industrial earnings breakouts while hedging via selective short exposure in deteriorating mega-cap growth.",
+        "justification": "Momentum is bifurcating aggressively with institutional volume concentrating in crypto proxies (COIN, MSTR) and robust earnings/cyclical winners (DE, MU, XOM). Conversely, software security and select EV names are showing clear distribution patterns. Allocating with strict asymmetric payoff structures and tight invalidation stops to maximize risk-adjusted compounding.",
         "positions": [
           {
-            "ticker": "TSLA",
+            "ticker": "COIN",
             "side": "long",
-            "alloc_pct": 20,
-            "thesis": "High-beta relative strength leader showing explosive upside continuation against broad tech weakness.",
+            "alloc_pct": 15,
+            "thesis": "Aggressive volume breakout in crypto infrastructure proxy leading sector upside.",
+            "stop_pct": -7,
+            "target_pct": 28
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "High-beta treasury leverage vehicle riding strong underlying Bitcoin structural accumulation.",
+            "stop_pct": -8,
+            "target_pct": 32
+          },
+          {
+            "ticker": "DE",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Decisive post-earnings breakout with heavy institutional volume confirmation.",
             "stop_pct": -6,
-            "target_pct": 24
+            "target_pct": 22
           },
           {
-            "ticker": "XLV",
+            "ticker": "MU",
             "side": "long",
             "alloc_pct": 15,
-            "thesis": "Heavy institutional rotation driving an aggressive breakout in healthcare over broad market indices.",
-            "stop_pct": -4,
-            "target_pct": 12
+            "thesis": "Leading semiconductor memory cycle with strong relative strength vs broader tech.",
+            "stop_pct": -6,
+            "target_pct": 20
           },
           {
-            "ticker": "AAPL",
+            "ticker": "BTC",
             "side": "long",
             "alloc_pct": 15,
-            "thesis": "Mega-cap leadership decoupling positively with sustained accumulation despite sector-wide semiconductor drag.",
+            "thesis": "Sustained base above $72k providing clean asymmetric risk-reward for continuation.",
+            "stop_pct": -5,
+            "target_pct": 20
+          },
+          {
+            "ticker": "XOM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Energy sector leader demonstrating clear defensive and inflationary relative strength.",
             "stop_pct": -5,
             "target_pct": 15
           },
           {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 15,
-            "thesis": "Resilient consumer discretionary and cloud momentum displaying clear relative strength.",
-            "stop_pct": -5,
+            "ticker": "CRWD",
+            "side": "short",
+            "alloc_pct": 8,
+            "thesis": "Technical distribution and sharp breakdown below critical key moving averages.",
+            "stop_pct": -6,
             "target_pct": 18
           },
           {
-            "ticker": "XLB",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Cyclical flow rotation breaking higher with strong risk-reward asymmetry.",
-            "stop_pct": -4,
-            "target_pct": 12
-          },
-          {
-            "ticker": "AVGO",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Tactical mean-reversion opportunity on an overextended single-day selloff with tight risk control.",
-            "stop_pct": -5,
-            "target_pct": 15
+            "ticker": "TSLA",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Relative weakness and consumer discretionary headwind rejecting overhead resistance.",
+            "stop_pct": -6,
+            "target_pct": 16
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2803,
-        "completion_tokens": 956,
-        "total_tokens": 3759,
-        "cost": 0.002843625,
+        "prompt_tokens": 5803,
+        "completion_tokens": 1224,
+        "total_tokens": 7027,
+        "cost": 0.004471125,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -338,12 +394,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.002843625,
-          "upstream_inference_prompt_cost": 0.001051125,
-          "upstream_inference_completions_cost": 0.0017925
+          "upstream_inference_cost": 0.004471125,
+          "upstream_inference_prompt_cost": 0.002176125,
+          "upstream_inference_completions_cost": 0.002295
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 665,
+          "reasoning_tokens": 524,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -353,62 +409,48 @@
       "model": "DeepSeek",
       "tier": "open",
       "picks": {
+        "thesis": "Market pullback offers selective entry points; I'm buying oversold retail (WMT) and momentum in energy (XOM), memory (MU), and AI (NVDA).",
+        "justification": "WMT's 9.5% drop is an overreaction to earnings, giving a high-probability bounce with asymmetric upside. XOM benefits from a crude oil bid and is breaking out of a range, offering a 2:1 reward-to-risk setup. MU shows strong momentum in a memory upcycle with a 3:1 payout. NVDA is consolidating near highs, and a pullback entry provides a 3:1 opportunity. All positions are right-sized at 10% each, with tight stops, leaving 60% cash for future high-conviction trades.",
         "positions": [
           {
-            "ticker": "QQQ",
+            "ticker": "WMT",
             "side": "long",
-            "alloc_pct": 20,
-            "thesis": "Dip-buy into tech leaders; AI capex cycle intact, oversold on rate fears, target mean reversion.",
-            "stop_pct": -5,
-            "target_pct": 15
-          },
-          {
-            "ticker": "XLV",
-            "side": "long",
-            "alloc_pct": 15,
-            "thesis": "Healthcare sector breakout on defensive rotation and policy tailwinds, momentum long.",
+            "alloc_pct": 10,
+            "thesis": "Walmart crashed 9.5% on earnings miss; the sell-off is overdone and a bounce is likely.",
             "stop_pct": -5,
             "target_pct": 12
           },
           {
-            "ticker": "XLY",
-            "side": "long",
-            "alloc_pct": 15,
-            "thesis": "Consumer discretionary breaking out after retail earnings beat, momentum continuation.",
-            "stop_pct": -5,
-            "target_pct": 15
-          },
-          {
-            "ticker": "IWM",
+            "ticker": "XOM",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Small-cap rotation play as rate cuts get priced in, Russell 2000 basing for breakout.",
+            "thesis": "Crude strength pushes XOM out of a consolidation range; momentum favors continuation.",
             "stop_pct": -5,
             "target_pct": 10
           },
           {
-            "ticker": "AVGO",
-            "side": "short",
-            "alloc_pct": 15,
-            "thesis": "Post-earnings breakdown on volume, guidance miss, momentum short into weakness.",
-            "stop_pct": 5,
-            "target_pct": -10
-          },
-          {
-            "ticker": "AAPL",
+            "ticker": "MU",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Apple breaking above downtrend line on AI iPhone supercycle speculation, trend following.",
+            "thesis": "Micron is riding a memory upcycle with strong momentum; the trend has room to run.",
             "stop_pct": -5,
-            "target_pct": 18
+            "target_pct": 15
+          },
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "NVDA is consolidating after AI gains; pullback to support offers a momentum continuation entry.",
+            "stop_pct": -5,
+            "target_pct": 15
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2456,
-        "completion_tokens": 3557,
-        "total_tokens": 6013,
-        "cost": 0.0161733,
+        "prompt_tokens": 4784,
+        "completion_tokens": 2861,
+        "total_tokens": 7645,
+        "cost": 0.014876496,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -417,12 +459,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0161733,
-          "upstream_inference_prompt_cost": 0.00415064,
-          "upstream_inference_completions_cost": 0.01202266
+          "upstream_inference_cost": 0.014876496,
+          "upstream_inference_prompt_cost": 0.006774144,
+          "upstream_inference_completions_cost": 0.008102352
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 3126,
+          "reasoning_tokens": 2391,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -432,78 +474,96 @@
       "model": "Qwen",
       "tier": "open",
       "picks": {
+        "thesis": "To turn $100k into $1m in 12 months, own liquid high-convexity crypto/AI call-like exposures with defined stops, not diversified beta.",
+        "justification": "The tape's strongest momentum is in crypto proxies (COIN, MSTR) and AI infrastructure (MU, MRVL), while broad indices are soft. I am concentrating in assets that can plausibly multiple, using stops and a small WMT short to hedge consumer risk. Targets are asymmetric bull-case exits; the remaining cash preserves flexibility if the high-beta bid fails.",
         "positions": [
           {
-            "ticker": "TSLA",
-            "side": "long",
-            "alloc_pct": 25,
-            "thesis": "High-beta momentum leader with AI/robotics/energy optionality; today's strength confirms risk-on leadership.",
-            "stop_pct": -15,
-            "target_pct": 120
-          },
-          {
-            "ticker": "AAPL",
+            "ticker": "COIN",
             "side": "long",
             "alloc_pct": 18,
-            "thesis": "Relative-strength mega-cap with services/AI device upgrade cycle and defensive cash-flow ballast.",
-            "stop_pct": -8,
-            "target_pct": 45
+            "thesis": "Crypto exchange volume and trading frenzy give COIN levered upside to any digital-asset bull market.",
+            "stop_pct": -15,
+            "target_pct": 1200
           },
           {
-            "ticker": "AMZN",
+            "ticker": "ETH",
             "side": "long",
             "alloc_pct": 15,
-            "thesis": "AWS and advertising compounding with resilient consumer; upside to margin expansion.",
-            "stop_pct": -10,
-            "target_pct": 60
+            "thesis": "ETH is the liquid smart-contract reserve asset with catch-up potential if BTC leadership rotates.",
+            "stop_pct": -15,
+            "target_pct": 800
           },
           {
-            "ticker": "META",
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "SOL is the highest-quality liquid altcoin with retail/DeFi momentum and large re-rating optionality.",
+            "stop_pct": -20,
+            "target_pct": 1500
+          },
+          {
+            "ticker": "DOGE",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "DOGE is a liquid meme-beta call option that can outperform majors in a retail risk-on wave.",
+            "stop_pct": -30,
+            "target_pct": 2500
+          },
+          {
+            "ticker": "MSTR",
             "side": "long",
             "alloc_pct": 8,
-            "thesis": "Flat tape in high-beta AI advertising name gives a low-entry point for monetization upside.",
+            "thesis": "MSTR is a BTC treasury vehicle with equity liquidity and leverage to BTC upside.",
+            "stop_pct": -20,
+            "target_pct": 1800
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AI data-center demand is turning memory into a pricing-power upcycle.",
             "stop_pct": -12,
-            "target_pct": 60
+            "target_pct": 350
           },
           {
-            "ticker": "XLY",
+            "ticker": "MRVL",
             "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Consumer discretionary strength signals durable spending and broad risk appetite.",
-            "stop_pct": -8,
-            "target_pct": 40
+            "alloc_pct": 9,
+            "thesis": "Custom AI networking and data-center interconnect share gains give MRVL asymmetric growth.",
+            "stop_pct": -12,
+            "target_pct": 350
           },
           {
-            "ticker": "XLV",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Healthcare is today's strongest sector tape, offering defensive rotation and earnings visibility.",
-            "stop_pct": -8,
-            "target_pct": 30
-          },
-          {
-            "ticker": "MSFT",
+            "ticker": "SMCI",
             "side": "long",
             "alloc_pct": 5,
-            "thesis": "Quality AI/cloud compounder used as lower-volatility ballast while maintaining upside.",
-            "stop_pct": -8,
-            "target_pct": 30
+            "thesis": "SMCI is a depressed AI-server name with large re-rating potential if margins and governance stabilize.",
+            "stop_pct": -20,
+            "target_pct": 1500
           },
           {
-            "ticker": "GOOGL",
+            "ticker": "DE",
             "side": "long",
-            "alloc_pct": 4,
-            "thesis": "AI/search/cloud monetization with valuation still reasonable versus mega-cap peers.",
+            "alloc_pct": 5,
+            "thesis": "DE's breakout signals an ag-equipment cycle inflection and earnings momentum.",
+            "stop_pct": -10,
+            "target_pct": 150
+          },
+          {
+            "ticker": "WMT",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "WMT's severe breakdown points to deteriorating consumer traffic and margin guidance.",
             "stop_pct": -8,
-            "target_pct": 35
+            "target_pct": 50
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2775,
-        "completion_tokens": 6312,
-        "total_tokens": 9087,
-        "cost": 0.043422,
+        "prompt_tokens": 5602,
+        "completion_tokens": 13009,
+        "total_tokens": 18611,
+        "cost": 0.089258,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -512,12 +572,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.043422,
-          "upstream_inference_prompt_cost": 0.00555,
-          "upstream_inference_completions_cost": 0.037872
+          "upstream_inference_cost": 0.089258,
+          "upstream_inference_prompt_cost": 0.011204,
+          "upstream_inference_completions_cost": 0.078054
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 5946,
+          "reasoning_tokens": 12106,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -527,108 +587,110 @@
       "model": "GLM",
       "tier": "open",
       "picks": {
+        "thesis": "Bifurcated late-cycle tape: AI capex boom vs a cracking US consumer \u2014 own the capex chain and washed-out crypto beta, fade the consumer, keep dry powder for September.",
+        "justification": "Semis are green on a red tape (XLK +0.14%, MU +2.2%) while WMT's -9.5% guide-down, COST -1.9% and soft discretionary names confirm the consumer is rolling over \u2014 so I'm long the AI supply chain (NVDA into earnings, MU on the memory supercycle, TSM/AVGO as capex toll-booths) and short XLY/NKE to monetize the consumer crack. Crypto is my contrarian asymmetric leg: BTC sits ~40% off its highs yet COIN +8.2% and MSTR +7.2% today on flat BTC \u2014 that divergence marks institutional re-entry into a washed-out drawdown, so I take BTC/SOL/COIN with wide stops and multi-bagger targets. 26% cash stays free for September seasonality and post-NVDA re-risking; every position carries a hard stop, and a simultaneous full stop-out across all ten positions costs only ~9% of equity \u2014 well inside the circuit breaker.",
         "positions": [
           {
-            "ticker": "AAPL",
+            "ticker": "NVDA",
             "side": "long",
-            "alloc_pct": 13,
-            "thesis": "Rotation out of crowded AI hardware into consumer tech laggards; AAPL +2.1% breakout while semis bleed \u2014 money is moving to the cheap side of mega-cap.",
+            "alloc_pct": 11,
+            "thesis": "AI capex king with data-center demand still exceeding supply \u2014 next week's earnings is the tape's biggest catalyst.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Memory supercycle: sold-out HBM/DRAM capacity and rising contract pricing into 2027 \u2014 the tightest bottleneck in AI.",
+            "stop_pct": -10,
+            "target_pct": 35
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Monopoly foundry behind every AI accelerator \u2014 wins regardless of which chip design takes share.",
             "stop_pct": -8,
             "target_pct": 25
-          },
-          {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 11,
-            "thesis": "Monetizes AI through AWS without the capex bleed crushing the semis, plus consumer strength confirmed by XLY leadership.",
-            "stop_pct": -8,
-            "target_pct": 22
-          },
-          {
-            "ticker": "XLV",
-            "side": "long",
-            "alloc_pct": 11,
-            "thesis": "Healthcare +3.5% breakout from a multi-year base \u2014 the defensive/ laggard rotation trade has room to run and nobody is positioned for it.",
-            "stop_pct": -7,
-            "target_pct": 20
-          },
-          {
-            "ticker": "IWM",
-            "side": "long",
-            "alloc_pct": 11,
-            "thesis": "Small-cap catch-up: rate-cut beneficiary trading at ~300 while mega-caps are extended; Dow outperforming QQQ says the rotation is real.",
-            "stop_pct": -8,
-            "target_pct": 25
-          },
-          {
-            "ticker": "XLRE",
-            "side": "long",
-            "alloc_pct": 9,
-            "thesis": "Rate-sensitive sector turning after years of pain; priced for pessimism with falling-rate tailwind \u2014 asymmetric recovery setup.",
-            "stop_pct": -7,
-            "target_pct": 18
-          },
-          {
-            "ticker": "GOOGL",
-            "side": "long",
-            "alloc_pct": 6,
-            "thesis": "Cheapest laggard mega-cap; broadening rotation gives it the catch-up bid as consensus money leaves the AI-semis complex.",
-            "stop_pct": -8,
-            "target_pct": 20
           },
           {
             "ticker": "AVGO",
-            "side": "short",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Custom ASICs and AI networking: hyperscalers building in-house silicon flows straight to AVGO.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "~40% off highs while COIN/MSTR surge 7-8% on flat BTC \u2014 divergence marks institutional re-entry into a washed-out drawdown.",
+            "stop_pct": -15,
+            "target_pct": 60
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
             "alloc_pct": 8,
-            "thesis": "-4.8% crack in the most crowded trade on the board; short rich AI-capex semis into the unwind \u2014 exit if it reclaims the breakdown.",
+            "thesis": "Highest-beta major crypto ~65% off highs \u2014 historically leads crypto recoveries with 3-5x torque.",
+            "stop_pct": -20,
+            "target_pct": 100
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Operating leverage to a crypto volume/price recovery; today's +8% on flat BTC says institutions are positioning.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "XLY",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Consumer is cracking \u2014 WMT's -9.5% guide-down is the tell; discretionary demand rolls over while AI absorbs the economy's growth.",
             "stop_pct": -7,
             "target_pct": 18
           },
           {
-            "ticker": "XLK",
-            "side": "long",
-            "alloc_pct": 0,
-            "thesis": "placeholder",
-            "stop_pct": 0,
-            "target_pct": 0
-          },
-          {
-            "ticker": "XLK",
+            "ticker": "NKE",
             "side": "short",
-            "alloc_pct": 7,
-            "thesis": "Crowded tech sector showing negative divergence vs Dow; expresses the rotation-out-of-tech thesis with sector breadth rather than single-name risk.",
-            "stop_pct": -6,
-            "target_pct": 15
+            "alloc_pct": 5,
+            "thesis": "Structural share loser to On/Hoka with margin pressure and no re-rating catalyst \u2014 stays a source of funds.",
+            "stop_pct": -8,
+            "target_pct": 25
           },
           {
-            "ticker": "VXX",
+            "ticker": "XLE",
             "side": "long",
-            "alloc_pct": 4,
-            "thesis": "Cheap tail hedge: vol at lows (-3% today) while the AI trade cracks underneath a flat SPY \u2014 small bleed for large convexity if the unwind accelerates.",
-            "stop_pct": -20,
-            "target_pct": 80
+            "alloc_pct": 5,
+            "thesis": "Energy green on a red tape \u2014 inflation/geopolitical premium building; hedges the shock that would hurt my tech book.",
+            "stop_pct": -8,
+            "target_pct": 20
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2453,
-        "completion_tokens": 4550,
-        "total_tokens": 7003,
-        "cost": 0.02068172,
+        "prompt_tokens": 4731,
+        "completion_tokens": 9104,
+        "total_tokens": 13835,
+        "cost": 0.046681,
         "is_byok": false,
         "prompt_tokens_details": {
-          "cached_tokens": 2432,
+          "cached_tokens": 0,
           "cache_write_tokens": 0,
           "audio_tokens": 0,
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.02068172,
-          "upstream_inference_prompt_cost": 0.00066172,
-          "upstream_inference_completions_cost": 0.02002
+          "upstream_inference_cost": 0.046681,
+          "upstream_inference_prompt_cost": 0.0066234,
+          "upstream_inference_completions_cost": 0.0400576
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 4010,
+          "reasoning_tokens": 8335,
           "image_tokens": 0,
           "audio_tokens": 0
         }
@@ -638,94 +700,96 @@
       "model": "Llama",
       "tier": "open",
       "picks": {
+        "thesis": "The market is poised for a rotation into sectors that have been oversold and are now showing signs of recovery, driven by improving economic indicators and a potential shift in monetary policy.",
+        "justification": "The current market snapshot indicates a mixed environment with some sectors and stocks showing weakness while others are gaining. My strategy is to identify areas that are oversold and have potential for rebound, focusing on stocks with strong fundamentals and recent positive catalysts. I will also consider the overall macroeconomic context and potential shifts in investor sentiment.",
         "positions": [
           {
-            "ticker": "XLV",
+            "ticker": "DE",
             "side": "long",
-            "alloc_pct": 15,
-            "thesis": "Healthcare sector is showing relative strength with a 3.53% daily gain, indicating potential for continued outperformance.",
+            "alloc_pct": 10,
+            "thesis": "Deere & Company is benefiting from a potential recovery in agricultural spending and has shown strong earnings momentum.",
             "stop_pct": -5,
-            "target_pct": 10
+            "target_pct": 15
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "MicroStrategy has been a strong performer in the crypto-related space and continues to benefit from its Bitcoin holdings and corporate strategy.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Coinbase is positioned to benefit from increased crypto market activity and has shown resilience in a challenging regulatory environment.",
+            "stop_pct": -10,
+            "target_pct": 25
           },
           {
             "ticker": "TSLA",
             "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Tesla's 4.24% daily gain suggests positive momentum, potentially driven by recent news or sector rotation.",
+            "alloc_pct": 6,
+            "thesis": "Tesla is showing signs of recovery driven by improved delivery numbers and potential new product launches.",
             "stop_pct": -8,
+            "target_pct": 18
+          },
+          {
+            "ticker": "MRVL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Marvell Technology is benefiting from growth in data center and automotive segments, with improving margins.",
+            "stop_pct": -7,
             "target_pct": 15
           },
           {
-            "ticker": "AVGO",
-            "side": "short",
-            "alloc_pct": 8,
-            "thesis": "Broadcom's -4.84% daily drop may indicate overreaction or negative sentiment that could continue in the short term.",
-            "stop_pct": 5,
-            "target_pct": -10
-          },
-          {
-            "ticker": "XLY",
+            "ticker": "XLF",
             "side": "long",
-            "alloc_pct": 12,
-            "thesis": "Consumer Discretionary sector ETF is up 1.89%, showing resilience in consumer spending.",
-            "stop_pct": -4,
-            "target_pct": 8
-          },
-          {
-            "ticker": "VXX",
-            "side": "short",
-            "alloc_pct": 5,
-            "thesis": "Volatility index ETF is down -2.98%, indicating decreasing volatility, a positive sign for equities.",
-            "stop_pct": 3,
-            "target_pct": -6
-          },
-          {
-            "ticker": "XLK",
-            "side": "short",
-            "alloc_pct": 10,
-            "thesis": "Technology sector ETF is down -1.05%, potentially overvalued given recent run-up.",
-            "stop_pct": 2,
-            "target_pct": -5
-          },
-          {
-            "ticker": "AAPL",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Apple's 2.1% gain indicates continued strength in consumer tech, driven by ecosystem lock-in.",
-            "stop_pct": -6,
-            "target_pct": 12
-          },
-          {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 8,
-            "thesis": "Amazon's 1.52% gain reflects positive sentiment in e-commerce and cloud sectors.",
+            "alloc_pct": 4,
+            "thesis": "The Financial Select Sector SPDR Fund is attractive due to its potential for recovery driven by interest rate changes and economic stabilization.",
             "stop_pct": -5,
             "target_pct": 10
           },
           {
-            "ticker": "XLF",
-            "side": "short",
-            "alloc_pct": 7,
-            "thesis": "Financial sector ETF is down -0.61%, potentially weak given economic indicators.",
-            "stop_pct": 3,
-            "target_pct": -8
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Bitcoin is showing stability and potential for growth driven by institutional investment and macroeconomic factors.",
+            "stop_pct": -12,
+            "target_pct": 30
           },
           {
-            "ticker": "GOOGL",
+            "ticker": "ETH",
             "side": "long",
-            "alloc_pct": 15,
-            "thesis": "Alphabet's stable 0.22% gain indicates solid fundamentals in the tech sector, driven by search and cloud dominance.",
-            "stop_pct": -4,
-            "target_pct": 8
+            "alloc_pct": 8,
+            "thesis": "Ethereum is benefiting from ongoing ecosystem development and potential ETF approvals, driving demand.",
+            "stop_pct": -12,
+            "target_pct": 28
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Solana is showing strong ecosystem growth and has potential for further adoption driven by its technological advancements.",
+            "stop_pct": -15,
+            "target_pct": 35
+          },
+          {
+            "ticker": "VXX",
+            "side": "short",
+            "alloc_pct": 2,
+            "thesis": "The CBOE Volatility Index ETF is expected to decline as market volatility decreases with improving economic indicators.",
+            "stop_pct": 10,
+            "target_pct": -20
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2378,
-        "completion_tokens": 702,
-        "total_tokens": 3080,
-        "cost": 0.000964192,
+        "prompt_tokens": 4586,
+        "completion_tokens": 794,
+        "total_tokens": 5380,
+        "cost": 0.0015524,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -734,9 +798,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.000964192,
-          "upstream_inference_prompt_cost": 0.0004756,
-          "upstream_inference_completions_cost": 0.000488592
+          "upstream_inference_cost": 0.0015524,
+          "upstream_inference_prompt_cost": 0.0009172,
+          "upstream_inference_completions_cost": 0.0006352
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -749,62 +813,96 @@
       "model": "Mistral",
       "tier": "open",
       "picks": {
+        "thesis": "AI infrastructure and energy outperform in a late-cycle, rate-cut-delayed environment; crypto benefits from liquidity and institutional adoption.",
+        "justification": "Market is consolidating after a strong run, but AI capex (NVDA, AVGO, MRVL) and energy (XLE, CVX) have structural tailwinds. Crypto (BTC, ETH) is early in a new bull cycle with ETF flows and halving dynamics. Shorting laggards like TSLA (margin pressure) and COIN (overbought post-earnings) hedges long exposure. Cash buffer for volatility.",
         "positions": [
           {
-            "ticker": "TSLA",
-            "side": "long",
-            "alloc_pct": 20,
-            "thesis": "AI-driven robotaxi narrative gaining traction; momentum + catalyst asymmetry",
-            "stop_pct": -8,
-            "target_pct": 30
-          },
-          {
-            "ticker": "XLY",
+            "ticker": "NVDA",
             "side": "long",
             "alloc_pct": 15,
-            "thesis": "Consumer discretionary leadership in late-cycle rally; relative strength vs SPY",
-            "stop_pct": -7,
-            "target_pct": 20
+            "thesis": "AI demand outstrips supply; next-gen chips priced for growth.",
+            "stop_pct": -10,
+            "target_pct": 30
           },
           {
             "ticker": "AVGO",
             "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Semiconductor pullback oversold; AI infrastructure demand remains structural",
-            "stop_pct": -6,
+            "alloc_pct": 12,
+            "thesis": "AI networking and custom silicon moat; earnings momentum.",
+            "stop_pct": -8,
             "target_pct": 25
           },
           {
-            "ticker": "QQQ",
-            "side": "short",
+            "ticker": "MRVL",
+            "side": "long",
             "alloc_pct": 10,
-            "thesis": "Tech heavyweights extended; mean reversion risk after 2026 AI euphoria",
-            "stop_pct": 5,
-            "target_pct": 15
+            "thesis": "AI data center connectivity; breakout with volume.",
+            "stop_pct": -8,
+            "target_pct": 25
           },
           {
             "ticker": "XLE",
             "side": "long",
             "alloc_pct": 10,
-            "thesis": "Energy underowned; geopolitical risk premium + seasonal demand",
+            "thesis": "OPEC+ cuts + summer demand; energy under-owned by funds.",
             "stop_pct": -7,
             "target_pct": 20
           },
           {
-            "ticker": "VXX",
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Institutional adoption + halving supply shock; $72k support held.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "ETF approval odds rising; DeFi and layer-2 scaling driving utility.",
+            "stop_pct": -12,
+            "target_pct": 35
+          },
+          {
+            "ticker": "TSLA",
+            "side": "short",
+            "alloc_pct": 8,
+            "thesis": "Margin compression + FSD hype priced in; technical breakdown below $340.",
+            "stop_pct": 5,
+            "target_pct": -20
+          },
+          {
+            "ticker": "COIN",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Post-earnings pop overbought; revenue tied to volatile trading volumes.",
+            "stop_pct": 5,
+            "target_pct": -15
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "AI memory demand; HBM pricing power and supply constraints.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "V",
             "side": "long",
             "alloc_pct": 5,
-            "thesis": "Volatility compression extreme; tail-hedge for late-summer correction",
-            "stop_pct": -50,
-            "target_pct": 50
+            "thesis": "Consumer resilience + cross-border volume; defensive growth.",
+            "stop_pct": -6,
+            "target_pct": 15
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2687,
-        "completion_tokens": 436,
-        "total_tokens": 3123,
-        "cost": 0.0073005,
+        "prompt_tokens": 5411,
+        "completion_tokens": 836,
+        "total_tokens": 6247,
+        "cost": 0.0143865,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 0,
@@ -813,9 +911,9 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0073005,
-          "upstream_inference_prompt_cost": 0.0040305,
-          "upstream_inference_completions_cost": 0.00327
+          "upstream_inference_cost": 0.0143865,
+          "upstream_inference_prompt_cost": 0.0081165,
+          "upstream_inference_completions_cost": 0.00627
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
@@ -828,94 +926,96 @@
       "model": "Kimi",
       "tier": "open",
       "picks": {
+        "thesis": "Late-cycle rotation tape: AI/memory and energy lead while the US consumer cracks (WMT -9.5% is the tell), and deeply beaten-down crypto is showing its first rotation signal via COIN/MSTR ripping on flat spot.",
+        "justification": "I concentrate in what is working \u2014 the memory supercycle (MU, MRVL) and the energy breakout (XOM) \u2014 because trend-following the leadership beats predicting tops. The asymmetric sleeve is crypto: BTC/ETH sit at deeply depressed levels while COIN +8% and MSTR +7% on flat spot is the classic equity-proxies-front-running-spot turn signal, giving 3-4:1 reward/risk with defined stops. I short the cracking side of the tape (CRWD breakdown, TSLA, F) where momentum and the consumer-weakness signal align, keeping the book net long but hedged. 94% deployed, gross well under the 2x ceiling, every position has an invalidation level and 2.5-4:1 asymmetry.",
         "positions": [
           {
-            "ticker": "TSLA",
+            "ticker": "MU",
             "side": "long",
             "alloc_pct": 15,
-            "thesis": "Relative-strength leader: +4.2% on a red tech day \u2014 momentum continuation with the highest beta in the book.",
+            "thesis": "Memory supercycle leader \u2014 HBM/AI demand keeps MU as the strongest momentum name in semis.",
             "stop_pct": -10,
-            "target_pct": 40
+            "target_pct": 35
           },
           {
-            "ticker": "AAPL",
+            "ticker": "BTC",
             "side": "long",
-            "alloc_pct": 12,
-            "thesis": "+2.1% while semis bleed \u2014 capital rotating into quality mega-cap leadership.",
+            "alloc_pct": 15,
+            "thesis": "Depressed at 72k with equity proxies (COIN/MSTR) ripping today \u2014 the rotation-back-into-crypto tell; asymmetric recovery bet.",
+            "stop_pct": -12,
+            "target_pct": 45
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Higher-beta crypto recovery \u2014 2.3k is washed out; if the cycle turns, ETH outperforms BTC on the way up.",
+            "stop_pct": -13,
+            "target_pct": 50
+          },
+          {
+            "ticker": "XOM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Energy sector rotation breakout \u2014 XOM +1.9% leading a bid XLE tape; defensive growth with momentum.",
             "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "MRVL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "AI custom-silicon/networking breakout, +2.45% with relative strength vs a red QQQ.",
+            "stop_pct": -9,
+            "target_pct": 30
+          },
+          {
+            "ticker": "QCOM",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Laggard semi catching a bid (+1.6%) \u2014 AI edge/device cycle catch-up with valuation support.",
+            "stop_pct": -8,
             "target_pct": 22
           },
           {
-            "ticker": "XLV",
+            "ticker": "COIN",
             "side": "long",
-            "alloc_pct": 12,
-            "thesis": "Healthcare breakout +3.5% on heavy defensive rotation; new leadership trade.",
-            "stop_pct": -6,
-            "target_pct": 18
+            "alloc_pct": 6,
+            "thesis": "+8% breakout is the confirmation signal of the crypto-rotation thesis; equity torque to any BTC/ETH recovery.",
+            "stop_pct": -11,
+            "target_pct": 35
           },
           {
-            "ticker": "AMZN",
-            "side": "long",
-            "alloc_pct": 12,
-            "thesis": "Discretionary strength (XLY +1.9%) plus AWS/retail momentum \u2014 riding the rotation, not fighting it.",
-            "stop_pct": -8,
-            "target_pct": 25
-          },
-          {
-            "ticker": "MSFT",
-            "side": "long",
-            "alloc_pct": 10,
-            "thesis": "Quality anchor: steady accumulation, lower-vol ballast for a high-beta book.",
-            "stop_pct": -7,
-            "target_pct": 18
-          },
-          {
-            "ticker": "META",
-            "side": "long",
-            "alloc_pct": 8,
-            "thesis": "Flat on a weak-tech day is quiet strength; ad engine plus AI monetization re-rating.",
-            "stop_pct": -8,
-            "target_pct": 25
-          },
-          {
-            "ticker": "XLB",
-            "side": "long",
-            "alloc_pct": 8,
-            "thesis": "Materials +1.4% confirms breadth beyond tech; reflation rotation leg.",
-            "stop_pct": -6,
-            "target_pct": 15
-          },
-          {
-            "ticker": "NVDA",
+            "ticker": "CRWD",
             "side": "short",
             "alloc_pct": 8,
-            "thesis": "Semis rolling over (AVGO -4.8%, XLK -1.1%) and NVDA hasn't priced the catch-down yet.",
-            "stop_pct": 6,
-            "target_pct": -18
+            "thesis": "-4.2% breakdown in a high-multiple name \u2014 momentum continuation as growth de-rates.",
+            "stop_pct": -9,
+            "target_pct": 22
           },
           {
-            "ticker": "VXX",
-            "side": "long",
-            "alloc_pct": 5,
-            "thesis": "Vol at 19 is cheap tail insurance with the crowd complacent at highs; small size, large asymmetry.",
-            "stop_pct": -20,
-            "target_pct": 60
-          },
-          {
-            "ticker": "GOOGL",
-            "side": "long",
-            "alloc_pct": 5,
-            "thesis": "Cheapest mega-cap AI exposure; XLC green, laggard catch-up setup.",
+            "ticker": "TSLA",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Broken momentum (-2.5%) into a weakening consumer \u2014 EV demand and margin pressure persist.",
             "stop_pct": -8,
             "target_pct": 20
+          },
+          {
+            "ticker": "F",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Autos cracking (-3.3%) \u2014 tariff costs, EV losses, and the WMT consumer warning all point one way.",
+            "stop_pct": -8,
+            "target_pct": 18
           }
         ]
       },
       "raw_usage": {
-        "prompt_tokens": 2474,
-        "completion_tokens": 3526,
-        "total_tokens": 6000,
-        "cost": 0.0601392,
+        "prompt_tokens": 4679,
+        "completion_tokens": 4777,
+        "total_tokens": 9456,
+        "cost": 0.0855192,
         "is_byok": false,
         "prompt_tokens_details": {
           "cached_tokens": 64,
@@ -924,12 +1024,12 @@
           "video_tokens": 0
         },
         "cost_details": {
-          "upstream_inference_cost": 0.0601392,
-          "upstream_inference_prompt_cost": 0.0072492,
-          "upstream_inference_completions_cost": 0.05289
+          "upstream_inference_cost": 0.0855192,
+          "upstream_inference_prompt_cost": 0.0138642,
+          "upstream_inference_completions_cost": 0.071655
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 2608,
+          "reasoning_tokens": 3337,
           "image_tokens": 0,
           "audio_tokens": 0
         }

@@ -94,12 +94,16 @@ def main():
     user_tpl = (
         "You hold $100,000 paper capital and are racing to $1,000,000 within one year. "
         "This is your OPENING move. Allocate your portfolio now.\n"
-        "Rules: US equities/ETFs only. Up to 10 positions. Allocations are percentages "
-        "summing to at most 100 (leave the rest cash if unsure). Long OR short.\n"
+        "Rules: ALL assets are fair game — US equities, ETFs, and crypto (BTC, ETH, SOL, "
+        "and other liquid coins). Trade whatever you predict will perform best. Up to 10 "
+        "positions. Allocations are percentages summing to at most 100 (leave the rest cash "
+        "if unsure). Long OR short.\n"
         "For each position give: ticker, side (long/short), alloc_pct, one-line thesis, "
         "stop_pct (e.g. -8), target_pct (e.g. +25).\n"
         + market +
-        "\n\nRespond ONLY as JSON: {\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25}]}"
+        "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
+        "\"justification\":\"<2-4 sentences justifying your overall selection logic>\","
+        "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25}]}"
     )
 
     outdir = os.path.join(ROOT, "data", "picks")

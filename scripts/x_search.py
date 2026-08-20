@@ -12,7 +12,7 @@ Usage (import):
 Usage (CLI):
     python3 scripts/x_search.py "NVDA stock" [--from 2026-08-19] [--to 2026-08-20]
 """
-import json, os, sys, time, urllib.request, urllib.error
+import json, os, sys, time, socket, urllib.request, urllib.error
 
 BASE = "https://api.x.ai/v1/responses"
 MODEL = "grok-4.6"  # the same model the race runs
@@ -63,7 +63,7 @@ def x_search(query, max_output_tokens=900, from_date=None, to_date=None,
     last_err = None
     for attempt in range(RETRIES):
         try:
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=180) as r:
                 data = json.loads(r.read().decode())
             break
         except urllib.error.HTTPError as e:
@@ -84,6 +84,14 @@ def x_search(query, max_output_tokens=900, from_date=None, to_date=None,
             if attempt < RETRIES - 1:
                 wait = 5 * (2 ** attempt)
                 sys.stderr.write(f"x_search URLError {e}, retry in {wait}s\n")
+                time.sleep(wait)
+                continue
+            raise
+        except socket.timeout as e:
+            last_err = e
+            if attempt < RETRIES - 1:
+                wait = 5 * (2 ** attempt)
+                sys.stderr.write(f"x_search timeout, retry in {wait}s\n")
                 time.sleep(wait)
                 continue
             raise

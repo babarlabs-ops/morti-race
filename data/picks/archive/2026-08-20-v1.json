@@ -1,0 +1,939 @@
+{
+  "generated_utc": "2026-08-20T13:37:48.852932+00:00",
+  "results": {
+    "fable": {
+      "model": "Fable",
+      "tier": "frontier",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Healthcare +3.5% on a rotation day out of tech \u2014 laggard sector breaking out with room to mean-revert higher after a year of underperformance.",
+            "stop_pct": -6,
+            "target_pct": 18
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Consumer discretionary leading (XLY +1.9%) and AMZN combines that flow with AWS AI monetization \u2014 strongest risk/reward in megacap.",
+            "stop_pct": -9,
+            "target_pct": 30
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "Cheapest megacap on earnings multiple with Gemini/cloud catalysts; flat on a red tech day signals relative strength and quiet accumulation.",
+            "stop_pct": -9,
+            "target_pct": 30
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "AAPL +2.1% against XLK -1.05% \u2014 clear breakout with institutional flow returning after long underperformance; ride the momentum.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "AI capex cycle intact; -0.7% pullback in the sector leader ahead of earnings is a buyable dip, sized so a miss is survivable.",
+            "stop_pct": -12,
+            "target_pct": 35
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "-4.8% single-day drop in a core AI-networking name with intact custom-silicon backlog \u2014 buy the overreaction, small size because the knife may keep falling.",
+            "stop_pct": -10,
+            "target_pct": 25
+          },
+          {
+            "ticker": "XLB",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Materials +1.4% confirming cyclical rotation breadth; cheap sector with rate-cut tailwind and nobody positioned for it.",
+            "stop_pct": -6,
+            "target_pct": 15
+          },
+          {
+            "ticker": "IWM",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Small caps lagging on a rotation day (-0.3% vs defensives ripping) \u2014 refinancing wall and margin pressure make IWM the weakest index; also hedges my long book.",
+            "stop_pct": -6,
+            "target_pct": 12
+          },
+          {
+            "ticker": "XLI",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Industrials -0.9% rolling over while defensives catch the bid \u2014 crowded soft-landing trade unwinding; second hedge against a broad risk-off leg.",
+            "stop_pct": -5,
+            "target_pct": 10
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 3344,
+        "completion_tokens": 1370,
+        "total_tokens": 4714,
+        "cost": 0.10194,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.10194,
+          "upstream_inference_prompt_cost": 0.03344,
+          "upstream_inference_completions_cost": 0.0685
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 452,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "sol": {
+      "model": "Sol",
+      "tier": "frontier",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "Strong relative strength against a weak index tape favors continued institutional momentum.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 18,
+            "thesis": "Positive momentum during broad-market weakness signals accumulation and a potential breakout continuation.",
+            "stop_pct": -9,
+            "target_pct": 32
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 16,
+            "thesis": "Stable price action amid technology-sector selling offers favorable upside if leadership broadens.",
+            "stop_pct": -8,
+            "target_pct": 28
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 14,
+            "thesis": "High-beta relative-strength breakout provides the portfolio's primary asymmetric return opportunity.",
+            "stop_pct": -11,
+            "target_pct": 45
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 14,
+            "thesis": "Powerful sector rotation into healthcare can sustain upside while reducing dependence on technology.",
+            "stop_pct": -7,
+            "target_pct": 22
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Holding positive while QQQ declines indicates relative strength with room for momentum expansion.",
+            "stop_pct": -8,
+            "target_pct": 27
+          },
+          {
+            "ticker": "XLB",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Materials-sector strength against a soft broad tape supports a tactical rotation trade.",
+            "stop_pct": -7,
+            "target_pct": 21
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2408,
+        "completion_tokens": 791,
+        "total_tokens": 3199,
+        "cost": 0.01247375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2405,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.01247375,
+          "upstream_inference_prompt_cost": 0.00060875,
+          "upstream_inference_completions_cost": 0.011865
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 484,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "grok": {
+      "model": "Grok",
+      "tier": "frontier",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 16,
+            "thesis": "AI ASIC/networking demand intact; 5% drop is a dislocation, not a cycle break.",
+            "stop_pct": -9,
+            "target_pct": 32
+          },
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 16,
+            "thesis": "CUDA moat and GPU scarcity still price the next leg of AI capex.",
+            "stop_pct": -10,
+            "target_pct": 40
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AWS reacceleration plus ads/retail mix shift not fully in the multiple.",
+            "stop_pct": -8,
+            "target_pct": 28
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AI-driven ad leverage and buybacks; crowd still anchored to old scars.",
+            "stop_pct": -9,
+            "target_pct": 30
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Search cash cow funding cloud/AI catch-up at a still-reasonable multiple.",
+            "stop_pct": -8,
+            "target_pct": 26
+          },
+          {
+            "ticker": "MSFT",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Azure plus Copilot attach is the cleanest enterprise AI monetization path.",
+            "stop_pct": -8,
+            "target_pct": 25
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2666,
+        "completion_tokens": 3750,
+        "total_tokens": 6416,
+        "cost": 0.02764,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.02764,
+          "upstream_inference_prompt_cost": 0.00514,
+          "upstream_inference_completions_cost": 0.0225
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3438,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "gemini": {
+      "model": "Gemini",
+      "tier": "frontier",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "High-beta relative strength leader showing explosive upside continuation against broad tech weakness.",
+            "stop_pct": -6,
+            "target_pct": 24
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Heavy institutional rotation driving an aggressive breakout in healthcare over broad market indices.",
+            "stop_pct": -4,
+            "target_pct": 12
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Mega-cap leadership decoupling positively with sustained accumulation despite sector-wide semiconductor drag.",
+            "stop_pct": -5,
+            "target_pct": 15
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Resilient consumer discretionary and cloud momentum displaying clear relative strength.",
+            "stop_pct": -5,
+            "target_pct": 18
+          },
+          {
+            "ticker": "XLB",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Cyclical flow rotation breaking higher with strong risk-reward asymmetry.",
+            "stop_pct": -4,
+            "target_pct": 12
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Tactical mean-reversion opportunity on an overextended single-day selloff with tight risk control.",
+            "stop_pct": -5,
+            "target_pct": 15
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2803,
+        "completion_tokens": 956,
+        "total_tokens": 3759,
+        "cost": 0.002843625,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002843625,
+          "upstream_inference_prompt_cost": 0.001051125,
+          "upstream_inference_completions_cost": 0.0017925
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 665,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "deepseek": {
+      "model": "DeepSeek",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "QQQ",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "Dip-buy into tech leaders; AI capex cycle intact, oversold on rate fears, target mean reversion.",
+            "stop_pct": -5,
+            "target_pct": 15
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Healthcare sector breakout on defensive rotation and policy tailwinds, momentum long.",
+            "stop_pct": -5,
+            "target_pct": 12
+          },
+          {
+            "ticker": "XLY",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Consumer discretionary breaking out after retail earnings beat, momentum continuation.",
+            "stop_pct": -5,
+            "target_pct": 15
+          },
+          {
+            "ticker": "IWM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Small-cap rotation play as rate cuts get priced in, Russell 2000 basing for breakout.",
+            "stop_pct": -5,
+            "target_pct": 10
+          },
+          {
+            "ticker": "AVGO",
+            "side": "short",
+            "alloc_pct": 15,
+            "thesis": "Post-earnings breakdown on volume, guidance miss, momentum short into weakness.",
+            "stop_pct": 5,
+            "target_pct": -10
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Apple breaking above downtrend line on AI iPhone supercycle speculation, trend following.",
+            "stop_pct": -5,
+            "target_pct": 18
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2456,
+        "completion_tokens": 3557,
+        "total_tokens": 6013,
+        "cost": 0.0161733,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0161733,
+          "upstream_inference_prompt_cost": 0.00415064,
+          "upstream_inference_completions_cost": 0.01202266
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3126,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "qwen": {
+      "model": "Qwen",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 25,
+            "thesis": "High-beta momentum leader with AI/robotics/energy optionality; today's strength confirms risk-on leadership.",
+            "stop_pct": -15,
+            "target_pct": 120
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 18,
+            "thesis": "Relative-strength mega-cap with services/AI device upgrade cycle and defensive cash-flow ballast.",
+            "stop_pct": -8,
+            "target_pct": 45
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "AWS and advertising compounding with resilient consumer; upside to margin expansion.",
+            "stop_pct": -10,
+            "target_pct": 60
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Flat tape in high-beta AI advertising name gives a low-entry point for monetization upside.",
+            "stop_pct": -12,
+            "target_pct": 60
+          },
+          {
+            "ticker": "XLY",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Consumer discretionary strength signals durable spending and broad risk appetite.",
+            "stop_pct": -8,
+            "target_pct": 40
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Healthcare is today's strongest sector tape, offering defensive rotation and earnings visibility.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MSFT",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Quality AI/cloud compounder used as lower-volatility ballast while maintaining upside.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 4,
+            "thesis": "AI/search/cloud monetization with valuation still reasonable versus mega-cap peers.",
+            "stop_pct": -8,
+            "target_pct": 35
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2775,
+        "completion_tokens": 6312,
+        "total_tokens": 9087,
+        "cost": 0.043422,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.043422,
+          "upstream_inference_prompt_cost": 0.00555,
+          "upstream_inference_completions_cost": 0.037872
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5946,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "glm": {
+      "model": "GLM",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 13,
+            "thesis": "Rotation out of crowded AI hardware into consumer tech laggards; AAPL +2.1% breakout while semis bleed \u2014 money is moving to the cheap side of mega-cap.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "Monetizes AI through AWS without the capex bleed crushing the semis, plus consumer strength confirmed by XLY leadership.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "Healthcare +3.5% breakout from a multi-year base \u2014 the defensive/ laggard rotation trade has room to run and nobody is positioned for it.",
+            "stop_pct": -7,
+            "target_pct": 20
+          },
+          {
+            "ticker": "IWM",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "Small-cap catch-up: rate-cut beneficiary trading at ~300 while mega-caps are extended; Dow outperforming QQQ says the rotation is real.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "XLRE",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Rate-sensitive sector turning after years of pain; priced for pessimism with falling-rate tailwind \u2014 asymmetric recovery setup.",
+            "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Cheapest laggard mega-cap; broadening rotation gives it the catch-up bid as consensus money leaves the AI-semis complex.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "AVGO",
+            "side": "short",
+            "alloc_pct": 8,
+            "thesis": "-4.8% crack in the most crowded trade on the board; short rich AI-capex semis into the unwind \u2014 exit if it reclaims the breakdown.",
+            "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "XLK",
+            "side": "long",
+            "alloc_pct": 0,
+            "thesis": "placeholder",
+            "stop_pct": 0,
+            "target_pct": 0
+          },
+          {
+            "ticker": "XLK",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Crowded tech sector showing negative divergence vs Dow; expresses the rotation-out-of-tech thesis with sector breadth rather than single-name risk.",
+            "stop_pct": -6,
+            "target_pct": 15
+          },
+          {
+            "ticker": "VXX",
+            "side": "long",
+            "alloc_pct": 4,
+            "thesis": "Cheap tail hedge: vol at lows (-3% today) while the AI trade cracks underneath a flat SPY \u2014 small bleed for large convexity if the unwind accelerates.",
+            "stop_pct": -20,
+            "target_pct": 80
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2453,
+        "completion_tokens": 4550,
+        "total_tokens": 7003,
+        "cost": 0.02068172,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.02068172,
+          "upstream_inference_prompt_cost": 0.00066172,
+          "upstream_inference_completions_cost": 0.02002
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4010,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "llama": {
+      "model": "Llama",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Healthcare sector is showing relative strength with a 3.53% daily gain, indicating potential for continued outperformance.",
+            "stop_pct": -5,
+            "target_pct": 10
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Tesla's 4.24% daily gain suggests positive momentum, potentially driven by recent news or sector rotation.",
+            "stop_pct": -8,
+            "target_pct": 15
+          },
+          {
+            "ticker": "AVGO",
+            "side": "short",
+            "alloc_pct": 8,
+            "thesis": "Broadcom's -4.84% daily drop may indicate overreaction or negative sentiment that could continue in the short term.",
+            "stop_pct": 5,
+            "target_pct": -10
+          },
+          {
+            "ticker": "XLY",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Consumer Discretionary sector ETF is up 1.89%, showing resilience in consumer spending.",
+            "stop_pct": -4,
+            "target_pct": 8
+          },
+          {
+            "ticker": "VXX",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Volatility index ETF is down -2.98%, indicating decreasing volatility, a positive sign for equities.",
+            "stop_pct": 3,
+            "target_pct": -6
+          },
+          {
+            "ticker": "XLK",
+            "side": "short",
+            "alloc_pct": 10,
+            "thesis": "Technology sector ETF is down -1.05%, potentially overvalued given recent run-up.",
+            "stop_pct": 2,
+            "target_pct": -5
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Apple's 2.1% gain indicates continued strength in consumer tech, driven by ecosystem lock-in.",
+            "stop_pct": -6,
+            "target_pct": 12
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Amazon's 1.52% gain reflects positive sentiment in e-commerce and cloud sectors.",
+            "stop_pct": -5,
+            "target_pct": 10
+          },
+          {
+            "ticker": "XLF",
+            "side": "short",
+            "alloc_pct": 7,
+            "thesis": "Financial sector ETF is down -0.61%, potentially weak given economic indicators.",
+            "stop_pct": 3,
+            "target_pct": -8
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Alphabet's stable 0.22% gain indicates solid fundamentals in the tech sector, driven by search and cloud dominance.",
+            "stop_pct": -4,
+            "target_pct": 8
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2378,
+        "completion_tokens": 702,
+        "total_tokens": 3080,
+        "cost": 0.000964192,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000964192,
+          "upstream_inference_prompt_cost": 0.0004756,
+          "upstream_inference_completions_cost": 0.000488592
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "mistral": {
+      "model": "Mistral",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "AI-driven robotaxi narrative gaining traction; momentum + catalyst asymmetry",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "XLY",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Consumer discretionary leadership in late-cycle rally; relative strength vs SPY",
+            "stop_pct": -7,
+            "target_pct": 20
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Semiconductor pullback oversold; AI infrastructure demand remains structural",
+            "stop_pct": -6,
+            "target_pct": 25
+          },
+          {
+            "ticker": "QQQ",
+            "side": "short",
+            "alloc_pct": 10,
+            "thesis": "Tech heavyweights extended; mean reversion risk after 2026 AI euphoria",
+            "stop_pct": 5,
+            "target_pct": 15
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Energy underowned; geopolitical risk premium + seasonal demand",
+            "stop_pct": -7,
+            "target_pct": 20
+          },
+          {
+            "ticker": "VXX",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Volatility compression extreme; tail-hedge for late-summer correction",
+            "stop_pct": -50,
+            "target_pct": 50
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2687,
+        "completion_tokens": 436,
+        "total_tokens": 3123,
+        "cost": 0.0073005,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0073005,
+          "upstream_inference_prompt_cost": 0.0040305,
+          "upstream_inference_completions_cost": 0.00327
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "kimi": {
+      "model": "Kimi",
+      "tier": "open",
+      "picks": {
+        "positions": [
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Relative-strength leader: +4.2% on a red tech day \u2014 momentum continuation with the highest beta in the book.",
+            "stop_pct": -10,
+            "target_pct": 40
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "+2.1% while semis bleed \u2014 capital rotating into quality mega-cap leadership.",
+            "stop_pct": -7,
+            "target_pct": 22
+          },
+          {
+            "ticker": "XLV",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Healthcare breakout +3.5% on heavy defensive rotation; new leadership trade.",
+            "stop_pct": -6,
+            "target_pct": 18
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Discretionary strength (XLY +1.9%) plus AWS/retail momentum \u2014 riding the rotation, not fighting it.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "MSFT",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Quality anchor: steady accumulation, lower-vol ballast for a high-beta book.",
+            "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Flat on a weak-tech day is quiet strength; ad engine plus AI monetization re-rating.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "XLB",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Materials +1.4% confirms breadth beyond tech; reflation rotation leg.",
+            "stop_pct": -6,
+            "target_pct": 15
+          },
+          {
+            "ticker": "NVDA",
+            "side": "short",
+            "alloc_pct": 8,
+            "thesis": "Semis rolling over (AVGO -4.8%, XLK -1.1%) and NVDA hasn't priced the catch-down yet.",
+            "stop_pct": 6,
+            "target_pct": -18
+          },
+          {
+            "ticker": "VXX",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Vol at 19 is cheap tail insurance with the crowd complacent at highs; small size, large asymmetry.",
+            "stop_pct": -20,
+            "target_pct": 60
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Cheapest mega-cap AI exposure; XLC green, laggard catch-up setup.",
+            "stop_pct": -8,
+            "target_pct": 20
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 2474,
+        "completion_tokens": 3526,
+        "total_tokens": 6000,
+        "cost": 0.0601392,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0601392,
+          "upstream_inference_prompt_cost": 0.0072492,
+          "upstream_inference_completions_cost": 0.05289
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2608,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  }
+}

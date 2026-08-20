@@ -3,45 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morti Race — The Model Trading Benchmark</title>
+<title>Morti Race — Ten Models. One Winner.</title>
 <style>
-  :root { --bg:#0a0a0f; --fg:#e8e8ee; --muted:#8a8a9a; --accent:#4f8cff; --card:#14141f; --border:#26263a; --up:#2ecc71; --down:#e74c3c; }
+  :root { --bg:#0a0a0f; --fg:#e8e8ee; --muted:#8a8a9a; --accent:#4f8cff; --card:#14141f; --border:#26263a; --up:#2ecc71; --down:#ff5c5c; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.55; padding:40px 20px 60px; min-height:100vh; }
-  .wrap { max-width:980px; margin:0 auto; }
-  .kicker { color:var(--accent); font-size:12px; letter-spacing:2.5px; text-transform:uppercase; }
-  h1 { font-size:40px; margin:6px 0 2px; letter-spacing:-0.5px; }
-  .race { font-size:19px; margin:2px 0 18px; }
-  .race b { color:var(--accent); }
-  .meta { color:var(--muted); font-size:12px; margin-bottom:28px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-  .badge { background:rgba(79,140,255,0.13); color:var(--accent); border:1px solid rgba(79,140,255,0.3); padding:2px 11px; border-radius:999px; font-size:11px; }
-  .live { display:inline-flex; align-items:center; gap:6px; }
+  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.5; padding:44px 18px 70px; min-height:100vh; }
+  .wrap { max-width:1060px; margin:0 auto; }
+  .kicker { color:var(--accent); font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-weight:600; }
+  h1 { font-size:40px; margin:8px 0 2px; letter-spacing:-0.5px; }
+  .race { font-size:17px; margin:4px 0 6px; color:var(--muted); }
+  .race b { color:var(--fg); }
+  .meta { display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin:14px 0 26px; font-size:12px; color:var(--muted); }
+  .live { display:inline-flex; align-items:center; gap:6px; color:var(--fg); }
   .dot { width:8px; height:8px; border-radius:50%; background:var(--up); box-shadow:0 0 8px var(--up); animation:pulse 1.6s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
-  table { width:100%; border-collapse:collapse; font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
-  th { text-align:left; color:var(--muted); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:1.2px; padding:13px 14px; border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02); }
-  td { padding:13px 14px; border-bottom:1px solid var(--border); }
-  tr:last-child td { border-bottom:none; }
-  .rank { color:var(--muted); font-size:13px; width:40px; }
-  .model { font-weight:600; }
-  .tier { font-size:10px; text-transform:uppercase; letter-spacing:1px; padding:2px 7px; border-radius:5px; }
-  .tier.frontier { background:rgba(79,140,255,0.15); color:#7aa2ff; }
-  .tier.open { background:rgba(46,204,113,0.12); color:#4ade80; }
-  .eq { font-variant-numeric:tabular-nums; font-weight:600; }
-  .ret { font-variant-numeric:tabular-nums; font-weight:600; }
+  .badge { background:rgba(79,140,255,0.13); color:var(--accent); border:1px solid rgba(79,140,255,0.3); padding:3px 11px; border-radius:999px; font-size:11px; }
+
+  table.board { width:100%; border-collapse:separate; border-spacing:0; font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
+  thead th { text-align:left; color:var(--muted); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:1.2px; padding:13px 15px; border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02); white-space:nowrap; }
+  thead th.num, td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  thead th.num:first-child { text-align:center; }
+  tr.model-row { cursor:pointer; transition:background .15s; }
+  tr.model-row:hover { background:rgba(79,140,255,0.06); }
+  tr.model-row td { padding:14px 15px; border-bottom:1px solid var(--border); }
+  tr.model-row.open { background:rgba(79,140,255,0.05); }
+  tr.model-row.open td { border-bottom:none; }
+  td.rank { color:var(--muted); font-size:13px; text-align:center; width:44px; }
+  td.model { font-weight:600; }
+  td.model .tierdot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:8px; vertical-align:middle; }
+  td.model .tierdot.frontier { background:var(--accent); box-shadow:0 0 6px var(--accent); }
+  td.model .tierdot.open { background:var(--up); }
+  td.eq { font-weight:600; }
   .up { color:var(--up); } .down { color:var(--down); }
-  .pos-grid { display:grid; gap:14px; margin-top:26px; }
-  .model-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; }
-  .model-card h3 { font-size:15px; margin-bottom:2px; }
-  .model-card .sub { color:var(--muted); font-size:12px; margin-bottom:12px; }
-  .ptable { width:100%; border-collapse:collapse; font-size:13px; }
-  .ptable th { font-size:10px; padding:7px 9px; }
-  .ptable td { padding:7px 9px; font-variant-numeric:tabular-nums; }
-  .side { font-size:10px; font-weight:700; letter-spacing:0.5px; padding:2px 6px; border-radius:4px; }
+  .chev { color:var(--muted); font-size:11px; transition:transform .2s; display:inline-block; }
+  tr.model-row.open .chev { transform:rotate(90deg); }
+
+  tr.detail-row td { padding:0 15px 18px; border-bottom:1px solid var(--border); background:rgba(79,140,255,0.03); }
+  .detail { border-top:1px solid var(--border); padding-top:14px; }
+  .thesis-line { font-size:14px; margin-bottom:10px; }
+  .thesis-line .lbl { color:var(--accent); font-size:10px; text-transform:uppercase; letter-spacing:1.2px; display:block; margin-bottom:3px; font-weight:600; }
+  .thesis-line .lbl.j { color:var(--muted); margin-top:12px; }
+  .just { color:var(--muted); font-size:13px; line-height:1.6; max-width:780px; }
+
+  table.hold { width:100%; border-collapse:collapse; font-size:13px; margin-top:14px; }
+  table.hold th { font-size:10px; padding:7px 9px; text-align:left; color:var(--muted); text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid var(--border); }
+  table.hold td { padding:8px 9px; border-bottom:1px solid rgba(255,255,255,0.04); font-variant-numeric:tabular-nums; }
+  table.hold td.num { text-align:right; }
+  table.hold tr:last-child td { border-bottom:none; }
+  .side { font-size:10px; font-weight:700; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; }
   .side.long { background:rgba(46,204,113,0.15); color:var(--up); }
-  .side.short { background:rgba(231,76,60,0.15); color:var(--down); }
-  .thesis { color:var(--muted); font-size:11.5px; font-variant-numeric:normal; }
-  .note { color:var(--muted); font-size:12px; margin-top:28px; line-height:1.6; }
+  .side.short { background:rgba(255,92,92,0.15); color:var(--down); }
+  .h-thesis { color:var(--muted); font-size:12px; font-variant-numeric:normal; line-height:1.45; }
+  .crypto-tag { font-size:9px; color:var(--accent); border:1px solid rgba(79,140,255,0.35); border-radius:4px; padding:1px 4px; margin-left:5px; }
+
+  .note { color:var(--muted); font-size:12px; margin-top:26px; line-height:1.6; max-width:820px; }
+  .err { color:var(--down); margin-top:20px; font-size:13px; }
 </style>
 </head>
 <body>
@@ -52,76 +68,99 @@
   <div class="meta">
     <span class="live"><span class="dot"></span> Live paper</span>
     <span class="badge">Paper trading · Not investment advice</span>
-    <span id="asof" style="color:var(--muted)"></span>
+    <span id="asof"></span>
   </div>
 
-  <table id="board">
+  <table class="board">
     <thead>
-      <tr><th>#</th><th>Model</th><th>Tier</th><th>Equity</th><th>Return</th><th>Positions</th><th>Gross</th></tr>
+      <tr>
+        <th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th>
+        <th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th>
+      </tr>
     </thead>
-    <tbody></tbody>
+    <tbody id="board"></tbody>
   </table>
 
-  <div class="pos-grid" id="portfolios"></div>
-
-  <p class="note">Every model runs the identical SOUL / AGENT / MEMORY / GUARDRAILS files on a shared virtual ledger, marked to Alpaca IEX prices. The only variable is the engine. Every pick, order, and result is attributed to its model and rendered from the append-only ledger — no narrative drift.</p>
+  <p class="note" id="note"></p>
 </div>
 
 <script>
-fetch('/data/ledger.json')
-  .then(r => r.json())
-  .then(d => {
-    const s = d.start_capital, tgt = d.target;
-    document.getElementById('asof').textContent = 'Updated ' + new Date(d.as_of).toLocaleString();
-    const models = Object.values(d.models).sort((a,b) => b.return_pct - a.return_pct);
+const fmtMoney = n => '$' + Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:0});
+const fmtPct = n => (n>=0?'+':'') + n.toFixed(2) + '%';
 
-    // leaderboard
-    const tb = document.querySelector('#board tbody');
-    models.forEach((m, i) => {
-      const cls = m.return_pct >= 0 ? 'up' : 'down';
-      const sign = m.return_pct >= 0 ? '+' : '';
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="rank">${i+1}</td>
-        <td class="model">${m.name}</td>
-        <td><span class="tier ${m.tier}">${m.tier}</span></td>
-        <td class="eq">$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2})}</td>
-        <td class="ret ${cls}">${sign}${m.return_pct.toFixed(3)}%</td>
-        <td>${m.n_positions}</td>
-        <td>${m.alloc_pct}%</td>`;
-      tb.appendChild(tr);
+function load() {
+  fetch('/api/ledger').then(r => r.ok ? r.json() : Promise.reject('api'))
+    .catch(() => fetch('/data/ledger.json').then(r => r.json()))
+    .then(render)
+    .catch(e => document.getElementById('note').textContent = 'Failed to load ledger: ' + e);
+}
+
+function render(d) {
+  const t = new Date(d.as_of);
+  document.getElementById('asof').textContent = 'Marked to live prices · ' + t.toLocaleString();
+  const models = Object.values(d.models).sort((a,b) => b.return_pct - a.return_pct);
+  const tb = document.getElementById('board');
+  tb.innerHTML = '';
+
+  models.forEach((m, i) => {
+    // --- model row ---
+    const row = document.createElement('tr');
+    row.className = 'model-row';
+    const retCls = m.return_pct >= 0 ? 'up' : 'down';
+    const pnlCls = m.unrealized_pnl >= 0 ? 'up' : 'down';
+    const tierdot = m.tier === 'frontier' ? 'frontier' : 'open';
+    row.innerHTML = `
+      <td class="rank num">${i+1}</td>
+      <td class="model"><span class="tierdot ${tierdot}"></span>${m.name}</td>
+      <td class="eq num">$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
+      <td class="num ${retCls}">${fmtPct(m.return_pct)}</td>
+      <td class="num ${pnlCls}">${m.unrealized_pnl>=0?'+':'-'}${fmtMoney(m.unrealized_pnl)}</td>
+      <td class="num">${m.net_pct>=0?'+':''}${m.net_pct}%</td>
+      <td class="num">${m.n_positions}</td>
+      <td class="num"><span class="chev">▶</span></td>`;
+
+    // --- detail row ---
+    const det = document.createElement('tr');
+    det.className = 'detail-row';
+    det.style.display = 'none';
+    const holdRows = (m.positions || []).map(p => {
+      const pc = p.unrealized_pnl >= 0 ? 'up' : 'down';
+      const ps = p.unrealized_pnl >= 0 ? '+' : '-';
+      const crypto = p.is_crypto ? '<span class="crypto-tag">CRYPTO</span>' : '';
+      return `<tr>
+        <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
+        <td><b>${p.ticker}</b>${crypto}</td>
+        <td class="num">${p.alloc_pct}%</td>
+        <td class="num">$${p.entry}</td>
+        <td class="num">$${p.last}</td>
+        <td class="num ${pc}">${ps}${fmtMoney(p.unrealized_pnl)} (${ps}${Math.abs(p.unrealized_pnl_pct).toFixed(1)}%)</td>
+        <td class="h-thesis">${p.thesis || ''}</td>
+      </tr>`;
+    }).join('');
+    det.innerHTML = `<td colspan="8">
+      <div class="detail">
+        ${m.thesis ? `<div class="thesis-line"><span class="lbl">Thesis</span>${m.thesis}</div>` : ''}
+        ${m.justification ? `<div class="thesis-line"><span class="lbl j">Justification</span><div class="just">${m.justification}</div></div>` : ''}
+        <table class="hold">
+          <thead><tr><th>Side</th><th>Ticker</th><th class="num">Alloc</th><th class="num">Entry</th><th class="num">Last</th><th class="num">P&amp;L</th><th>Why</th></tr></thead>
+          <tbody>${holdRows}</tbody>
+        </table>
+      </div>
+    </td>`;
+
+    row.addEventListener('click', () => {
+      const open = det.style.display !== 'none';
+      det.style.display = open ? 'none' : '';
+      row.classList.toggle('open', !open);
     });
 
-    // portfolios
-    const pg = document.getElementById('portfolios');
-    models.forEach(m => {
-      const card = document.createElement('div');
-      card.className = 'model-card';
-      const rows = m.positions.map(p => {
-        const side = p.side.toUpperCase();
-        const pc = p.unrealized_pnl >= 0 ? 'up' : 'down';
-        const ps = p.unrealized_pnl >= 0 ? '+' : '';
-        return `<tr>
-          <td><span class="side ${p.side}">${side}</span></td>
-          <td><b>${p.ticker}</b></td>
-          <td>${p.alloc_pct}%</td>
-          <td>$${p.entry}</td>
-          <td>$${p.last}</td>
-          <td class="${pc}">${ps}$${p.unrealized_pnl.toFixed(0)} (${ps}${p.unrealized_pnl_pct.toFixed(1)}%)</td>
-          <td class="thesis">${p.thesis || ''}</td>
-        </tr>`;
-      }).join('');
-      card.innerHTML = `
-        <h3>${m.name} <span style="color:var(--muted);font-weight:400;font-size:12px">· ${m.tier} · ${m.n_positions} positions · cash $${m.cash.toLocaleString()}</span></h3>
-        <div class="sub">Equity <b>$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2})}</b> · ${m.return_pct>=0?'+':''}${m.return_pct.toFixed(3)}%</div>
-        <table class="ptable">
-          <thead><tr><th>Side</th><th>Ticker</th><th>Alloc</th><th>Entry</th><th>Last</th><th>P&amp;L</th><th>Thesis</th></tr></thead>
-          <tbody>${rows}</tbody>
-        </table>`;
-      pg.appendChild(card);
-    });
-  })
-  .catch(e => { document.body.insertAdjacentHTML('beforeend', '<p style="color:var(--down)">Failed to load ledger: ' + e + '</p>'); });
+    tb.appendChild(row);
+    tb.appendChild(det);
+  });
+}
+
+load();
+setInterval(load, 60000);  // re-mark to live prices every 60s
 </script>
 </body>
 </html>

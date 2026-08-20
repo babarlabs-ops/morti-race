@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/ledger.js": {
+      "includeFiles": "data/ledger.json"
+    }
+  }
+}
