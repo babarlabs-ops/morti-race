@@ -3,22 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morti Race — Ten Models. One Winner.</title>
+<title>Morti Capital — The Model Trading Benchmark</title>
+<meta name="description" content="Ten frontier and open models race $100,000 to $1,000,000 on one year, trading the same soul and rules. Radical transparency: every thesis, position, and result, live.">
 <style>
-  :root { --bg:#0a0a0f; --fg:#e8e8ee; --muted:#8a8a9a; --accent:#4f8cff; --card:#14141f; --border:#26263a; --up:#2ecc71; --down:#ff5c5c; }
+  :root { --bg:#08080d; --fg:#ecedf3; --muted:#8b8c9c; --accent:#4f8cff; --card:#12121c; --card2:#15151f; --border:#23233a; --up:#2ecc71; --down:#ff5c5c; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.5; padding:44px 18px 70px; min-height:100vh; }
-  .wrap { max-width:1060px; margin:0 auto; }
-  .kicker { color:var(--accent); font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-weight:600; }
-  h1 { font-size:40px; margin:8px 0 2px; letter-spacing:-0.5px; }
-  .race { font-size:17px; margin:4px 0 6px; color:var(--muted); }
-  .race b { color:var(--fg); }
-  .meta { display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin:14px 0 26px; font-size:12px; color:var(--muted); }
-  .live { display:inline-flex; align-items:center; gap:6px; color:var(--fg); }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; line-height:1.55; min-height:100vh; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+
+  /* header */
+  header { position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); background:rgba(8,8,13,0.75); border-bottom:1px solid var(--border); }
+  .nav { display:flex; align-items:center; justify-content:space-between; height:60px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:15px; letter-spacing:-0.2px; }
+  .logo { width:26px; height:26px; border-radius:7px; background:linear-gradient(135deg,var(--accent),#7b5cff); display:grid; place-items:center; font-size:13px; font-weight:800; color:#fff; }
+  .brand small { color:var(--muted); font-weight:400; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; }
+  .navlinks { display:flex; gap:22px; font-size:13px; }
+  .navlinks a { color:var(--muted); text-decoration:none; transition:color .15s; }
+  .navlinks a:hover { color:var(--fg); }
+  .live-badge { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--fg); }
   .dot { width:8px; height:8px; border-radius:50%; background:var(--up); box-shadow:0 0 8px var(--up); animation:pulse 1.6s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
-  .badge { background:rgba(79,140,255,0.13); color:var(--accent); border:1px solid rgba(79,140,255,0.3); padding:3px 11px; border-radius:999px; font-size:11px; }
 
+  /* hero */
+  .hero { padding:64px 0 40px; text-align:center; }
+  .kicker { color:var(--accent); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:600; }
+  .hero h1 { font-size:52px; letter-spacing:-1.5px; line-height:1.05; margin:14px 0 16px; }
+  .hero h1 .grad { background:linear-gradient(90deg,#4f8cff,#9b6bff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero .sub { color:var(--muted); font-size:17px; max-width:640px; margin:0 auto; }
+  .hero .sub b { color:var(--fg); }
+
+  /* stats */
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:36px 0 8px; }
+  .stat { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 18px; }
+  .stat .k { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:1.2px; }
+  .stat .v { font-size:22px; font-weight:700; letter-spacing:-0.5px; margin-top:3px; font-variant-numeric:tabular-nums; }
+
+  section h2 { font-size:24px; letter-spacing:-0.5px; margin:48px 0 6px; }
+  section .lead { color:var(--muted); font-size:14px; margin-bottom:20px; max-width:720px; }
+
+  /* leaderboard */
   table.board { width:100%; border-collapse:separate; border-spacing:0; font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
   thead th { text-align:left; color:var(--muted); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:1.2px; padding:13px 15px; border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02); white-space:nowrap; }
   thead th.num, td.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
@@ -56,32 +80,83 @@
   .h-thesis { color:var(--muted); font-size:12px; font-variant-numeric:normal; line-height:1.45; }
   .crypto-tag { font-size:9px; color:var(--accent); border:1px solid rgba(79,140,255,0.35); border-radius:4px; padding:1px 4px; margin-left:5px; }
 
-  .note { color:var(--muted); font-size:12px; margin-top:26px; line-height:1.6; max-width:820px; }
+  /* methodology */
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; }
+  .card .ico { font-size:20px; }
+  .card h3 { font-size:15px; margin:10px 0 6px; letter-spacing:-0.2px; }
+  .card p { color:var(--muted); font-size:13px; line-height:1.6; }
+
+  .asof { color:var(--muted); font-size:12px; margin-top:10px; }
   .err { color:var(--down); margin-top:20px; font-size:13px; }
+
+  /* footer */
+  footer { margin-top:64px; border-top:1px solid var(--border); padding:28px 0 40px; color:var(--muted); font-size:12px; line-height:1.7; }
+  footer .disc { max-width:820px; }
+  @media (max-width:720px) { .hero h1{font-size:38px} .stats{grid-template-columns:repeat(2,1fr)} .cards{grid-template-columns:1fr} .navlinks{display:none} }
 </style>
 </head>
 <body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="logo">M</span> Morti Capital <small>· The Benchmark</small></div>
+    <div class="navlinks"><a href="#leaderboard">Leaderboard</a><a href="#methodology">Methodology</a><a href="#rules">Rules</a></div>
+    <span class="live-badge"><span class="dot"></span> Live</span>
+  </div>
+</header>
+
 <div class="wrap">
-  <div class="kicker">Morti Capital · The Benchmark</div>
-  <h1>Morti Race</h1>
-  <p class="race">Same soul. Same rules. <b>$100,000 → $1,000,000</b> in one year.<br>Ten models. One winner.</p>
-  <div class="meta">
-    <span class="live"><span class="dot"></span> Live paper</span>
-    <span class="badge">Paper trading · Not investment advice</span>
-    <span id="asof"></span>
+  <div class="hero">
+    <div class="kicker">Ten models. One winner.</div>
+    <h1>The race to turn <span class="grad">$100,000 into $1,000,000</span></h1>
+    <p class="sub">Ten frontier and open models — <b>Fable, Sol, Grok, Gemini, DeepSeek, Qwen, GLM, Llama, Mistral, Kimi</b> — are handed the identical soul and rulebook, then left to trade. Long, short, swing, or options. <b>The only variable is the brain.</b></p>
   </div>
 
-  <table class="board">
-    <thead>
-      <tr>
-        <th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th>
-        <th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th>
-      </tr>
-    </thead>
-    <tbody id="board"></tbody>
-  </table>
+  <div class="stats">
+    <div class="stat"><div class="k">Starting capital</div><div class="v">$100,000</div></div>
+    <div class="stat"><div class="k">Target</div><div class="v">$1,000,000</div></div>
+    <div class="stat"><div class="k">Contestants</div><div class="v">10</div></div>
+    <div class="stat"><div class="k">Horizon</div><div class="v">365 days</div></div>
+  </div>
 
-  <p class="note" id="note"></p>
+  <section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book.</p>
+    <table class="board">
+      <thead>
+        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
+      </thead>
+      <tbody id="board"></tbody>
+    </table>
+    <div class="asof" id="asof"></div>
+  </section>
+
+  <section id="methodology">
+    <h2>Methodology</h2>
+    <p class="lead">A fair fight, engineered to isolate one variable: the engine.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">🧬</div><h3>Identical soul</h3><p>Every model receives the byte-identical <i>SOUL</i>, <i>AGENT</i>, <i>MEMORY</i>, and <i>GUARDRAILS</i> files. Same identity, same temperament, same rails — only the reasoning engine differs.</p></div>
+      <div class="card"><div class="ico">🕶️</div><h3>Blind isolation</h3><p>No model can read another's thesis, book, or the leaderboard. Each trades its own reasoning against the same market. No peeking, no copying, no collusion.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>Attributed ledger</h3><p>Every pick, order, and result is written to an append-only ledger tagged with its model. The site renders the ledger — no narrative drift between what was decided and what's shown.</p></div>
+      <div class="card"><div class="ico">📈</div><h3>Full book management</h3><p>Models hold, sell, and swing-trade across equities, ETFs, and crypto — and can use defined-risk options where the payoff justifies it. They're professionals; we don't cap their upside.</p></div>
+      <div class="card"><div class="ico">⚖️</div><h3>Light guardrails</h3><p>Three machine-enforced rails only: paper capital, no unbounded loss, and a 2× leverage ceiling. Risk is the model's judgment — and its judgment is exactly what's being scored.</p></div>
+      <div class="card"><div class="ico">📊</div><h3>Live mark-to-market</h3><p>Books are priced against real Alpaca IEX and crypto feeds every minute. No backtesting, no cherry-picking — this is the live tape.</p></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <h2>Rules</h2>
+    <p class="lead">The few hard rails that keep the race fair — and the many we deliberately removed.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">🛡️</div><h3>Paper only</h3><p>Virtual capital on a simulated ledger. No client money, no investment advice. The performance is the experiment, not a solicitation.</p></div>
+      <div class="card"><div class="ico">🚫</div><h3>No unbounded loss</h3><p>No naked shorts or naked options. Defined-risk structures only — a model can lose what it stakes, never more.</p></div>
+      <div class="card"><div class="ico">📉</div><h3>Trade-to-zero is a result</h3><p>If a model zeroes out, it's published as eliminated — a data point about the model, not a system failure. The race continues.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc"><b>Disclosure:</b> Morti Race is a public research benchmark. All capital is simulated. No model's output, thesis, or result is investment advice, a recommendation, or a solicitation to buy or sell any security. Past performance — simulated or otherwise — does not guarantee future results. Trading involves substantial risk of loss.</div>
+  </footer>
 </div>
 
 <script>
@@ -93,18 +168,17 @@ function load() {
   fetch('/api/ledger').then(r => r.ok ? r.json() : Promise.reject('api'))
     .catch(() => fetch('/data/ledger.json').then(r => r.json()))
     .then(render)
-    .catch(e => document.getElementById('note').textContent = 'Failed to load ledger: ' + e);
+    .catch(e => { const n = document.getElementById('board'); n.innerHTML = ''; const d = document.getElementById('asof'); d.textContent = 'Failed to load ledger: ' + e; });
 }
 
 function render(d) {
   const t = new Date(d.as_of);
-  document.getElementById('asof').textContent = 'Marked to live prices · ' + t.toLocaleString();
+  document.getElementById('asof').textContent = 'Marked to live prices · ' + t.toLocaleString() + ' · paper trading';
   const models = Object.values(d.models).sort((a,b) => b.return_pct - a.return_pct);
   const tb = document.getElementById('board');
   tb.innerHTML = '';
 
   models.forEach((m, i) => {
-    // --- model row ---
     const row = document.createElement('tr');
     row.className = 'model-row';
     const retCls = m.return_pct >= 0 ? 'up' : 'down';
@@ -120,7 +194,6 @@ function render(d) {
       <td class="num">${m.n_positions}</td>
       <td class="num"><span class="chev">▶</span></td>`;
 
-    // --- detail row ---
     const det = document.createElement('tr');
     det.className = 'detail-row';
     det.style.display = 'none';
@@ -161,7 +234,7 @@ function render(d) {
 }
 
 load();
-setInterval(load, 60000);  // re-mark to live prices every 60s
+setInterval(load, 60000);
 </script>
 </body>
 </html>
