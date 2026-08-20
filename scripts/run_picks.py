@@ -136,7 +136,8 @@ def main():
             "For an equity/crypto position give: ticker, side (long/short), alloc_pct, one-line "
             "thesis, stop_pct (e.g. -8), target_pct (e.g. +25).\n"
             "For an option give: ticker (underlying), type (long_call/long_put), strike_pct "
-            "(e.g. 5 = 5% OTM), expiry_days (e.g. 30), alloc_pct, thesis.\n"
+            "(percent OUT-OF-THE-MONEY, 1 to 40: e.g. 5 = strike 5% above spot for a call, "
+            "5% below spot for a put), expiry_days (e.g. 30), alloc_pct, thesis.\n"
             + market +
             "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
             "\"justification\":\"<2-4 sentences on your selection logic>\","

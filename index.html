@@ -201,6 +201,19 @@ function render(d) {
       const pc = p.unrealized_pnl >= 0 ? 'up' : 'down';
       const ps = p.unrealized_pnl >= 0 ? '+' : '-';
       const crypto = p.is_crypto ? '<span class="crypto-tag">CRYPTO</span>' : '';
+      if (p.kind === 'option') {
+        const obadge = p.is_call ? 'CALL' : 'PUT';
+        const ocls = p.is_call ? 'long' : 'short';
+        return `<tr>
+          <td><span class="side ${ocls}">${obadge}</span></td>
+          <td><b>${p.ticker}</b> <span class="crypto-tag">OPTION</span><div class="h-thesis">strike ${fmtPrice(p.strike)} · exp ${(p.expiry||'').slice(0,10)}</div></td>
+          <td class="num">${p.alloc_pct}%</td>
+          <td class="num">prem ${fmtPrice(p.premium)}</td>
+          <td class="num">${p.contracts}×</td>
+          <td class="num ${pc}">${ps}${fmtMoney(p.unrealized_pnl)}</td>
+          <td class="h-thesis">${p.thesis || ''}</td>
+        </tr>`;
+      }
       return `<tr>
         <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
         <td><b>${p.ticker}</b>${crypto}</td>

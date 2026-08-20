@@ -185,7 +185,7 @@ def main():
                 # default: treat "option" type + side long => call, short => put
                 if kind == "option":
                     is_call = (pos.get("side", "long") == "long")
-                strike_pct = pos.get("strike_pct", 5) or 5
+                strike_pct = max(1, min(40, pos.get("strike_pct", 5) or 5))
                 strike = spot * (1 + strike_pct / 100.0) if is_call else spot * (1 - strike_pct / 100.0)
                 expiry_days = pos.get("expiry_days", 30) or 30
                 expiry = (now + timedelta(days=expiry_days)).isoformat()
