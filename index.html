@@ -179,6 +179,7 @@ function render(d) {
   tb.innerHTML = '';
 
   models.forEach((m, i) => {
+    if (!Number.isFinite(m.equity) || !Number.isFinite(m.return_pct)) return;
     const row = document.createElement('tr');
     row.className = 'model-row';
     const retCls = m.return_pct >= 0 ? 'up' : 'down';
