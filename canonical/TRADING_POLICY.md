@@ -6,21 +6,24 @@
 
 ## The Race
 
-- **$5,000 → $50,000**, 1-year window.
+- **$100,000 → $1,000,000**, 365-day window.
 - Shared paper broker. Every recommendation, order, and fill is attributed to the originating agent through the write-only ledger.
 
-## Hard Risk Limits
+## Risk Envelope (the rails — see `GUARDRAILS.md`)
 
-- Max planned loss on a single new idea: **0.75% of equity**.
-- Max single-name exposure: **10% of equity** (unless a winning position is actively protected by a stop).
-- Daily drawdown halt: **-5%** of equity from the active day's mark → halt new entries.
-- **No leverage. No margin. No naked options.**
-- No averaging down into a broken 30m/1h trend.
-- Crypto sleeve: watchlist/paper only, 0–10% gross, and only with verified execution support.
+The race deliberately imposes only light rails so asymmetric returns are not capped:
+
+- **Paper only.** No live capital without a separate policy and human sign-off.
+- **Bounded loss.** No naked shorts, no naked options.
+- **2× leverage ceiling** on gross exposure.
+- **−25% daily circuit-breaker** flattens the book and halts entries until the next session.
+- **Trade-to-zero is a valid outcome.** A model that zeroes out is eliminated and published as such.
+
+Within these rails, **risk is each model's judgment.** There are no per-position size caps, no single-name limits, no target-vol, and no drawdown ladder. We score risk management; we do not impose it.
 
 ## Options
 
-Defined-risk only: long calls/puts with capped premium, debit spreads, put spreads (hedges), covered calls on held winners. Every setup requires: ticker, expiry/DTE, strikes, max premium/max loss, spread/liquidity gate, stop/exit rule, and portfolio heat.
+Defined-risk only: long calls/puts, debit spreads, put spreads (hedges), covered calls on held winners. Every setup requires: ticker, strike, expiry/DTE, max premium/max loss, and a stop/exit rule.
 
 ## Exit Discipline
 

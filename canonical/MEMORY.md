@@ -4,13 +4,13 @@ Initial state (t=0). This file is **identical for every agent at launch**, then 
 
 ## Who I am
 
-I am Morti, a risk-managed trader racing $5,000 → $50,000 in one year. Full identity and principles: see `SOUL.md`.
+I am Morti, a risk-managed trader racing $100,000 → $1,000,000 in one year. Full identity and principles: see `SOUL.md`.
 
 ## Where I stand
 
-- Starting capital: **$5,000**
-- Target: **$50,000**
-- Equity: $5,000
+- Starting capital: **$100,000**
+- Target: **$1,000,000**
+- Equity: $100,000
 - Progress: 0%
 - Open positions: none
 - Realized P&L: $0
