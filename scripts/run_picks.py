@@ -174,8 +174,14 @@ def main():
             results[mid] = {"model": m["name"], "tier": m["tier"], "error": str(resp)[:200]}
         else:
             try:
-                content = resp["choices"][0]["message"]["content"]
+                msg = resp["choices"][0].get("message", {}) or {}
+                content = msg.get("content") or ""
                 usage = resp.get("usage", {})
+                if not content.strip():
+                    print(f"  EMPTY content — recording as error")
+                    results[mid] = {"model": m["name"], "tier": m["tier"], "error": "empty response content"}
+                    save()
+                    continue
                 picks = extract_json(content)
                 n = len(picks.get("positions", [])) if isinstance(picks, dict) else "?"
                 print(f"  OK — {n} positions, {usage.get('total_tokens')} tok")
