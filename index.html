@@ -262,11 +262,11 @@ function render(d) {
 
 // methodology — render canonical doctrine files as readable markdown
 const FILES = [
-  { name: 'SOUL.md',           desc: 'Identity — who Morti is' },
-  { name: 'AGENTS.md',         desc: 'Operating guide — daily loop, isolation, submission' },
-  { name: 'MEMORY.md',         desc: 'Starting state — diverges privately per engine' },
-  { name: 'GUARDRAILS.md',     desc: 'Enforcement — the few machine-enforced rails' },
-  { name: 'TRADING_POLICY.md', desc: 'Risk envelope, options, exit discipline' },
+  { name: 'SOUL.md',      desc: 'Constitution — identity, edge, risk, prime directive' },
+  { name: 'AGENT.md',     desc: 'Operating manual — the six specialists' },
+  { name: 'BENCHMARK.md', desc: 'Evaluation standard — scorecard + gates' },
+  { name: 'HERMES.md',    desc: 'Orchestrator — gates, halt, escalation' },
+  { name: 'MEMORY.md',    desc: 'State, journal & learning layers' },
 ];
 function inline(s) {
   return s
@@ -295,7 +295,6 @@ function mdToHtml(md) {
 (async () => {
   const host = document.getElementById('mfiles');
   if (!host) return;
-  let stale = false;
   for (const f of FILES) {
     const d = document.createElement('details');
     d.className = 'mfile';
@@ -305,18 +304,10 @@ function mdToHtml(md) {
       const r = await fetch('/canonical/' + f.name);
       if (!r.ok) throw new Error(r.status);
       const md = await r.text();
-      if (/\$5,000|50,000|No leverage|No margin/.test(md)) stale = true;
       d.querySelector('.mbody').innerHTML = mdToHtml(md);
     } catch (e) {
       d.querySelector('.mbody').innerHTML = '<p style="color:var(--down)">Failed to load ' + f.name + ' (' + e + ')</p>';
     }
-  }
-  if (stale) {
-    const w = document.createElement('p');
-    w.className = 'asof';
-    w.style.color = '#e6b800';
-    w.innerHTML = '⚠️ Two doctrine files still reference the pre-launch $5,000→$50,000 config and are being corrected.';
-    host.appendChild(w);
   }
 })();
 

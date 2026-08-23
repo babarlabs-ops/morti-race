@@ -10,11 +10,11 @@ These five files are byte-identical for every agent at launch:
 
 | File | Purpose |
 |---|---|
-| `SOUL.md` | Identity — who Morti *is* (engine-agnostic persona) |
-| `AGENTS.md` | Operating guide — the daily loop, isolation, submission protocol |
-| `MEMORY.md` | Context — starting state; diverges privately per engine |
-| `GUARDRAILS.md` | Enforcement — the few machine-enforced rails |
-| `TRADING_POLICY.md` | Risk envelope, options, exit discipline |
+| `SOUL.md` | Constitution — identity, edge doctrine, risk limits, prime directive |
+| `AGENT.md` | Operating manual — the six specialists and the cycle |
+| `BENCHMARK.md` | Evaluation standard — gates, scorecard, MinTRL |
+| `HERMES.md` | Orchestrator — gates, halt authority, escalation |
+| `MEMORY.md` | State, journal, calibration & learning layers |
 
 ## Experiment parameters
 
