@@ -1,0 +1,1087 @@
+{
+  "generated_utc": "2026-08-23T11:40:05.783073+00:00",
+  "results": {
+    "fable": {
+      "model": "Fable",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Risk-on tape with VXX fading and crypto-adjacent equities (HOOD +13.7%, COIN +8.3%, MSTR +6.7%) ripping while spot BTC sits flat at $77k \u2014 flow says spot catches up to the proxies, not the other way around.",
+        "justification": "I sell XLE: energy is the only red sector on a green tape and my thesis there has no catalyst \u2014 dead money. I add to BTC on the proxy-divergence signal rather than chasing HOOD/COIN after double-digit moves, which would violate my no-chase rule. I add TSM as the cleanest un-extended semi (only +0.7% today, upstream of NVDA/AMD demand) and a small defined-risk NVDA call to add convexity into the AI capex cycle while the stock digests. Everything else holds with stops written before size; ~35% stays in cash.",
+        "positions": [
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AI capex core holding; pullback day in an uptrend, demand signal intact via peers.",
+            "stop_pct": -10,
+            "target_pct": 25
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "HBM memory supply-demand imbalance; pricing power through 2026.",
+            "stop_pct": -12,
+            "target_pct": 30
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Gemini monetization plus cloud acceleration re-rating; still cheapest mega-cap AI play.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Depressed vs cycle highs; risk-on tape plus crypto-equity leadership pulls majors up.",
+            "stop_pct": -12,
+            "target_pct": 35
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "High-beta crypto recovery play; moves 1.5-2x ETH in risk-on regimes.",
+            "stop_pct": -15,
+            "target_pct": 40
+          },
+          {
+            "ticker": "WMT",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Defensive ballast; consumer trade-down winner with TGT +4.5% confirming retail strength.",
+            "stop_pct": -7,
+            "target_pct": 15
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Adding 3%: MSTR/COIN/HOOD ripping while spot flat is a leading flow signal \u2014 spot converges up.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Monopoly foundry upstream of every AI winner; only +0.7% today, not extended.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "NVDA",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 45,
+            "alloc_pct": 2,
+            "thesis": "Defined-risk convexity on AI leader breaking out of digestion; max loss is premium, upside multiple if tape strength continues."
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 6771,
+        "completion_tokens": 2002,
+        "total_tokens": 8773,
+        "cost": 0.16781,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.16781,
+          "upstream_inference_prompt_cost": 0.06771,
+          "upstream_inference_completions_cost": 0.1001
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 869,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "sol": {
+      "model": "Sol",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Broad risk-on breadth favors crypto, semiconductors, financials, and industrials over defensive healthcare, but sharp speculative gains argue against chasing new momentum names.",
+        "justification": "Hold the existing crypto and semiconductor leaders with defined exits, retain XLF, sell XLV, and rotate its 10% allocation into XLI. The final book remains 95% invested with 5% cash, while avoiding extended names such as HOOD and COIN after outsized one-day moves.",
+        "positions": [
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "Flat price despite surging crypto equities suggests underlying risk appetite can drive a catch-up move in the benchmark asset.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 13,
+            "thesis": "ETH offers higher-beta upside if broad crypto strength expands beyond equity proxies and BTC.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "SOL is the highest-beta liquid crypto holding and should outperform during sustained speculative risk-on flows.",
+            "stop_pct": -11,
+            "target_pct": 35
+          },
+          {
+            "ticker": "AMD",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Positive semiconductor breadth and AMD's relative resilience support continued AI-compute momentum.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Broadcom provides diversified AI infrastructure exposure with positive price momentum and less single-product risk.",
+            "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "TSM remains the manufacturing bottleneck for advanced AI chips and is holding firm despite mixed semiconductor trading.",
+            "stop_pct": -7,
+            "target_pct": 18
+          },
+          {
+            "ticker": "XLF",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Broad market strength and strong financial leadership favor continued upside in the sector without single-bank risk.",
+            "stop_pct": -6,
+            "target_pct": 14
+          },
+          {
+            "ticker": "XLI",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Rotation into cyclicals and strength across capital-goods names favor industrials over defensive healthcare.",
+            "stop_pct": -6,
+            "target_pct": 15
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5037,
+        "completion_tokens": 942,
+        "total_tokens": 5979,
+        "cost": 0.022011,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 5034,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.022011,
+          "upstream_inference_prompt_cost": 0.012591,
+          "upstream_inference_completions_cost": 0.00942
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 467,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "grok": {
+      "model": "Grok",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Mild risk-on tape but semiconductor internals are fracturing \u2014 stay long quality compounders, cut crowded AI-beta, add uncorrelated cash-flow names.",
+        "justification": "The book was five semis plus three cryptos: one factor, no asymmetry. MU/AMD/SOL/ETH add beta I do not need on a day with no fresh catalyst; NVDA/TSM/AVGO plus mega-cap cash compounders is the core I can defend in one line each. META/AMZN/AAPL/LLY reduce single-factor AI risk without chasing HOOD/COIN/TSLA rips. Sixteen percent cash is dry powder; I do not buy premium without a dated catalyst.",
+        "positions": [
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "AI compute standard; today's dip is noise, not invalidation of the training/inference stack.",
+            "stop_pct": -8,
+            "target_pct": 28
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Sole advanced-node foundry \u2014 every leading AI die still clears TSMC.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Custom ASICs plus networking attach to AI capex, less consensus than NVDA.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "MSFT",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Azure plus Copilot is the cleanest large-cap AI monetization path.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "GOOGL",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Search cash funds Gemini; core compounder, not a crowded-chase name today.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Scarce collateral in a risk-on tape; keep the reserve crypto, drop the beta cousins.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Ads plus AI cost-out diversifies the book away from silicon.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "AMZN",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "AWS plus retail on a small red print; quality that was missing from a semi-heavy book.",
+            "stop_pct": -8,
+            "target_pct": 24
+          },
+          {
+            "ticker": "AAPL",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Slight dip, fortress FCF and buybacks; lowers single-factor AI risk.",
+            "stop_pct": -7,
+            "target_pct": 20
+          },
+          {
+            "ticker": "LLY",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "GLP-1 franchise is uncorrelated to the crowded AI tape and still compounding.",
+            "stop_pct": -8,
+            "target_pct": 25
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5547,
+        "completion_tokens": 4264,
+        "total_tokens": 9811,
+        "cost": 0.036486,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.036486,
+          "upstream_inference_prompt_cost": 0.010902,
+          "upstream_inference_completions_cost": 0.025584
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3590,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "gemini": {
+      "model": "Gemini",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Capitalizing on aggressive momentum leadership in crypto-fintech proxies, AI infrastructure, and industrial breakout leaders.",
+        "justification": "Crypto-linked equities (COIN, MSTR, HOOD) and high-beta tech leaders (TSLA, PLTR, NET) are showing exceptional relative strength with outsized volume. We maintain heavy exposure to high-asymmetry winners while adding TSLA and ORCL to capture broad risk-on expansion across tech and industrial leaders like DE. Capital is optimized across 10 defined-risk positions with precise stops to protect equity as we scale.",
+        "positions": [
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Core digital asset reserve anchoring the crypto-beta cycle.",
+            "stop_pct": -6,
+            "target_pct": 20
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Crypto trading volume surge driving explosive +8.3% top-line momentum.",
+            "stop_pct": -7,
+            "target_pct": 25
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "High-beta leveraged BTC proxy breaking out +6.7% on strong flows.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "HOOD",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Retail volume and crypto trading explosion driving +13.7% momentum breakout.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "High-beta growth breakout gaining +5.1% with strong institutional accumulation.",
+            "stop_pct": -6,
+            "target_pct": 25
+          },
+          {
+            "ticker": "DE",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Top-tier industrial earnings momentum breaking out +4.35% to new highs.",
+            "stop_pct": -5,
+            "target_pct": 18
+          },
+          {
+            "ticker": "PLTR",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Enterprise AI execution leader continuing steady +3.5% upward trend.",
+            "stop_pct": -6,
+            "target_pct": 22
+          },
+          {
+            "ticker": "NET",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Edge cloud and cyber infrastructure breakout surging +5.15%.",
+            "stop_pct": -7,
+            "target_pct": 25
+          },
+          {
+            "ticker": "ORCL",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Cloud infrastructure and AI database backlog expansion driving +3.1% breakout.",
+            "stop_pct": -5,
+            "target_pct": 20
+          },
+          {
+            "ticker": "GS",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 30,
+            "alloc_pct": 8,
+            "thesis": "Capital markets and investment banking surge powering financial sector breakout."
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 6360,
+        "completion_tokens": 1851,
+        "total_tokens": 8211,
+        "cost": 0.005855625,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.005855625,
+          "upstream_inference_prompt_cost": 0.002385,
+          "upstream_inference_completions_cost": 0.003470625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 964,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "deepseek": {
+      "model": "DeepSeek",
+      "tier": "open",
+      "picks": {
+        "thesis": "Risk-on momentum is broadening into financials, crypto, and select growth names, while defensive sectors fade \u2014 I'm leaning long into the strongest breakouts and trimming laggards.",
+        "justification": "GS +3.7%, COIN +8.3%, HOOD +13.7%, MSTR +6.7%, TSLA +5.1% \u2014 capital is rotating aggressively into high-beta and crypto-exposed names. NVDA is flat/down on the day, underperforming the tape, so I'm cutting it to free capital for stronger momentum. I'm taking profits on the COIN calls (up huge) and rolling into a fresh PLTR call with a tighter OTM strike to capture continued AI momentum. Adding a starter in MSTR as a leveraged BTC proxy given the crypto strength. Keeping GS and BTC as core longs.",
+        "positions": [
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 0,
+            "thesis": "SELL: Underperforming the tape today, capital better deployed into stronger momentum names.",
+            "stop_pct": 0,
+            "target_pct": 0
+          },
+          {
+            "ticker": "GS",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "HOLD: Breaking out +3.7% on broad financial strength, trend is accelerating.",
+            "stop_pct": -5,
+            "target_pct": 15
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "HOLD: Crypto proxy strength across COIN/MSTR/HOOD confirms risk appetite for digital assets.",
+            "stop_pct": -6,
+            "target_pct": 20
+          },
+          {
+            "ticker": "COIN",
+            "type": "long_call",
+            "strike_pct": 0,
+            "expiry_days": 0,
+            "alloc_pct": 0,
+            "thesis": "SELL: Taking profits on the massive +8.3% move today, locking in gains."
+          },
+          {
+            "ticker": "PLTR",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 21,
+            "alloc_pct": 8,
+            "thesis": "NEW: PLTR +3.5% today breaking out, AI momentum continues; fresh call with 5% OTM strike captures upside with defined risk."
+          },
+          {
+            "ticker": "TSLA",
+            "type": "long_call",
+            "strike_pct": 0,
+            "expiry_days": 0,
+            "alloc_pct": 0,
+            "thesis": "HOLD existing calls: TSLA +5.1% today, strong momentum, letting it run."
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "NEW: Levered BTC proxy surging +6.7% today, crypto momentum is broadening \u2014 asymmetric upside with defined stop.",
+            "stop_pct": -7,
+            "target_pct": 25
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5138,
+        "completion_tokens": 726,
+        "total_tokens": 5864,
+        "cost": 0.008567,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.008567,
+          "upstream_inference_prompt_cost": 0.0066794,
+          "upstream_inference_completions_cost": 0.0018876
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "qwen": {
+      "model": "Qwen",
+      "tier": "open",
+      "picks": {
+        "thesis": "Risk-on rotation is favoring crypto-linked fintech, AI software, and select cyclicals; concentrate in high-beta momentum leaders while trimming weaker alts and semis.",
+        "justification": "COIN, HOOD, MSTR, TSLA, and DE show the strongest relative momentum, while DOGE, MU, and SMCI are weaker or less differentiated. I keep core crypto exposure but add NET and PLTR for AI-software upside, plus a defined-risk COIN call for convexity. Cash remains available to absorb volatility and add to confirmed breakouts.",
+        "positions": [
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Crypto exchange volume and retail trading momentum are accelerating.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "ETH is a liquid core crypto asset with potential institutional catch-up.",
+            "stop_pct": -12,
+            "target_pct": 35
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "SOL offers high-beta upside if crypto risk appetite expands.",
+            "stop_pct": -15,
+            "target_pct": 50
+          },
+          {
+            "ticker": "HOOD",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "HOOD is benefiting from a surge in retail trading and crypto activity.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "MSTR is a high-beta BTC proxy with strong near-term momentum.",
+            "stop_pct": -15,
+            "target_pct": 45
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "TSLA momentum is improving with AI and autonomy optionality.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "DE",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "DE is breaking out on cyclical recovery and strong relative strength.",
+            "stop_pct": -8,
+            "target_pct": 22
+          },
+          {
+            "ticker": "NET",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "NET is riding AI-driven cybersecurity and cloud demand.",
+            "stop_pct": -10,
+            "target_pct": 35
+          },
+          {
+            "ticker": "PLTR",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "PLTR has strong AI software momentum across government and enterprise.",
+            "stop_pct": -12,
+            "target_pct": 35
+          },
+          {
+            "ticker": "COIN",
+            "type": "long_call",
+            "strike_pct": 8,
+            "expiry_days": 60,
+            "alloc_pct": 6,
+            "thesis": "Defined-risk convexity if crypto volume expansion continues."
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 6187,
+        "completion_tokens": 7629,
+        "total_tokens": 13816,
+        "cost": 0.058148,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.058148,
+          "upstream_inference_prompt_cost": 0.012374,
+          "upstream_inference_completions_cost": 0.045774
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6795,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "glm": {
+      "model": "GLM",
+      "tier": "open",
+      "picks": {
+        "thesis": "Risk-on rotation confirmed: defensives dumped (XLU -2.3%) while financials, software, and crypto equities (COIN +8%, HOOD +14%, MSTR +7%) rip against flat coins \u2014 hold the AI+crypto core, own the laggard coins, and convert redundant ETH into a defined-risk MU earnings call.",
+        "justification": "The tape validates the book's risk-on stance, so the core holds: 34% AI semis, 25% crypto, 7% financials, 6% small caps. ETH is my least-conviction leg \u2014 it carries full crypto downside correlation without differentiated upside given the structural ETH/BTC decay \u2014 so I recycle that 5% into a 5% OTM MU call expiring past late-September earnings, turning redundant spot beta into a bounded-loss, catalyst-driven payoff. I keep 23% cash and refuse to chase +8-14% single-day movers (HOOD, COIN, TSLA, GS); if I miss them, I wait.",
+        "positions": [
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "AI compute demand leader; Blackwell-to-Rubin cycle keeps estimates rising \u2014 core anchor position.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "HBM memory supercycle with pricing power into 2027; supply discipline extends the cycle.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MU",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 45,
+            "alloc_pct": 5,
+            "thesis": "Defined-risk bet on late-September earnings: HBM pricing beat drives a breakout through ~$1,015; premium paid is max loss."
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Sole leading-edge foundry for every AI accelerator; geopolitical discount persists while results compound.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Custom AI silicon wins share as hyperscalers diversify compute away from GPUs; steady re-rating.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 11,
+            "thesis": "Crypto equities ripping double-digits while coins sit flat \u2014 the laggard asset catches the bid.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "High-beta crypto with real fee and flow activity; outperforms BTC in confirmed risk-on legs.",
+            "stop_pct": -15,
+            "target_pct": 50
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Leveraged crypto beta: volumes, custody, and trading flows expand with price; today's +8% shows the crowd arriving.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "XLF",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Financials lead the rotation (GS +3.7%); deal flow and a steepening curve lift the sector.",
+            "stop_pct": -6,
+            "target_pct": 15
+          },
+          {
+            "ticker": "IWM",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Small caps catch the bid as defensives are sold; domestic-cycle and rate-cut beta.",
+            "stop_pct": -7,
+            "target_pct": 18
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5216,
+        "completion_tokens": 7262,
+        "total_tokens": 12478,
+        "cost": 0.0392552,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0392552,
+          "upstream_inference_prompt_cost": 0.0073024,
+          "upstream_inference_completions_cost": 0.0319528
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6561,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "llama": {
+      "model": "Llama",
+      "tier": "open",
+      "picks": {
+        "thesis": "Today's market is driven by positive momentum in tech and crypto, with key holdings showing significant gains.",
+        "justification": "The current portfolio is heavily weighted in crypto and tech, which are showing strong performance. New positions will be considered in sectors that are likely to benefit from this momentum. Risk management will be crucial to avoid overexposure.",
+        "positions": [
+          {
+            "ticker": "DE",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Strong earnings and agricultural demand drive DE higher",
+            "stop_pct": -5,
+            "target_pct": 10
+          },
+          {
+            "ticker": "MSTR",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Continued adoption of bitcoin drives MSTR higher",
+            "stop_pct": -8,
+            "target_pct": 15
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Crypto market strength boosts COIN",
+            "stop_pct": -10,
+            "target_pct": 20
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Electric vehicle demand and tech momentum support TSLA",
+            "stop_pct": -8,
+            "target_pct": 15
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Bitcoin continues to drive crypto market",
+            "stop_pct": -5,
+            "target_pct": 10
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Ethereum benefits from overall crypto strength",
+            "stop_pct": -8,
+            "target_pct": 15
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Solana's performance tied to crypto market momentum",
+            "stop_pct": -10,
+            "target_pct": 20
+          },
+          {
+            "ticker": "VXX",
+            "side": "short",
+            "alloc_pct": 2,
+            "thesis": "Low volatility environment suggests VXX will decline",
+            "stop_pct": 10,
+            "target_pct": -15
+          },
+          {
+            "ticker": "HOOD",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Fintech and crypto exposure drives HOOD higher",
+            "stop_pct": -10,
+            "target_pct": 20
+          },
+          {
+            "ticker": "GS",
+            "side": "long",
+            "alloc_pct": 4,
+            "thesis": "Financial sector stability and growth support GS",
+            "stop_pct": -8,
+            "target_pct": 12
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5070,
+        "completion_tokens": 561,
+        "total_tokens": 5631,
+        "cost": 0.0014628,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0014628,
+          "upstream_inference_prompt_cost": 0.001014,
+          "upstream_inference_completions_cost": 0.0004488
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "mistral": {
+      "model": "Mistral",
+      "tier": "open",
+      "picks": {
+        "thesis": "AI infrastructure and energy sectors remain structurally bullish; rotate out of laggards (MRVL, MU) and into momentum leaders (TSLA, COIN, HOOD) while maintaining core AI exposure (NVDA, AVGO).",
+        "justification": "MRVL and MU are underperforming with weak price action (-5.59% and -0.78% today), violating the 'read the room' rule. TSLA (+5.12%), COIN (+8.32%), and HOOD (+13.7%) show explosive momentum tied to AI/electric vehicle and crypto narratives. Core AI names (NVDA, AVGO) hold structural edge but require tighter stops. Energy (XLE) is flat; trim to reallocate to higher-conviction plays. ARM call is underwater; close to free capital for better asymmetry elsewhere.",
+        "positions": [
+          {
+            "ticker": "NVDA",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "Core AI GPU leader with structural demand; holding but tightening stop.",
+            "stop_pct": -8,
+            "target_pct": 25
+          },
+          {
+            "ticker": "AVGO",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "AI networking/accelerator play with diversified exposure.",
+            "stop_pct": -8,
+            "target_pct": 20
+          },
+          {
+            "ticker": "TSLA",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Momentum leader in EV/AI robotaxi narrative, breaking out (+5.12%).",
+            "stop_pct": -7,
+            "target_pct": 20
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Crypto exchange leveraged to spot ETF flows and institutional adoption (+8.32%).",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "HOOD",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Retail trading platform with crypto leverage; extreme momentum (+13.7%).",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Macro hedge and crypto beta; consolidating but structurally bullish.",
+            "stop_pct": -8,
+            "target_pct": 35
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "High-beta crypto with ecosystem growth; hold for asymmetry.",
+            "stop_pct": -15,
+            "target_pct": 50
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Energy sector play on supply constraints; trim to reduce exposure.",
+            "stop_pct": -6,
+            "target_pct": 15
+          },
+          {
+            "ticker": "ARM",
+            "type": "long_call",
+            "strike_pct": 10,
+            "expiry_days": 45,
+            "alloc_pct": 5,
+            "thesis": "AI chip designer with long-term optionality; defined-risk play on rebound."
+          },
+          {
+            "ticker": "V",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Payments leader with steady growth; defensive hold.",
+            "stop_pct": -5,
+            "target_pct": 12
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5955,
+        "completion_tokens": 809,
+        "total_tokens": 6764,
+        "cost": 0.015,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.015,
+          "upstream_inference_prompt_cost": 0.0089325,
+          "upstream_inference_completions_cost": 0.0060675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "kimi": {
+      "model": "Kimi",
+      "tier": "open",
+      "picks": {
+        "thesis": "Risk-on is broadening: vol bleeding (VXX -1.6%), defensives sold (XLU -2.3%), and crypto equities (COIN +8.3%, HOOD +13.7%, MSTR +6.7%) are ripping while spot crypto sits flat \u2014 I want to own the spot catch-up, keep AI-leader exposure with defined risk, and stay short utilities as the rotation hedge.",
+        "justification": "The book is aligned with the tape, so I hold the core: BTC/ETH/SOL for the crypto-equity-vs-spot divergence, COIN stock plus its 10%-OTM calls as the leveraged expression, ORCL/GS as AI-infra and capital-markets beneficiaries. I trim MU from 12% to 10% because semis breadth is deteriorating (MRVL -5.6%, INTC -2.3%, ARM -3.0%) even though the memory thesis is intact. I swap flat QCOM for a defined-risk NVDA call \u2014 the AI leader lagging -1% while the AI complex firms is the better asymmetric catch-up \u2014 and bump BTC to 17%. I refuse to chase HOOD/TSLA/RIVN after double-digit pops; 25% cash stays dry for pullbacks.",
+        "positions": [
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 17,
+            "thesis": "Crypto equities leading spot by a wide margin; long the catch-up in a risk-on tape.",
+            "stop_pct": -8,
+            "target_pct": 30
+          },
+          {
+            "ticker": "MU",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "HBM/memory pricing cycle intact; trimmed on mixed semis breadth.",
+            "stop_pct": -10,
+            "target_pct": 25
+          },
+          {
+            "ticker": "ETH",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Crypto catch-up beta; historically lags BTC then outperforms when risk-on extends.",
+            "stop_pct": -10,
+            "target_pct": 35
+          },
+          {
+            "ticker": "ORCL",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "AI cloud infra demand with momentum, +3.1% today.",
+            "stop_pct": -9,
+            "target_pct": 22
+          },
+          {
+            "ticker": "GS",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Trading and capital-markets revenue leverage to the crypto/equity risk-on.",
+            "stop_pct": -8,
+            "target_pct": 18
+          },
+          {
+            "ticker": "SOL",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "High-beta crypto; retail flows returning per HOOD/COIN prints.",
+            "stop_pct": -12,
+            "target_pct": 40
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Crypto equity leader +8.3%; hold the momentum alongside the calls.",
+            "stop_pct": -10,
+            "target_pct": 30
+          },
+          {
+            "ticker": "XLU",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Rotation out of defensives as risk-on broadens; utilities -2.3% today.",
+            "stop_pct": -5,
+            "target_pct": 8
+          },
+          {
+            "ticker": "COIN",
+            "type": "long_call",
+            "strike_pct": 10,
+            "expiry_days": 30,
+            "alloc_pct": 3,
+            "thesis": "Defined-risk upside on crypto momentum; hold existing 10%-OTM calls while spot crypto catches up to the equities."
+          },
+          {
+            "ticker": "NVDA",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 45,
+            "alloc_pct": 4,
+            "thesis": "AI leader lagging -1% while the AI complex (ORCL, AVGO) firms; defined-risk catch-up into any capex catalyst."
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 5156,
+        "completion_tokens": 5358,
+        "total_tokens": 10514,
+        "cost": 0.0956652,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0956652,
+          "upstream_inference_prompt_cost": 0.0152952,
+          "upstream_inference_completions_cost": 0.08037
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3836,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  }
+}
