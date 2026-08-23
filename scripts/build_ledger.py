@@ -12,7 +12,7 @@ import json, os, math, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ENV_PATH = "/Users/minimi/.hermes/profiles/morticapital/.env"
+ENV_PATH = "/Users/minimi/.hermes/profiles/morti/.env"
 START = 100000
 
 CRYPTO = {"BTC", "ETH", "SOL", "DOGE", "XRP", "ADA", "LTC", "AVAX", "LINK", "DOT",

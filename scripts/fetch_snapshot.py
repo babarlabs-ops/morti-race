@@ -7,7 +7,7 @@ Broad universe so models see ALL assets as fair game (less ETF-heavy).
 import json, os, urllib.request, urllib.parse
 from datetime import datetime, timezone
 
-ENV_PATH = "/Users/minimi/.hermes/profiles/morticapital/.env"
+ENV_PATH = "/Users/minimi/.hermes/profiles/morti/.env"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
