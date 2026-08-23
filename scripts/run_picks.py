@@ -102,7 +102,6 @@ def main():
         sys.exit(1)
     cfg = json.loads(read(os.path.join(ROOT, "config", "models.json")))
     soul = read(os.path.join(ROOT, "canonical", "SOUL.md"))
-    guardrails = read(os.path.join(ROOT, "canonical", "GUARDRAILS.md"))
 
     market = ""
     snap = os.path.join(ROOT, "data", "market_snapshot.json")
@@ -119,7 +118,7 @@ def main():
 
     system = (
         "You are Morti, an autonomous trader. Internalize this identity exactly:\n\n"
-        + soul + "\n\nGUARDRAILS (machine-enforced limits):\n" + guardrails
+        + soul
     )
 
     def user_prompt(mid):
