@@ -241,6 +241,7 @@ def main():
             "alloc_pct": round(invested / equity * 100, 1) if equity else 0,
             "net_pct": round((long_d - short_d) / equity * 100, 1) if equity else 0,
             "unrealized_pnl": 0.0,
+            "prev_equity": round(prev_equity, 2),
             "equity": round(equity, 2),
             "return_pct": round((equity / START - 1) * 100, 3),
             "n_positions": len(positions),

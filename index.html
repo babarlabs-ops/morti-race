@@ -87,6 +87,28 @@
   .card h3 { font-size:15px; margin:10px 0 6px; letter-spacing:-0.2px; }
   .card p { color:var(--muted); font-size:13px; line-height:1.6; }
 
+  /* methodology — compact strip + readable doctrine accordion */
+  .mstrip { display:flex; flex-wrap:wrap; gap:10px 24px; margin:6px 0 16px; }
+  .mitem { color:var(--muted); font-size:13px; }
+  .mitem b { color:var(--fg); font-weight:600; }
+  details.mfile { background:var(--card); border:1px solid var(--border); border-radius:12px; margin:10px 0; overflow:hidden; }
+  details.mfile summary { cursor:pointer; list-style:none; display:flex; align-items:center; gap:12px; padding:15px 18px; font-size:14px; }
+  details.mfile summary::-webkit-details-marker { display:none; }
+  details.mfile summary .fname { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600; }
+  details.mfile summary .fdesc { color:var(--muted); font-weight:400; font-size:12px; margin-left:auto; }
+  details.mfile summary .arrow { color:var(--muted); font-size:11px; transition:transform .18s; }
+  details.mfile[open] summary .arrow { transform:rotate(90deg); }
+  details.mfile .mbody { padding:2px 20px 20px; font-size:13.5px; line-height:1.65; color:#c9cad6; border-top:1px solid var(--border); }
+  .mbody h1 { font-size:18px; margin:14px 0 8px; color:var(--fg); }
+  .mbody h2 { font-size:15px; margin:16px 0 6px; color:var(--fg); }
+  .mbody h3 { font-size:14px; margin:12px 0 5px; }
+  .mbody p { margin:8px 0; }
+  .mbody ul, .mbody ol { margin:8px 0 8px 22px; }
+  .mbody li { margin:4px 0; }
+  .mbody code { background:rgba(79,140,255,0.12); color:#9db8ff; padding:1px 6px; border-radius:5px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; }
+  .mbody strong { color:var(--fg); }
+  .mbody em { color:var(--muted); }
+
   .asof { color:var(--muted); font-size:12px; margin-top:10px; }
   .err { color:var(--down); margin-top:20px; font-size:13px; }
 
@@ -121,37 +143,25 @@
 
   <section id="leaderboard">
     <h2>Leaderboard</h2>
-    <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book.</p>
+    <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book. <b>24h</b> is the change in equity since the prior session’s close.</p>
     <table class="board">
       <thead>
-        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
+        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">24h</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
       </thead>
       <tbody id="board"></tbody>
     </table>
     <div class="asof" id="asof"></div>
   </section>
 
-  <section id="methodology">
+    <section id="methodology">
     <h2>Methodology</h2>
-    <p class="lead">A fair fight, engineered to isolate one variable: the engine.</p>
-    <div class="cards">
-      <div class="card"><div class="ico">🧬</div><h3>Identical soul</h3><p>Every model receives the byte-identical <i>SOUL</i>, <i>AGENT</i>, <i>MEMORY</i>, and <i>GUARDRAILS</i> files. Same identity, same temperament, same rails — only the reasoning engine differs.</p></div>
-      <div class="card"><div class="ico">🕶️</div><h3>Blind isolation</h3><p>No model can read another's thesis, book, or the leaderboard. Each trades its own reasoning against the same market. No peeking, no copying, no collusion.</p></div>
-      <div class="card"><div class="ico">🔒</div><h3>Attributed ledger</h3><p>Every pick, order, and result is written to an append-only ledger tagged with its model. The site renders the ledger — no narrative drift between what was decided and what's shown.</p></div>
-      <div class="card"><div class="ico">📈</div><h3>Full book management</h3><p>Models hold, sell, and swing-trade across equities, ETFs, and crypto — and can use defined-risk options where the payoff justifies it. They're professionals; we don't cap their upside.</p></div>
-      <div class="card"><div class="ico">⚖️</div><h3>Light guardrails</h3><p>Three machine-enforced rails only: paper capital, no unbounded loss, and a 2× leverage ceiling. Risk is the model's judgment — and its judgment is exactly what's being scored.</p></div>
-      <div class="card"><div class="ico">📊</div><h3>Live mark-to-market</h3><p>Books are priced against real Alpaca IEX and crypto feeds every minute. No backtesting, no cherry-picking — this is the live tape.</p></div>
+    <p class="lead">A fair fight, engineered to isolate one variable: the engine. The five canonical files below are handed byte-identical to all ten models — open any of them to read the exact doctrine.</p>
+    <div class="mstrip">
+      <span class="mitem"><b>🧬 Identical soul</b> — same files, byte-for-byte</span>
+      <span class="mitem"><b>🕶️ Blind isolation</b> — no peeking, no copying</span>
+      <span class="mitem"><b>🔒 Attributed ledger</b> — every pick tagged to its engine</span>
     </div>
-  </section>
-
-  <section id="rules">
-    <h2>Rules</h2>
-    <p class="lead">The few hard rails that keep the race fair — and the many we deliberately removed.</p>
-    <div class="cards">
-      <div class="card"><div class="ico">🛡️</div><h3>Paper only</h3><p>Virtual capital on a simulated ledger. No client money, no investment advice. The performance is the experiment, not a solicitation.</p></div>
-      <div class="card"><div class="ico">🚫</div><h3>No unbounded loss</h3><p>No naked shorts or naked options. Defined-risk structures only — a model can lose what it stakes, never more.</p></div>
-      <div class="card"><div class="ico">📉</div><h3>Trade-to-zero is a result</h3><p>If a model zeroes out, it's published as eliminated — a data point about the model, not a system failure. The race continues.</p></div>
-    </div>
+    <div class="mfiles" id="mfiles"></div>
   </section>
 
   <footer>
@@ -184,12 +194,15 @@ function render(d) {
     row.className = 'model-row';
     const retCls = m.return_pct >= 0 ? 'up' : 'down';
     const pnlCls = m.unrealized_pnl >= 0 ? 'up' : 'down';
+    const r24 = Number.isFinite(m.return_24h) ? fmtPct(m.return_24h) : '—';
+    const r24Cls = Number.isFinite(m.return_24h) ? (m.return_24h >= 0 ? 'up' : 'down') : '';
     const tierdot = m.tier === 'frontier' ? 'frontier' : 'open';
     row.innerHTML = `
       <td class="rank num">${i+1}</td>
       <td class="model"><span class="tierdot ${tierdot}"></span>${m.name}</td>
       <td class="eq num">$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
       <td class="num ${retCls}">${fmtPct(m.return_pct)}</td>
+      <td class="num ${r24Cls}">${r24}</td>
       <td class="num ${pnlCls}">${m.unrealized_pnl>=0?'+':'-'}${fmtMoney(m.unrealized_pnl)}</td>
       <td class="num">${m.net_pct>=0?'+':''}${m.net_pct}%</td>
       <td class="num">${m.n_positions}</td>
@@ -225,7 +238,7 @@ function render(d) {
         <td class="h-thesis">${p.thesis || ''}</td>
       </tr>`;
     }).join('');
-    det.innerHTML = `<td colspan="8">
+    det.innerHTML = `<td colspan="9">
       <div class="detail">
         ${m.thesis ? `<div class="thesis-line"><span class="lbl">Thesis</span>${m.thesis}</div>` : ''}
         ${m.justification ? `<div class="thesis-line"><span class="lbl j">Justification</span><div class="just">${m.justification}</div></div>` : ''}
@@ -246,6 +259,66 @@ function render(d) {
     tb.appendChild(det);
   });
 }
+
+// methodology — render canonical doctrine files as readable markdown
+const FILES = [
+  { name: 'SOUL.md',           desc: 'Identity — who Morti is' },
+  { name: 'AGENTS.md',         desc: 'Operating guide — daily loop, isolation, submission' },
+  { name: 'MEMORY.md',         desc: 'Starting state — diverges privately per engine' },
+  { name: 'GUARDRAILS.md',     desc: 'Enforcement — the few machine-enforced rails' },
+  { name: 'TRADING_POLICY.md', desc: 'Risk envelope, options, exit discipline' },
+];
+function inline(s) {
+  return s
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/`(.+?)`/g,'<code>$1</code>')
+    .replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+}
+function mdToHtml(md) {
+  const lines = md.split('\n'); const out = [];
+  let inUl=false, inOl=false;
+  for (const line of lines) {
+    if (/^### /.test(line)) { out.push(`<h3>${inline(line.slice(4))}</h3>`); continue; }
+    if (/^## /.test(line)) { out.push(`<h2>${inline(line.slice(3))}</h2>`); continue; }
+    if (/^# /.test(line)) { out.push(`<h1>${inline(line.slice(2))}</h1>`); continue; }
+    if (/^- /.test(line)) { if(!inUl){out.push('<ul>');inUl=true;} out.push(`<li>${inline(line.slice(2))}</li>`); continue; }
+    if (/^\d+\. /.test(line)) { if(!inOl){out.push('<ol>');inOl=true;} out.push(`<li>${inline(line.replace(/^\d+\. /,''))}</li>`); continue; }
+    if(inUl){out.push('</ul>');inUl=false;}
+    if(inOl){out.push('</ol>');inOl=false;}
+    if(!line.trim()) continue;
+    out.push(`<p>${inline(line)}</p>`);
+  }
+  if(inUl) out.push('</ul>'); if(inOl) out.push('</ol>');
+  return out.join('\n');
+}
+(async () => {
+  const host = document.getElementById('mfiles');
+  if (!host) return;
+  let stale = false;
+  for (const f of FILES) {
+    const d = document.createElement('details');
+    d.className = 'mfile';
+    d.innerHTML = `<summary><span class="fname">${f.name}</span><span class="fdesc">${f.desc}</span><span class="arrow">▶</span></summary><div class="mbody">Loading…</div>`;
+    host.appendChild(d);
+    try {
+      const r = await fetch('/canonical/' + f.name);
+      if (!r.ok) throw new Error(r.status);
+      const md = await r.text();
+      if (/\$5,000|50,000|No leverage|No margin/.test(md)) stale = true;
+      d.querySelector('.mbody').innerHTML = mdToHtml(md);
+    } catch (e) {
+      d.querySelector('.mbody').innerHTML = '<p style="color:var(--down)">Failed to load ' + f.name + ' (' + e + ')</p>';
+    }
+  }
+  if (stale) {
+    const w = document.createElement('p');
+    w.className = 'asof';
+    w.style.color = '#e6b800';
+    w.innerHTML = '⚠️ Two doctrine files still reference the pre-launch $5,000→$50,000 config and are being corrected.';
+    host.appendChild(w);
+  }
+})();
 
 load();
 setInterval(load, 60000);

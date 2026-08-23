@@ -97,6 +97,7 @@ export default async function handler(req, res) {
       const base = Number.isFinite(m.equity) ? m.equity : ledger.start_capital;
       m.equity = +(base + u).toFixed(2);
       m.return_pct = +((m.equity / ledger.start_capital - 1) * 100).toFixed(3);
+      m.return_24h = Number.isFinite(m.prev_equity) && m.prev_equity > 0 ? +((m.equity / m.prev_equity - 1) * 100).toFixed(2) : null;
     }
     ledger.as_of = new Date().toISOString();
     res.status(200).json(ledger);

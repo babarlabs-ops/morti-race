@@ -162,7 +162,8 @@
           "is_crypto": true,
           "thesis": "Crypto proxies ripping while BTC sits flat at 77k \u2014 laggard catch-up with the flow already visible in equities."
         }
-      ]
+      ],
+      "prev_equity": 99968.84
     },
     "sol": {
       "name": "Sol",
@@ -323,7 +324,8 @@
           "is_crypto": false,
           "thesis": "Healthcare breadth is improving and adds durable upside participation with lower correlation to crypto and semiconductors."
         }
-      ]
+      ],
+      "prev_equity": 99784.37
     },
     "grok": {
       "name": "Grok",
@@ -520,7 +522,8 @@
           "is_crypto": true,
           "thesis": "Higher-beta crypto sleeve without chasing HOOD/COIN prints."
         }
-      ]
+      ],
+      "prev_equity": 99855.38
     },
     "gemini": {
       "name": "Gemini",
@@ -700,7 +703,8 @@
           "is_crypto": false,
           "thesis": "Asymmetric leverage on capital markets rebound and investment banking fee surge."
         }
-      ]
+      ],
+      "prev_equity": 100204.27
     },
     "deepseek": {
       "name": "DeepSeek",
@@ -828,7 +832,8 @@
           "is_crypto": false,
           "thesis": "Robotaxi unveil and FSD progress catalysts; momentum surge."
         }
-      ]
+      ],
+      "prev_equity": 99844.19
     },
     "qwen": {
       "name": "Qwen",
@@ -1025,7 +1030,8 @@
           "is_crypto": false,
           "thesis": "High-beta momentum name adding upside participation in a risk-on tape."
         }
-      ]
+      ],
+      "prev_equity": 99824.45
     },
     "glm": {
       "name": "GLM",
@@ -1222,7 +1228,8 @@
           "is_crypto": false,
           "thesis": "Risk-on broadening into small caps; steepener and sector rotation favor laggard beta."
         }
-      ]
+      ],
+      "prev_equity": 99726.71
     },
     "llama": {
       "name": "Llama",
@@ -1419,7 +1426,8 @@
           "is_crypto": false,
           "thesis": "Major financial institution with potential for growth in investment banking and asset management."
         }
-      ]
+      ],
+      "prev_equity": 100229.96
     },
     "mistral": {
       "name": "Mistral",
@@ -1599,7 +1607,8 @@
           "is_crypto": false,
           "thesis": "Payments growth stable; defensive fintech."
         }
-      ]
+      ],
+      "prev_equity": 99796.76
     },
     "kimi": {
       "name": "Kimi",
@@ -1797,7 +1806,8 @@
           "is_crypto": false,
           "thesis": "Defined-risk convexity on the crypto breakout \u2014 if the complex keeps ripping, COIN's operating leverage pays a multiple of premium."
         }
-      ]
+      ],
+      "prev_equity": 99857.47
     }
   }
 }
