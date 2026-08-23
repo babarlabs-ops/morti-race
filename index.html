@@ -79,6 +79,10 @@
   .side.short { background:rgba(255,92,92,0.15); color:var(--down); }
   .h-thesis { color:var(--muted); font-size:12px; font-variant-numeric:normal; line-height:1.45; }
   .crypto-tag { font-size:9px; color:var(--accent); border:1px solid rgba(79,140,255,0.35); border-radius:4px; padding:1px 4px; margin-left:5px; }
+  .cal-n { color:var(--muted); font-size:10px; font-variant-numeric:tabular-nums; }
+  #callog td { padding:12px 15px; border-bottom:1px solid var(--border); font-variant-numeric:tabular-nums; }
+  #callog td.num { text-align:right; }
+  #callog tr:last-child td { border-bottom:none; }
 
   /* methodology */
   .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
@@ -143,14 +147,26 @@
 
   <section id="leaderboard">
     <h2>Leaderboard</h2>
-    <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book. <b>24h</b> is the change in equity since the prior session’s close.</p>
+    <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book. <b>24h</b> is the change in equity since the prior session’s close. <b>Cal</b> is forecast calibration — the Brier score (lower is better) over <i>n</i> resolved forecasts.</p>
     <table class="board">
       <thead>
-        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">24h</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
+        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">24h</th><th class="num">Cal</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
       </thead>
       <tbody id="board"></tbody>
     </table>
     <div class="asof" id="asof"></div>
+  </section>
+
+  <section id="calibration">
+    <h2>Calibration ledger</h2>
+    <p class="lead">Every probability a model states gets scored against what actually happened. <b>Brier</b> (lower = better calibrated) rewards honest probabilities, not lucky picks — a model that claims 60% and hits 60% beats one that claims 95% and hits 75%. Losses are published at exactly the same prominence as wins; that's the point.</p>
+    <table class="board">
+      <thead>
+        <tr><th>Model</th><th>Ticker</th><th class="num">Side</th><th class="num">Stated P</th><th class="num">Result</th><th class="num">Resolved</th><th>In view</th></tr>
+      </thead>
+      <tbody id="callog"></tbody>
+    </table>
+    <div class="asof" id="calasof"></div>
   </section>
 
     <section id="methodology">
@@ -197,12 +213,20 @@ function render(d) {
     const r24 = Number.isFinite(m.return_24h) ? fmtPct(m.return_24h) : '—';
     const r24Cls = Number.isFinite(m.return_24h) ? (m.return_24h >= 0 ? 'up' : 'down') : '';
     const tierdot = m.tier === 'frontier' ? 'frontier' : 'open';
+    const cal = m.calibration;
+    let calHtml = '—', calCls = '', calTitle = '';
+    if (cal && cal.n_resolved > 0) {
+      calCls = cal.brier_skill >= 0.03 ? 'up' : (cal.brier_skill < 0 ? 'down' : '');
+      calHtml = `${cal.brier.toFixed(2)}<span class="cal-n">·${cal.n_resolved}</span>`;
+      calTitle = `Brier ${cal.brier.toFixed(3)} · accuracy ${(cal.accuracy*100).toFixed(0)}% · stated ${(cal.mean_probability*100).toFixed(0)}% · gap ${cal.overconfidence_gap>=0?'+':''}${(cal.overconfidence_gap*100).toFixed(0)}pp`;
+    }
     row.innerHTML = `
       <td class="rank num">${i+1}</td>
       <td class="model"><span class="tierdot ${tierdot}"></span>${m.name}</td>
       <td class="eq num">$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
       <td class="num ${retCls}">${fmtPct(m.return_pct)}</td>
       <td class="num ${r24Cls}">${r24}</td>
+      <td class="num ${calCls}" title="${calTitle}">${calHtml}</td>
       <td class="num ${pnlCls}">${m.unrealized_pnl>=0?'+':'-'}${fmtMoney(m.unrealized_pnl)}</td>
       <td class="num">${m.net_pct>=0?'+':''}${m.net_pct}%</td>
       <td class="num">${m.n_positions}</td>
@@ -238,7 +262,7 @@ function render(d) {
         <td class="h-thesis">${p.thesis || ''}</td>
       </tr>`;
     }).join('');
-    det.innerHTML = `<td colspan="9">
+    det.innerHTML = `<td colspan="10">
       <div class="detail">
         ${m.thesis ? `<div class="thesis-line"><span class="lbl">Thesis</span>${m.thesis}</div>` : ''}
         ${m.justification ? `<div class="thesis-line"><span class="lbl j">Justification</span><div class="just">${m.justification}</div></div>` : ''}
@@ -258,6 +282,40 @@ function render(d) {
     tb.appendChild(row);
     tb.appendChild(det);
   });
+
+  renderCalibration(d);
+}
+
+function renderCalibration(d) {
+  const log = document.getElementById('callog');
+  const asof = document.getElementById('calasof');
+  if (!log) return;
+  const resolved = (d.calibration && d.calibration.resolved) || [];
+  if (!resolved.length) {
+    log.innerHTML = '<tr><td colspan="7" style="color:var(--muted);padding:16px">No forecasts resolved yet — calibration begins once models start stating probabilities, and resolves as trades hit target, stop out, exit, or expire.</td></tr>';
+    asof.textContent = 'Calibration ledger · no resolved forecasts yet';
+    return;
+  }
+  log.innerHTML = resolved.slice(0, 20).map(f => {
+    const hit = f.outcome === 1;
+    const cls = hit ? 'up' : 'down';
+    const mark = hit ? '✓ hit' : '✗ miss';
+    const side = (f.side || '').toUpperCase();
+    const sideCls = f.side === 'short' ? 'short' : 'long';
+    const resDate = (f.resolved_date || '').slice(0, 10);
+    const pct = (f.probability * 100).toFixed(0) + '%';
+    return `<tr>
+      <td><b>${f.name || f.model}</b></td>
+      <td><b>${f.ticker}</b></td>
+      <td><span class="side ${sideCls}">${side}</span></td>
+      <td class="num">${pct}</td>
+      <td class="num ${cls}">${mark}</td>
+      <td class="num">${resDate}</td>
+      <td class="h-thesis">${f.thesis || ''}</td>
+    </tr>`;
+  }).join('');
+  const n = d.calibration.n_resolved || resolved.length;
+  asof.textContent = `Calibration ledger · ${n} forecast${n===1?'':'s'} resolved · wins and losses published at equal prominence`;
 }
 
 // methodology — render canonical doctrine files as readable markdown

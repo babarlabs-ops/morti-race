@@ -123,6 +123,19 @@ def main():
 
     def user_prompt(mid):
         book = current_book_summary(prev, mid)
+        contract = (
+            "DECISION CONTRACT — every position you open must state, up front:\n"
+            "- edge_type: one of informational | analytical | behavioral | structural. "
+            "No position without a declared edge (name who is giving you the alpha and why).\n"
+            "- probability: your honest estimate (0.05–0.95) that this trade hits its target "
+            "before its stop, within horizon_days. Calibration beats conviction: being right "
+            "60% while claiming 60% beats being right 75% while claiming 95%.\n"
+            "- invalidation: the falsifier, written BEFORE entry — \"we are wrong if X by date D\". "
+            "If you cannot write it, you do not understand the trade yet.\n"
+            "- horizon_days: how many days you give the thesis to resolve (options: use expiry_days).\n"
+            "FLAT IS A POSITION. \"No action\" is a valid and frequently correct cycle output. "
+            "Do not invent trades to look productive.\n"
+        )
         return (
             "You are racing $100,000 to $1,000,000 in one year. This is today's decision cycle.\n\n"
             "YOUR CURRENT BOOK:\n" + book +
@@ -131,17 +144,18 @@ def main():
             "Rules: ALL assets are fair game — US equities, ETFs, and crypto (BTC, ETH, SOL, "
             "etc.). Defined-risk OPTIONS are allowed where the payoff justifies it (long calls "
             "or long puts only). Up to 10 positions. Allocations are percentages of equity "
-            "summing to at most 100 (leave the rest cash if unsure).\n"
-            "For an equity/crypto position give: ticker, side (long/short), alloc_pct, one-line "
-            "thesis, stop_pct (e.g. -8), target_pct (e.g. +25).\n"
+            "summing to at most 100 (leave the rest cash if unsure).\n\n"
+            + contract +
+            "\nFor an equity/crypto position give: ticker, side (long/short), alloc_pct, one-line "
+            "thesis, stop_pct (e.g. -8), target_pct (e.g. +25), edge_type, probability, invalidation, horizon_days.\n"
             "For an option give: ticker (underlying), type (long_call/long_put), strike_pct "
             "(percent OUT-OF-THE-MONEY, 1 to 40: e.g. 5 = strike 5% above spot for a call, "
-            "5% below spot for a put), expiry_days (e.g. 30), alloc_pct, thesis.\n"
+            "5% below spot for a put), expiry_days (e.g. 30), alloc_pct, thesis, edge_type, probability, invalidation, horizon_days.\n"
             + market +
             "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
             "\"justification\":\"<2-4 sentences on your selection logic>\","
-            "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25} OR "
-            "{\"ticker\":\"NVDA\",\"type\":\"long_call\",\"strike_pct\":5,\"expiry_days\":30,\"alloc_pct\":5,\"thesis\":\"...\"}]}"
+            "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25,\"edge_type\":\"analytical\",\"probability\":0.62,\"invalidation\":\"...\",\"horizon_days\":30} OR "
+            "{\"ticker\":\"NVDA\",\"type\":\"long_call\",\"strike_pct\":5,\"expiry_days\":30,\"alloc_pct\":5,\"thesis\":\"...\",\"edge_type\":\"behavioral\",\"probability\":0.55,\"invalidation\":\"...\",\"horizon_days\":30}]}"
         )
 
     outdir = os.path.join(ROOT, "data", "picks")

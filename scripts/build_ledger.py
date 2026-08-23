@@ -204,6 +204,10 @@ def main():
                     "entry": spot, "last": spot, "unrealized_pnl": 0.0, "unrealized_pnl_pct": 0.0,
                     "is_crypto": ticker in CRYPTO,
                     "thesis": (pos.get("thesis") or "")[:180],
+                    "edge_type": (pos.get("edge_type") or "").strip(),
+                    "probability": pos.get("probability"),
+                    "invalidation": (pos.get("invalidation") or "")[:200],
+                    "horizon_days": pos.get("horizon_days") or pos.get("expiry_days") or 30,
                 })
             else:
                 if ticker not in entry_prices or ticker not in live:
@@ -226,6 +230,10 @@ def main():
                     "unrealized_pnl": 0.0, "unrealized_pnl_pct": 0.0,
                     "is_crypto": ticker in CRYPTO,
                     "thesis": (pos.get("thesis") or "")[:180],
+                    "edge_type": (pos.get("edge_type") or "").strip(),
+                    "probability": pos.get("probability"),
+                    "invalidation": (pos.get("invalidation") or "")[:200],
+                    "horizon_days": pos.get("horizon_days") or 30,
                 })
 
         invested = sum(x["dollar"] for x in positions)

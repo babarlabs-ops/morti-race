@@ -100,6 +100,22 @@ export default async function handler(req, res) {
       m.return_24h = Number.isFinite(m.prev_equity) && m.prev_equity > 0 ? +((m.equity / m.prev_equity - 1) * 100).toFixed(2) : null;
     }
     ledger.as_of = new Date().toISOString();
+    // Calibration — attach per-model Brier/accuracy from data/calibration.json
+    try {
+      const calib = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'calibration.json'), 'utf8'));
+      const cm = calib.models || {};
+      for (const [mid, m] of Object.entries(ledger.models)) {
+        m.calibration = cm[mid] || null;
+      }
+      const resolved = (calib.forecasts || []).filter(f => f.outcome !== null && f.outcome !== undefined);
+      ledger.calibration = {
+        as_of: calib.as_of,
+        resolved: resolved.slice(-120).reverse(),
+        n_resolved: resolved.length,
+      };
+    } catch (e) {
+      ledger.calibration = null;
+    }
     res.status(200).json(ledger);
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });

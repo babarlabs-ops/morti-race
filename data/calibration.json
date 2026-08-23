@@ -1,0 +1,106 @@
+{
+  "as_of": "2026-08-23T20:34:26.530373+00:00",
+  "forecasts": [],
+  "models": {
+    "fable": {
+      "name": "Fable",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "sol": {
+      "name": "Sol",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "grok": {
+      "name": "Grok",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "gemini": {
+      "name": "Gemini",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "qwen": {
+      "name": "Qwen",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "glm": {
+      "name": "GLM",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "llama": {
+      "name": "Llama",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "mistral": {
+      "name": "Mistral",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    },
+    "kimi": {
+      "name": "Kimi",
+      "n_resolved": 0,
+      "n_open": 0,
+      "brier": null,
+      "accuracy": null,
+      "mean_probability": null,
+      "overconfidence_gap": null,
+      "brier_skill": null
+    }
+  }
+}
