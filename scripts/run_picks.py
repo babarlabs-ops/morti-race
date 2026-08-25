@@ -35,7 +35,7 @@ def call_model(model, system, user, key):
     payload = {"model": model, "messages": [
         {"role": "system", "content": system},
         {"role": "user", "content": user},
-    ], "temperature": 0.4}
+    ], "temperature": 0.4, "max_tokens": 3000}
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
         data=json.dumps(payload).encode(),

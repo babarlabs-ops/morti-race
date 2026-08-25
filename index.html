@@ -79,6 +79,7 @@
   .side.short { background:rgba(255,92,92,0.15); color:var(--down); }
   .h-thesis { color:var(--muted); font-size:12px; font-variant-numeric:normal; line-height:1.45; }
   .crypto-tag { font-size:9px; color:var(--accent); border:1px solid rgba(79,140,255,0.35); border-radius:4px; padding:1px 4px; margin-left:5px; }
+  .sym-name { color:var(--muted); font-weight:400; font-size:12px; margin-left:5px; }
   .cal-n { color:var(--muted); font-size:10px; font-variant-numeric:tabular-nums; }
   #callog td { padding:12px 15px; border-bottom:1px solid var(--border); font-variant-numeric:tabular-nums; }
   #callog td.num { text-align:right; }
@@ -190,6 +191,28 @@ const fmtMoney = n => '$' + Math.abs(n).toLocaleString(undefined,{minimumFractio
 const fmtPct = n => (n>=0?'+':'') + n.toFixed(2) + '%';
 const fmtPrice = n => { if (n == null) return '—'; const a = Math.abs(n); const d = a >= 1000 ? 2 : a >= 1 ? 2 : a >= 0.01 ? 4 : 6; return '$' + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d}); };
 
+const SYMBOL_NAMES = {
+  SPY:'S&P 500', QQQ:'Nasdaq 100', DIA:'Dow Jones', IWM:'Russell 2000', VXX:'VIX Futures',
+  XLK:'Technology', XLF:'Financials', XLE:'Energy', XLV:'Health Care', XLI:'Industrials',
+  XLY:'Consumer Disc.', XLP:'Consumer Staples', XLU:'Utilities', XLB:'Materials', XLRE:'Real Estate', XLC:'Comm. Services',
+  NVDA:'NVIDIA', AAPL:'Apple', MSFT:'Microsoft', GOOGL:'Alphabet', AMZN:'Amazon', META:'Meta', TSLA:'Tesla', AVGO:'Broadcom',
+  AMD:'AMD', INTC:'Intel', MU:'Micron', QCOM:'Qualcomm', TSM:'Taiwan Semi', ARM:'Arm Holdings', SMCI:'Super Micro', MRVL:'Marvell', PLTR:'Palantir',
+  CRM:'Salesforce', ORCL:'Oracle', ADBE:'Adobe', NFLX:'Netflix', SNOW:'Snowflake', DDOG:'Datadog', PANW:'Palo Alto Networks', CRWD:'CrowdStrike', NET:'Cloudflare',
+  SHOP:'Shopify', UBER:'Uber', ABNB:'Airbnb', DIS:'Disney', NKE:'Nike', SBUX:'Starbucks', COST:'Costco', WMT:'Walmart', TGT:'Target',
+  COIN:'Coinbase', MSTR:'MicroStrategy', HOOD:'Robinhood', SQ:'Block', PYPL:'PayPal',
+  BA:'Boeing', CAT:'Caterpillar', GE:'GE Aerospace', DE:'Deere', HON:'Honeywell',
+  JPM:'JPMorgan', GS:'Goldman Sachs', V:'Visa', MA:'Mastercard', BAC:'Bank of America',
+  UNH:'UnitedHealth', LLY:'Eli Lilly', PFE:'Pfizer', MRK:'Merck', ABBV:'AbbVie',
+  CVX:'Chevron', XOM:'ExxonMobil', SLB:'SLB',
+  F:'Ford', GM:'General Motors', RIVN:'Rivian', LCID:'Lucid', NIO:'NIO',
+  BTC:'Bitcoin', ETH:'Ethereum', SOL:'Solana', DOGE:'Dogecoin', XRP:'XRP', ADA:'Cardano'
+};
+function symName(t) {
+  if (!t) return '';
+  const n = SYMBOL_NAMES[String(t).toUpperCase()] || '';
+  return n ? '<span class="sym-name">' + n + '</span>' : '';
+}
+
 function load() {
   fetch('/api/ledger').then(r => r.ok ? r.json() : Promise.reject('api'))
     .catch(() => fetch('/data/ledger.json').then(r => r.json()))
@@ -244,7 +267,7 @@ function render(d) {
         const ocls = p.is_call ? 'long' : 'short';
         return `<tr>
           <td><span class="side ${ocls}">${obadge}</span></td>
-          <td><b>${p.ticker}</b> <span class="crypto-tag">OPTION</span><div class="h-thesis">strike ${fmtPrice(p.strike)} · exp ${(p.expiry||'').slice(0,10)}</div></td>
+          <td><b>${p.ticker}</b>${symName(p.ticker)} <span class="crypto-tag">OPTION</span><div class="h-thesis">strike ${fmtPrice(p.strike)} · exp ${(p.expiry||'').slice(0,10)}</div></td>
           <td class="num">${p.alloc_pct}%</td>
           <td class="num">prem ${fmtPrice(p.premium)}</td>
           <td class="num">${p.contracts}×</td>
@@ -254,7 +277,7 @@ function render(d) {
       }
       return `<tr>
         <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
-        <td><b>${p.ticker}</b>${crypto}</td>
+        <td><b>${p.ticker}</b>${symName(p.ticker)}${crypto}</td>
         <td class="num">${p.alloc_pct}%</td>
         <td class="num">${fmtPrice(p.entry)}</td>
         <td class="num">${fmtPrice(p.last)}</td>
@@ -306,7 +329,7 @@ function renderCalibration(d) {
     const pct = (f.probability * 100).toFixed(0) + '%';
     return `<tr>
       <td><b>${f.name || f.model}</b></td>
-      <td><b>${f.ticker}</b></td>
+      <td><b>${f.ticker}</b>${symName(f.ticker)}</td>
       <td><span class="side ${sideCls}">${side}</span></td>
       <td class="num">${pct}</td>
       <td class="num ${cls}">${mark}</td>
