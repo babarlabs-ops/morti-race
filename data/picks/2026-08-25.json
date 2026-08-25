@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-25T12:32:36.520842+00:00",
+  "generated_utc": "2026-08-25T12:41:20.886494+00:00",
   "results": {
     "fable": {
       "model": "Fable",
@@ -855,6 +855,99 @@
         },
         "completion_tokens_details": {
           "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "kimi": {
+      "model": "Kimi",
+      "tier": "open",
+      "picks": {
+        "thesis": "Rotation day, not risk-off: capital is leaving AI-semis and crypto-beta for payments, staples, financials and healthcare \u2014 cut the crowded side, keep only what can be honestly re-underwritten, and hold cash as a position.",
+        "justification": "Book review came first, before new ideas: the inherited crypto cluster (BTC+ETH+COIN equity+COIN calls+HOOD) was ~35% of NAV, breaching the 25% correlation-cluster limit, and today's tape (semis -2% to -6%, staples/payments/financials +1% to +3%) invalidated the crypto-equity and AI-semi tilts \u2014 so ETH, COIN equity, COIN $206.81 calls, NVDA $220.27 calls, MU, HOOD, and the XLU short are all exits at today's marks, crystallizing roughly -2.5k to -3k, published with the same prominence as any gain. Position marks arrived stale (entry=last, P&L 0.00) against a live snapshot showing COIN -4.6% and HOOD -3.7% versus entry \u2014 flagged as a reconciliation discrepancy; all decisions use the live snapshot. What survives is what I can re-underwrite with a declared edge: BTC trimmed inside the 10% single-name cap, GS (rotation beneficiary), ORCL trimmed to respect the tape, plus two new expressions where the flow is actually going (V, UNH) \u2014 2 new theses, under the 3-per-cycle cap. The 10x-in-a-year framing is noted and rejected as a sizing input: it would require concentration and leverage the constitution forbids \u2014 survive, measure honestly, compound, in that order. Result: 33% deployed, 67% cash, max single-position risk 48bps of NAV, worst-case all-stops loss ~1.9% of NAV.",
+        "positions": [
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Trimmed to the single-name cap: BTC held flat while crypto-equities de-rated 4% \u2014 relative strength in the cleanest crypto expression, with post-halving supply constraint and steady ETF mandate bids underneath.",
+            "stop_pct": -6,
+            "target_pct": 18,
+            "edge_type": "structural",
+            "probability": 0.55,
+            "invalidation": "We are wrong if BTC closes below 74,000, or if spot-ETF flows print two consecutive net-negative weeks, by 2026-10-24.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "GS",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "Capital-markets recovery plus rotation into financials \u2014 XLF +1.2% on a red semi tape confirms the flow, and GS is the quality expression of it.",
+            "stop_pct": -6,
+            "target_pct": 12,
+            "edge_type": "behavioral",
+            "probability": 0.56,
+            "invalidation": "We are wrong if GS closes below 974, or XLF round-trips the August breakout (rotation thesis dead), by 2026-10-09.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "ORCL",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Trimmed from 8%: contracted cloud RPO backlog is being lumped in with the semi de-rating, but the revenue is signed rather than hoped-for \u2014 kept small because today's tape is against it.",
+            "stop_pct": -6,
+            "target_pct": 15,
+            "edge_type": "analytical",
+            "probability": 0.53,
+            "invalidation": "We are wrong if ORCL closes below 134, or the next earnings print shows RPO growth decelerating, by 2026-10-09.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "V",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "NEW: payments breakout (+3.0% today) as rotation seeks quality defensives with resilient volumes \u2014 alpha comes from funds forced out of crowded AI into under-owned quality compounders.",
+            "stop_pct": -5,
+            "target_pct": 10,
+            "edge_type": "behavioral",
+            "probability": 0.56,
+            "invalidation": "We are wrong if V closes below 363, or XLK reclaims market leadership (rotation reversal), by 2026-09-24.",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "UNH",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "NEW: beaten-down managed-care leader re-rating as defensives catch a bid (+2.2% today), still far below prior highs \u2014 mean reversion with a flow tailwind.",
+            "stop_pct": -6,
+            "target_pct": 12,
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "We are wrong if UNH closes below 375, or fresh regulatory action against managed care lands, by 2026-10-09.",
+            "horizon_days": 45
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 18892,
+        "completion_tokens": 11316,
+        "total_tokens": 30208,
+        "cost": 0.2150952,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.2150952,
+          "upstream_inference_prompt_cost": 0.0538422,
+          "upstream_inference_completions_cost": 0.161253
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8861,
           "image_tokens": 0,
           "audio_tokens": 0
         }
