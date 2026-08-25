@@ -112,6 +112,14 @@ def main():
     if os.path.exists(snap):
         market = "\n\nCURRENT MARKET SNAPSHOT (live data):\n" + read(snap)
 
+    macro = ""
+    macropath = os.path.join(ROOT, "data", "macro.json")
+    if os.path.exists(macropath):
+        try:
+            macro = "\n\n" + (json.loads(read(macropath)).get("summary") or "")
+        except Exception:
+            macro = ""
+
     prev = None
     ledger_path = os.path.join(ROOT, "data", "ledger.json")
     if os.path.exists(ledger_path):
@@ -155,7 +163,7 @@ def main():
             "For an option give: ticker (underlying), type (long_call/long_put), strike_pct "
             "(percent OUT-OF-THE-MONEY, 1 to 40: e.g. 5 = strike 5% above spot for a call, "
             "5% below spot for a put), expiry_days (e.g. 30), alloc_pct, thesis, edge_type, probability, invalidation, horizon_days.\n"
-            + market +
+            + market + macro +
             "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
             "\"justification\":\"<2-4 sentences on your selection logic>\","
             "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25,\"edge_type\":\"analytical\",\"probability\":0.62,\"invalidation\":\"...\",\"horizon_days\":30} OR "
