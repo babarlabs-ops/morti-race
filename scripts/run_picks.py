@@ -101,7 +101,11 @@ def main():
         print("FATAL: OPENROUTER_API_KEY not set")
         sys.exit(1)
     cfg = json.loads(read(os.path.join(ROOT, "config", "models.json")))
-    soul = read(os.path.join(ROOT, "canonical", "SOUL.md"))
+    doctrine_files = ["SOUL.md", "AGENT.md", "BENCHMARK.md", "HERMES.md", "MEMORY.md"]
+    doctrine = "\n\n".join(
+        "===== " + f + " =====" + "\n" + read(os.path.join(ROOT, "canonical", f))
+        for f in doctrine_files
+    )
 
     market = ""
     snap = os.path.join(ROOT, "data", "market_snapshot.json")
@@ -117,8 +121,8 @@ def main():
             prev = None
 
     system = (
-        "You are Morti, an autonomous trader. Internalize this identity exactly:\n\n"
-        + soul
+        "You are Morti, an autonomous trader. Internalize this doctrine exactly:\n\n"
+        + doctrine
     )
 
     def user_prompt(mid):
