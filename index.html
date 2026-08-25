@@ -79,7 +79,8 @@
   .side.short { background:rgba(255,92,92,0.15); color:var(--down); }
   .h-thesis { color:var(--muted); font-size:12px; font-variant-numeric:normal; line-height:1.45; }
   .crypto-tag { font-size:9px; color:var(--accent); border:1px solid rgba(79,140,255,0.35); border-radius:4px; padding:1px 4px; margin-left:5px; }
-  .sym-name { color:var(--muted); font-weight:400; font-size:12px; margin-left:5px; }
+  .tick { color:inherit; text-decoration:none; border-bottom:1px dotted var(--muted); cursor:pointer; }
+  .tick:hover { border-bottom-color:var(--accent); color:var(--accent); }
   .cal-n { color:var(--muted); font-size:10px; font-variant-numeric:tabular-nums; }
   #callog td { padding:12px 15px; border-bottom:1px solid var(--border); font-variant-numeric:tabular-nums; }
   #callog td.num { text-align:right; }
@@ -207,10 +208,19 @@ const SYMBOL_NAMES = {
   F:'Ford', GM:'General Motors', RIVN:'Rivian', LCID:'Lucid', NIO:'NIO',
   BTC:'Bitcoin', ETH:'Ethereum', SOL:'Solana', DOGE:'Dogecoin', XRP:'XRP', ADA:'Cardano'
 };
+const CRYPTO = new Set(['BTC','ETH','SOL','DOGE','XRP','ADA']);
 function symName(t) {
   if (!t) return '';
-  const n = SYMBOL_NAMES[String(t).toUpperCase()] || '';
-  return n ? '<span class="sym-name">' + n + '</span>' : '';
+  return SYMBOL_NAMES[String(t).toUpperCase()] || '';
+}
+function tickLink(t) {
+  const up = String(t || '').toUpperCase();
+  const name = SYMBOL_NAMES[up] || '';
+  const url = CRYPTO.has(up)
+    ? 'https://finance.yahoo.com/quote/' + up + '-USD'
+    : 'https://finance.yahoo.com/quote/' + up;
+  const title = name ? ' title="' + name + '"' : '';
+  return '<a class="tick" href="' + url + '" target="_blank" rel="noopener"' + title + '>' + t + '</a>';
 }
 
 function load() {
@@ -267,7 +277,7 @@ function render(d) {
         const ocls = p.is_call ? 'long' : 'short';
         return `<tr>
           <td><span class="side ${ocls}">${obadge}</span></td>
-          <td><b>${p.ticker}</b>${symName(p.ticker)} <span class="crypto-tag">OPTION</span><div class="h-thesis">strike ${fmtPrice(p.strike)} · exp ${(p.expiry||'').slice(0,10)}</div></td>
+          <td><b>${tickLink(p.ticker)}</b> <span class="crypto-tag">OPTION</span><div class="h-thesis">strike ${fmtPrice(p.strike)} · exp ${(p.expiry||'').slice(0,10)}</div></td>
           <td class="num">${p.alloc_pct}%</td>
           <td class="num">prem ${fmtPrice(p.premium)}</td>
           <td class="num">${p.contracts}×</td>
@@ -277,7 +287,7 @@ function render(d) {
       }
       return `<tr>
         <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
-        <td><b>${p.ticker}</b>${symName(p.ticker)}${crypto}</td>
+        <td><b>${tickLink(p.ticker)}</b>${crypto}</td>
         <td class="num">${p.alloc_pct}%</td>
         <td class="num">${fmtPrice(p.entry)}</td>
         <td class="num">${fmtPrice(p.last)}</td>
@@ -329,7 +339,7 @@ function renderCalibration(d) {
     const pct = (f.probability * 100).toFixed(0) + '%';
     return `<tr>
       <td><b>${f.name || f.model}</b></td>
-      <td><b>${f.ticker}</b>${symName(f.ticker)}</td>
+      <td><b>${tickLink(f.ticker)}</b></td>
       <td><span class="side ${sideCls}">${side}</span></td>
       <td class="num">${pct}</td>
       <td class="num ${cls}">${mark}</td>
