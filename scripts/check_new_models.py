@@ -7,8 +7,8 @@ silent (cron no_agent delivers nothing). Exit 1 on fetch error.
 """
 import json, os, re, sys, time, urllib.request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATE = os.path.join(ROOT, "data", "model_watch_seen.json")
+REPO = "/Users/minimi/Claude Working files/morti-race"
+STATE = os.path.join(REPO, "data", "model_watch_seen.json")
 RECENT_DAYS = 21
 
 FAMILIES = [
@@ -52,7 +52,7 @@ def save_seen(seen):
 
 
 def main():
-    cfg = json.load(open(os.path.join(ROOT, "config", "models.json")))
+    cfg = json.load(open(os.path.join(REPO, "config", "models.json")))
     current_ids = {m["model"] for m in cfg["models"]}
 
     try:
