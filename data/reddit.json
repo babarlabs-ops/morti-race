@@ -1,0 +1,12 @@
+{
+  "fetched_utc": "2026-08-26T02:35:12.063260+00:00",
+  "posts": [],
+  "tickers": {},
+  "summary": "REDDIT SENTIMENT (top posts by score):\n(blocked/failed \u2014 see errors)",
+  "errors": {
+    "wallstreetbets": "403 blocked (anonymous scrape) \u2014 set REDDIT_CLIENT_ID/SECRET (free script app) in .env",
+    "stocks": "403 blocked (anonymous scrape) \u2014 set REDDIT_CLIENT_ID/SECRET (free script app) in .env",
+    "investing": "403 blocked (anonymous scrape) \u2014 set REDDIT_CLIENT_ID/SECRET (free script app) in .env",
+    "CryptoCurrency": "403 blocked (anonymous scrape) \u2014 set REDDIT_CLIENT_ID/SECRET (free script app) in .env"
+  }
+}

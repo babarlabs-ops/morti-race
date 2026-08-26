@@ -1,0 +1,55 @@
+{
+  "fetched_utc": "2026-08-26T02:40:23.215723+00:00",
+  "results": [
+    {
+      "query": "What is driving the US stock market today? Key movers, macro catalysts, and biggest risks.",
+      "text": "**US stocks are in a cautious, event-driven mode on August 26, 2026, following overnight gains (Nasdaq +0.66%, S&P 500 +0.32%, Dow +0.30%) led by a tech rebound, with futures mixed and some trending lower pre-open.** Global cues are generally positive, Asian markets mostly green, oil sliding further (Brent around $85.5\u2013$86), and the 10-year Treasury yield cooling toward 4.63\u20134.65%. Gold is extending its rally on safe-haven demand and a softer USD.[[1]](https://x.com/TradeViewPty/status/2092440710410916184)\n\nThe tape is positioning around a stacked calendar rather than a single dominant headline, with money rotating back into growth/tech after recent selling.\n\n### Key Movers\nSemiconductors an",
+      "citations": [
+        "https://x.com/TradeViewPty/status/2092440710410916184",
+        "https://x.com/YUBIT_Exchange/status/2092103064891379993",
+        "https://x.com/TripDawg/status/2092440769181429913",
+        "https://x.com/GavynnCuevas/status/2092347376543633736",
+        "https://x.com/damodara_SEBIRA/status/2092440437684633690"
+      ]
+    },
+    {
+      "query": "$SMCI stock \u2014 what are traders saying today? Bull and bear catalysts.",
+      "text": "**SMCI traders on X today (around Aug 26) are mostly retail-bullish after a ~9% move, treating it as an AI-server play tied to NVIDIA, with technicals and a Cisco partnership as near-term sparks.** A smaller group is skeptical of lingering accounting noise, calling the bounce a potential fake-out ahead of NVIDIA earnings. Sentiment is hype-heavy rather than deeply analytical.[[1]](https://x.com/eightcap_global/status/2092421320373924135)\n\n**Bull catalysts traders are citing:**\n- NVIDIA ecosystem/read-through: Multiple posts flag SMCI as a key AI-server partner. If NVIDIA beats and raises (earnings/call expected soon), they expect a pop in related names like SMCI, Dell, and others. One user l",
+      "citations": [
+        "https://x.com/eightcap_global/status/2092421320373924135",
+        "https://x.com/netbullish2/status/2092437470524633158",
+        "https://x.com/Marc_periu/status/2092429817375302013",
+        "https://x.com/Marc_periu/status/2092430515248763136",
+        "https://x.com/TradeLikeGates/status/2092341818524414100"
+      ]
+    },
+    {
+      "query": "$HOOD stock \u2014 what are traders saying today? Bull and bear catalysts.",
+      "text": "**Traders on X today (around Aug 26, 2026) are mixed but leaning bullish on $HOOD's recent momentum, with the stock around $112 after a sharp run-up.** Discussions focus on technical breakouts, a fresh Goldman Sachs target, crypto tailwinds, and options activity, while bears flag overbought conditions and valuation after the surge. Volatility has been high (intraday swings of ~9%).[[1]](https://x.com/OrderlyCN_/status/2092441414659674623)\n\n### Bull Catalysts\nTraders highlight strong buying interest and technical setups:\n- Momentum and volume: Multiple posts note expanded volume on the move higher, a breakout from a downtrend, tight Bollinger Bands with an inside-bar continuation, and multi-t",
+      "citations": [
+        "https://x.com/OrderlyCN_/status/2092441414659674623",
+        "https://x.com/TherealnikkiN/status/2092286409931423792",
+        "https://x.com/PureStoryLabs/status/2092389040523726896",
+        "https://x.com/hassyswings/status/2092441283855896887",
+        "https://x.com/dkntrading/status/2092248382014198133"
+      ]
+    },
+    {
+      "query": "$AMD stock \u2014 what are traders saying today? Bull and bear catalysts.",
+      "text": "**Traders on X are mostly leaning bullish on $AMD today**, with the stock up around 4.9% amid technical strength, positive options flow, and a notable analyst upgrade. Sentiment focuses on AI/data-center momentum and Lisa Su\u2019s execution, though some lingering valuation and competition concerns persist from recent sessions.",
+      "citations": [
+        "https://x.com/i/status/",
+        "https://x.com/i/status/1875408135197708774",
+        "https://x.com/i/status/2091554124026310827",
+        "https://x.com/i/status/2092431671450861624",
+        "https://x.com/i/status/1904203035364004046"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 96586,
+    "output_tokens": 14031,
+    "total_tokens": 110617
+  },
+  "summary": "X / TWITTER SENTIMENT (xAI x_search):\n- **US stocks are in a cautious, event-driven mode on August 26, 2026, following overnight gains (Nasdaq +0.66%, S&P 500 +0.32%, Dow +0.30%) led by a tech rebound, with futures mixed and some trending lower pre-open.** Global cues are generally positive, Asian markets mostly green, oil sliding further (Brent around $85.5\u2013$86), and the 10-year Treasur\n- **SMCI traders on X today (around Aug 26) are mostly retail-bullish after a ~9% move, treating it as an AI-server play tied to NVIDIA, with technicals and a Cisco partnership as near-term sparks.** A smaller group is skeptical of lingering accounting noise, calling the bounce a potential fake-out ahead of NVIDIA earnings. Sentiment is hype-heavy ra\n- **Traders on X today (around Aug 26, 2026) are mixed but leaning bullish on $HOOD's recent momentum, with the stock around $112 after a sharp run-up.** Discussions focus on technical breakouts, a fresh Goldman Sachs target, crypto tailwinds, and options activity, while bears flag overbought conditions and valuation after the surge. Volatility has b\n- **Traders on X are mostly leaning bullish on $AMD today**, with the stock up around 4.9% amid technical strength, positive options flow, and a notable analyst upgrade. Sentiment focuses on AI/data-center momentum and Lisa Su\u2019s execution, though some lingering valuation and competition concerns persist from recent sessions."
+}

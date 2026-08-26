@@ -103,7 +103,7 @@ def main():
     cfg = json.loads(read(os.path.join(ROOT, "config", "models.json")))
     doctrine_files = ["SOUL.md", "AGENT.md", "BENCHMARK.md", "HERMES.md", "MEMORY.md"]
     doctrine = "\n\n".join(
-        "===== " + f + " =====" + "\n" + read(os.path.join(ROOT, "canonical", f))
+        "===== " + f + " =====\n" + read(os.path.join(ROOT, "canonical", f))
         for f in doctrine_files
     )
 
@@ -119,6 +119,26 @@ def main():
             macro = "\n\n" + (json.loads(read(macropath)).get("summary") or "")
         except Exception:
             macro = ""
+
+    # NEW research sources (free-first, X paid via xAI)
+    research = ""
+    for fname, label in [
+        ("news.json", "NEWS HEADLINES"),
+        ("reddit.json", "REDDIT SENTIMENT"),
+        ("edgar.json", "SEC EDGAR"),
+        ("calendar.json", "ECONOMIC CALENDAR"),
+        ("sentiment.json", "X/TWITTER SENTIMENT"),
+    ]:
+        p = os.path.join(ROOT, "data", fname)
+        if os.path.exists(p):
+            try:
+                summary = json.loads(read(p)).get("summary") or ""
+                if summary:
+                    research += f"\n\n{label}:\n{summary}"
+            except Exception:
+                pass
+    if research:
+        research = "\n\nRESEARCH FEED (live):\n" + research.strip()
 
     prev = None
     ledger_path = os.path.join(ROOT, "data", "ledger.json")
@@ -163,7 +183,7 @@ def main():
             "For an option give: ticker (underlying), type (long_call/long_put), strike_pct "
             "(percent OUT-OF-THE-MONEY, 1 to 40: e.g. 5 = strike 5% above spot for a call, "
             "5% below spot for a put), expiry_days (e.g. 30), alloc_pct, thesis, edge_type, probability, invalidation, horizon_days.\n"
-            + market + macro +
+            + market + macro + research +
             "\n\nRespond ONLY as JSON: {\"thesis\":\"<one-line macro thesis for today>\","
             "\"justification\":\"<2-4 sentences on your selection logic>\","
             "\"positions\":[{\"ticker\":\"AAPL\",\"side\":\"long\",\"alloc_pct\":15,\"thesis\":\"...\",\"stop_pct\":-8,\"target_pct\":25,\"edge_type\":\"analytical\",\"probability\":0.62,\"invalidation\":\"...\",\"horizon_days\":30} OR "
