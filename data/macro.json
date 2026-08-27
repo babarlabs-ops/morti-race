@@ -1,22 +1,22 @@
 {
-  "fetched_utc": "2026-08-26T16:30:22.614531+00:00",
+  "fetched_utc": "2026-08-27T11:30:46.186633+00:00",
   "series": {
     "fed_funds": {
       "value": 3.63,
       "date": "2026-07-01"
     },
     "us10y": {
-      "value": 4.7,
-      "date": "2026-08-24"
+      "value": 4.64,
+      "date": "2026-08-25"
     },
     "us2y": {
-      "value": 4.24,
-      "date": "2026-08-24"
+      "value": 4.17,
+      "date": "2026-08-25"
     },
     "vix": {
       "value": 15.45,
       "date": "2026-08-25"
     }
   },
-  "summary": "Macro: Fed funds 3.63%; 10Y 4.70%; 2Y 4.24%; curve +0.46% (steep); VIX 15.4 (normal)"
+  "summary": "Macro: Fed funds 3.63%; 10Y 4.64%; 2Y 4.17%; curve +0.47% (steep); VIX 15.4 (normal)"
 }
