@@ -452,3 +452,51 @@ Calibration: 268 total forecasts — 9 opened today, 52 resolved today, 259 reso
   Fable      n= 15  Brier=0.264  acc=0.47  stated=0.53  gap=+0.07  BSS=-0.06
   DeepSeek   n=  4  Brier=0.246  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+[main c121f34] Pivot 2026-08-27 10:30:07
+ 6 files changed, 2143 insertions(+), 926 deletions(-)
+ create mode 100644 data/picks/archive/2026-08-27-1030.json
+To https://github.com/babarlabs-ops/morti-race.git
+   3851717..c121f34  main -> main
+[2026-08-27 10:30:09] === pivot complete ===
+[2026-08-27 12:30:06] pivot credits: 4.45
+[2026-08-27 12:30:06] archived prior picks → 2026-08-27-1230.json
+[2026-08-27 12:30:06] === pivot start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Macro: Fed funds 3.63%; 10Y 4.64%; 2Y 4.17%; curve +0.47% (steep); VIX 15.2 (normal)
+Resuming — 10 models already done
+✓ skip Fable (done)
+✓ skip Sol (done)
+✓ skip Grok (done)
+✓ skip Gemini (done)
+✓ skip DeepSeek (done)
+✓ skip Qwen (done)
+✓ skip GLM (done)
+✓ skip Llama (done)
+✓ skip Mistral (done)
+✓ skip Kimi (done)
+
+Done — 10/10 models → /Users/minimi/Claude Working files/morti-race/data/picks/2026-08-27.json
+RANK  MODEL      EQUITY        RET%      POS  GROSS%   REALIZED
+   1  Llama      $112,551.92   +12.552    7   49.9   +1,309.52
+   2  Qwen       $105,515.75    +5.516    9   54.7      +50.64
+   3  Sol        $103,166.51    +3.167    0    0.0       +0.00
+   4  Gemini     $102,828.45    +2.828    9   73.0     +199.13
+   5  Grok       $100,639.06    +0.639    0    0.0       +0.00
+   6  Fable      $100,306.77    +0.307    2   13.0      +42.05
+   7  GLM        $ 99,270.60    -0.729    8   39.0     +128.36
+   8  Kimi       $ 98,248.82    -1.751   10   55.0      -10.98
+   9  DeepSeek   $ 97,254.98    -2.745    0    0.0       +0.00
+  10  Mistral    $ 87,961.53   -12.038    5   47.6     -253.40
+
+Saved → /Users/minimi/Claude Working files/morti-race/data/ledger.json
+Calibration: 309 total forecasts — 41 opened today, 61 resolved today, 268 resolved overall
+  Qwen       n= 51  Brier=0.260  acc=0.47  stated=0.52  gap=+0.05  BSS=-0.04
+  Gemini     n= 49  Brier=0.264  acc=0.51  stated=0.58  gap=+0.07  BSS=-0.06
+  GLM        n= 43  Brier=0.252  acc=0.51  stated=0.57  gap=+0.06  BSS=-0.01
+  Kimi       n= 42  Brier=0.256  acc=0.45  stated=0.55  gap=+0.09  BSS=-0.03
+  Llama      n= 41  Brier=0.272  acc=0.44  stated=0.60  gap=+0.16  BSS=-0.10
+  Mistral    n= 23  Brier=0.262  acc=0.43  stated=0.58  gap=+0.15  BSS=-0.06
+  Fable      n= 15  Brier=0.264  acc=0.47  stated=0.53  gap=+0.07  BSS=-0.06
+  DeepSeek   n=  4  Brier=0.246  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
+Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
