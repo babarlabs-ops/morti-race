@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-27T11:53:52.403816+00:00",
+  "as_of": "2026-08-27T14:30:07.744392+00:00",
   "forecasts": [
     {
       "id": "2026-08-24:fable:NVDA:long",
@@ -5470,11 +5470,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Generalist funds remain structurally underweight energy after years of underperformance; steep curve and sticky inflation favor real-asset cash flows, and the equity has lagged the",
       "invalidation": "Wrong if XLE closes below 58.05 (-7%), or if Brent breaks below $75 without energy equities holding bid, by horizon end \u2014 mandate-driven underweights are not re-rating and the carry argument is dead.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 62.43
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 61.83,
+      "last_price": 61.83
     },
     {
       "id": "2026-08-27:fable:XLF:long",
@@ -5495,11 +5495,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "2s10s at +47bps and steepening restores bank net-interest-margin economics; market is slow to reprice financials after two years of inversion trauma \u2014 the marginal seller is fighti",
       "invalidation": "Wrong if the 2s10s curve re-inverts (goes negative) or XLF closes below 54.75 (-6%) before horizon end \u2014 the NIM mechanism requires the steepening to persist, not just exist.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 58.25
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 57.76,
+      "last_price": 57.76
     },
     {
       "id": "2026-08-27:gemini:ORCL:long",
@@ -5520,11 +5520,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "OCI multi-cloud database backlog conversion is underappreciated relative to legacy on-premise attrition concerns.",
       "invalidation": "OCI cloud revenue growth decelerates below 35% YoY or price closes below 138.80 by 2026-10-15",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 149.16
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 150.97,
+      "last_price": 150.97
     },
     {
       "id": "2026-08-27:gemini:DE:long",
@@ -5545,11 +5545,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Precision agriculture tech adoption drives structural trough multiple expansion ahead of the agricultural equipment replacement cycle.",
       "invalidation": "Large ag equipment dealer inventories rise >20% QoQ or DE drops below 596.00 by 2026-11-15",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 634.12
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 619.06,
+      "last_price": 619.06
     },
     {
       "id": "2026-08-27:gemini:BTC:long",
@@ -5570,11 +5570,11 @@
       "expiry_date": "2026-10-06",
       "thesis": "Institutional ETF custody inflows and post-halving structural supply deficit dominate macro rate headwinds.",
       "invalidation": "Net ETF 14-day rolling flows turn negative alongside a weekly close below 73,800 by 2026-10-01",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 79391.105
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 79923.795,
+      "last_price": 79923.795
     },
     {
       "id": "2026-08-27:gemini:PLTR:long",
@@ -5595,11 +5595,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "AIP enterprise deployment velocity creates an expanding net retention moat that consensus treats as cyclical consulting revenue.",
       "invalidation": "US commercial customer count growth slows below 30% YoY or price closes below 164.40 by 2026-10-20",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 177.49
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 184.625,
+      "last_price": 184.625
     },
     {
       "id": "2026-08-27:gemini:NET:long",
@@ -5620,11 +5620,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Workers AI inferencing at edge nodes enables monetizable compute capacity faster than centralized hyperscaler build-outs.",
       "invalidation": "Free cash flow margin fails to reach +12% on next filing or price falls below 266.90 by 2026-10-15",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 284.71
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 303.07,
+      "last_price": 303.07
     },
     {
       "id": "2026-08-27:gemini:MSTR:long",
@@ -5645,11 +5645,11 @@
       "expiry_date": "2026-10-01",
       "thesis": "Accretive convertible debt issuance engine creates structural BTC-per-share compounding premium above NAV.",
       "invalidation": "Premium to net asset value compresses below 1.05x or stock closes below 113.00 by 2026-10-01",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 122.89
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 133.81,
+      "last_price": 133.81
     },
     {
       "id": "2026-08-27:qwen:BTC:long",
@@ -5670,11 +5670,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Behavioral: institutional dip buyers absorb retail caution while supply remains constrained.",
       "invalidation": "BTC closes below 72000 or fails to hold above 75000 for five sessions by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 79391.105
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 79923.795,
+      "last_price": 79923.795
     },
     {
       "id": "2026-08-27:qwen:ETH:long",
@@ -5695,11 +5695,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Structural: staking yield and ETF wrappers create persistent demand versus skeptical alt rotation.",
       "invalidation": "ETH closes below 2170 by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 2501.045
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 2507.815,
+      "last_price": 2507.815
     },
     {
       "id": "2026-08-27:qwen:MRK:long",
@@ -5720,11 +5720,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Structural: defensive-pharma forced flows after sector weakness underprice durable cash flow and pipeline.",
       "invalidation": "MRK closes below 146 or adverse pipeline/regulatory disclosure by 2026-10-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 153.08
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 150.95,
+      "last_price": 150.95
     },
     {
       "id": "2026-08-27:qwen:GS:long",
@@ -5745,11 +5745,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Structural: steep curve and capital-markets recovery are not fully priced by defensive index positioning.",
       "invalidation": "GS closes below 987 or 2s10s flattens below 0.20% by 2026-10-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 1040.7
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 1036.68,
+      "last_price": 1036.68
     },
     {
       "id": "2026-08-27:qwen:COST:long",
@@ -5770,11 +5770,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Behavioral: valuation anxiety creates an entry while membership economics remain resilient.",
       "invalidation": "COST closes below 880 or membership growth decelerates materially by 2026-10-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 956.26
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 942.53,
+      "last_price": 942.53
     },
     {
       "id": "2026-08-27:qwen:TSM:long",
@@ -5795,11 +5795,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Analytical: AI accelerator and advanced-packaging tightness exceed consensus models.",
       "invalidation": "TSM closes below 385 or a major AI capex cut is announced by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 417
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 425.905,
+      "last_price": 425.905
     },
     {
       "id": "2026-08-27:qwen:MU:long",
@@ -5820,11 +5820,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Analytical: HBM/DRAM supply discipline and AI memory demand are undermodeled by cycle bears.",
       "invalidation": "MU closes below 876 or DRAM/HBM pricing turns down by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 951.84
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 930.105,
+      "last_price": 930.105
     },
     {
       "id": "2026-08-27:qwen:XLE:short",
@@ -5845,11 +5845,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "Analytical: sliding oil and weak demand make OTM energy downside cheaper than the tail risk it hedges.",
       "invalidation": "XLE closes above 64.5 or Brent sustains above $88 by 2026-09-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 62.43
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 61.83,
+      "last_price": 61.83
     },
     {
       "id": "2026-08-27:glm:TSM:long",
@@ -5870,11 +5870,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Sole leading-edge foundry with contracted AI capex; multi-year revenue visibility still priced as a chip cyclical.",
       "invalidation": "We are wrong if TSM closes below 376.50 or a top-3 customer publicly cuts foundry orders, by 2026-10-26.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 417
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 425.905,
+      "last_price": 425.905
     },
     {
       "id": "2026-08-27:glm:AVGO:long",
@@ -5895,11 +5895,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Custom AI ASIC sockets are multi-year design wins; the market prices them as merchant-silicon beta.",
       "invalidation": "We are wrong if AVGO closes below 319.50 or a disclosed custom-silicon socket is lost to a competitor, by 2026-10-26.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 355.57
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 368.33,
+      "last_price": 368.33
     },
     {
       "id": "2026-08-27:glm:BTC:long",
@@ -5920,11 +5920,11 @@
       "expiry_date": "2026-11-25",
       "thesis": "Spot-ETF channel creates a persistent structural bid against fixed post-halving issuance.",
       "invalidation": "We are wrong if BTC closes below 70600 or spot-ETF net flows are negative four consecutive weeks, by 2026-11-25.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 79391.105
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 79923.795,
+      "last_price": 79923.795
     },
     {
       "id": "2026-08-27:glm:XLF:long",
@@ -5945,11 +5945,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "A +47bp steepening curve is direct NIM relief for money-center balance sheets that has not fully repriced.",
       "invalidation": "We are wrong if the 2s10s curve flattens below +20bp or XLF closes below 54.15, by 2026-10-26.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 58.25
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 57.76,
+      "last_price": 57.76
     },
     {
       "id": "2026-08-27:glm:IWM:long",
@@ -5970,11 +5970,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Small caps get disproportionate relief from priced Fed cuts while allocators remain underweight after two years of mega-cap concentration.",
       "invalidation": "We are wrong if IWM closes below 275.00 or the September 16 FOMC guides to a pause, by 2026-09-17.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 298.93
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 298.51,
+      "last_price": 298.51
     },
     {
       "id": "2026-08-27:glm:XLU:long",
@@ -5995,11 +5995,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Utilities carry the longest duration in the equity space and re-rate as priced cuts pull the 10Y down from 4.64%.",
       "invalidation": "We are wrong if the 10Y sustains above 5.00% or XLU closes below 40.45, by 2026-10-26.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 43.49
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 43.175,
+      "last_price": 43.175
     },
     {
       "id": "2026-08-27:llama:DE:long",
@@ -6020,11 +6020,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Deere's agricultural equipment demand remains strong due to ongoing global food production needs.",
       "invalidation": "Global agricultural commodity prices fall sharply by more than 10% within the next 30 days.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 634.12
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 619.06,
+      "last_price": 619.06
     },
     {
       "id": "2026-08-27:llama:MSTR:long",
@@ -6045,11 +6045,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "MicroStrategy's Bitcoin holdings continue to drive its stock performance amid crypto market stability.",
       "invalidation": "Bitcoin price drops below $75,000 within the next 30 days.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 122.89
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 133.81,
+      "last_price": 133.81
     },
     {
       "id": "2026-08-27:llama:TSLA:long",
@@ -6070,11 +6070,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Tesla's ongoing innovation in EVs and energy storage continues to attract investor interest.",
       "invalidation": "Tesla reports a significant earnings miss for the current quarter.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 345.36
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 352.42,
+      "last_price": 352.42
     },
     {
       "id": "2026-08-27:llama:VXX:short",
@@ -6095,11 +6095,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "VIX remains at normal levels, suggesting low volatility environment.",
       "invalidation": "VIX spikes above 20 within the next 30 days.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 18.555
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 18.36,
+      "last_price": 18.36
     },
     {
       "id": "2026-08-27:llama:SMCI:long",
@@ -6120,11 +6120,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "Super Micro Computer benefits from AI server demand tied to NVIDIA's performance.",
       "invalidation": "NVIDIA earnings disappoint, impacting AI server demand.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 37.415
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 38.56,
+      "last_price": 38.56
     },
     {
       "id": "2026-08-27:llama:NVDA:long",
@@ -6145,11 +6145,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "Nvidia's earnings are expected to be positive, driving the stock higher.",
       "invalidation": "Nvidia reports a significant earnings miss.",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 209.37
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 225.75,
+      "last_price": 225.75
     },
     {
       "id": "2026-08-27:mistral:XLE:long",
@@ -6170,11 +6170,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Structural underinvestment in energy supply meets resilient demand; geopolitical risk premium underpriced in equities vs. oil options.",
       "invalidation": "WTI crude < $75 or OPEC+ production increase >1M bpd by 2026-10-01",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 62.43
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 61.83,
+      "last_price": 61.83
     },
     {
       "id": "2026-08-27:mistral:MSFT:long",
@@ -6195,11 +6195,11 @@
       "expiry_date": "2026-11-25",
       "thesis": "AI infrastructure spend (cloud/enterprise) resilient; valuation reasonable vs. growth. Consensus underestimates margin durability.",
       "invalidation": "Azure revenue growth <15% YoY in next earnings (2026-10-28) or Fed funds >4.5%",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 496.36
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 505.04,
+      "last_price": 505.04
     },
     {
       "id": "2026-08-27:mistral:JPM:long",
@@ -6220,11 +6220,11 @@
       "expiry_date": "2026-11-25",
       "thesis": "Defensive value: strong balance sheet, net interest margin stable, and trading at discount to historical P/B. Behavioral edge: retail underweight financials.",
       "invalidation": "10Y-2Y spread inverts or credit spreads +50bps by 2026-11-30",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 356.72
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 353.08,
+      "last_price": 353.08
     },
     {
       "id": "2026-08-27:mistral:BTC:long",
@@ -6245,11 +6245,11 @@
       "expiry_date": "2026-12-25",
       "thesis": "Institutional adoption (ETF flows) and halving cycle support price floor. Structural edge: supply shock vs. demand from spot ETFs.",
       "invalidation": "BTC < $70k or monthly ETF outflow > $1B by 2026-12-31",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 79391.105
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 79923.795,
+      "last_price": 79923.795
     },
     {
       "id": "2026-08-27:mistral:NVDA:short",
@@ -6270,11 +6270,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Earnings risk: guidance may disappoint on AI demand pull-forward. Behavioral edge: options market underprices downside skew post-5-quarter decline prediction.",
       "invalidation": "NVDA > $220 by 2026-10-10 or implied vol < 40%",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 209.37
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 225.75,
+      "last_price": 225.75
     },
     {
       "id": "2026-08-27:kimi:BTC:long",
@@ -6295,11 +6295,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Easing cycle with a steepening curve signals ample liquidity; structural ETF/mandate flows provide a persistent bid. Trimmed from 8% for risk-limit compliance.",
       "invalidation": "Daily close below $72,000, or 10Y yield above 4.90% (liquidity regime break), by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 79391.105
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 79923.795,
+      "last_price": 79923.795
     },
     {
       "id": "2026-08-27:kimi:GS:long",
@@ -6320,11 +6320,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "2s10s at +47bp lifts net interest income and capital-markets revenue into Q4; today's -1.7% dip is not thesis-relevant.",
       "invalidation": "2s10s re-inverts below +0.10, or XLF breaks its 200-day average, by 2026-10-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 1040.7
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 1036.68,
+      "last_price": 1036.68
     },
     {
       "id": "2026-08-27:kimi:ORCL:long",
@@ -6345,11 +6345,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Cloud/AI backlog momentum intact \u2014 +3% today post-NVDA confirms the demand narrative; generalist funds remain underweight the theme.",
       "invalidation": "Close below $136, or NVDA/hyperscaler capex guidance turns cautious, by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 149.16
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 150.97,
+      "last_price": 150.97
     },
     {
       "id": "2026-08-27:kimi:SMCI:short",
@@ -6370,11 +6370,11 @@
       "expiry_date": "2026-09-26",
       "thesis": "Retail-hype fade now that the NVDA catalyst has passed with a whimper; accounting overhang unresolved. Working: -2.7% today.",
       "invalidation": "Close above $41.50, or a clean accounting/filing resolution that re-rates the stock, by 2026-09-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 37.415
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 38.56,
+      "last_price": 38.56
     },
     {
       "id": "2026-08-27:kimi:XLE:short",
@@ -6395,11 +6395,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "Oil sliding (Brent ~$86), supply comfortable, geopolitical risk premium drained; XOM -1.5% confirms.",
       "invalidation": "Brent back above $92 on a supply shock or OPEC+ cut, by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 62.43
+      "status": "EXITED",
+      "outcome": 1,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 61.83,
+      "last_price": 61.83
     },
     {
       "id": "2026-08-27:kimi:PFE:long",
@@ -6420,11 +6420,11 @@
       "expiry_date": "2026-10-26",
       "thesis": "Defensive yield plus pipeline optionality; no invalidation since entry, held per process.",
       "invalidation": "Guidance cut, or XLV sector breakdown, by 2026-10-26",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 28.32
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 27.895,
+      "last_price": 27.895
     },
     {
       "id": "2026-08-27:kimi:MU:long",
@@ -6445,11 +6445,11 @@
       "expiry_date": "2026-10-11",
       "thesis": "NEW: HBM/memory pricing tightness; semi strength broadening beyond NVDA (ARM, MRVL confirming) \u2014 the cycle laggard catching the bid.",
       "invalidation": "Memory spot prices roll over, or AI-capex commentary from NVDA/hyperscalers turns cautious, by 2026-10-11",
-      "status": "OPEN",
-      "outcome": null,
-      "resolved_date": null,
-      "resolved_price": null,
-      "last_price": 951.84
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 930.105,
+      "last_price": 930.105
     },
     {
       "id": "2026-08-27:kimi:CAT:long",
@@ -6470,23 +6470,248 @@
       "expiry_date": "2026-10-26",
       "thesis": "NEW: Steep curve plus an easing Fed favors the capex/infrastructure cycle; XLI +1.1% and CAT +1.3% show the rotation is live. Diversifies the book.",
       "invalidation": "PMI back below 50, or close below $760, by 2026-10-26",
+      "status": "EXITED",
+      "outcome": 0,
+      "resolved_date": "2026-08-27",
+      "resolved_price": 814.85,
+      "last_price": 814.85
+    },
+    {
+      "id": "2026-08-27:gemini:XLP:long",
+      "model": "gemini",
+      "name": "Gemini",
+      "date_opened": "2026-08-27",
+      "ticker": "XLP",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "structural",
+      "probability": 0.62,
+      "entry": 85.29,
+      "stop": 81.88,
+      "target": 92.11,
+      "stop_pct": -4,
+      "target_pct": 8,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Consumer staples offer superior risk-adjusted carry and margin resilience amidst late-cycle consumer bifurcation.",
+      "invalidation": "XLP closes below 82.80 or real retail sales accelerate >300 bps annualized by 2026-11-15",
       "status": "OPEN",
       "outcome": null,
       "resolved_date": null,
       "resolved_price": null,
-      "last_price": 821.695
+      "last_price": 85.29
+    },
+    {
+      "id": "2026-08-27:gemini:WMT:long",
+      "model": "gemini",
+      "name": "Gemini",
+      "date_opened": "2026-08-27",
+      "ticker": "WMT",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "analytical",
+      "probability": 0.6,
+      "entry": 102.48,
+      "stop": 97.36,
+      "target": 117.85,
+      "stop_pct": -5,
+      "target_pct": 15,
+      "horizon_days": 45,
+      "expiry_date": "2026-10-11",
+      "thesis": "Omnichannel and grocery share gains allow margin expansion despite broader consumer trade-down pressure.",
+      "invalidation": "WMT weekly close below 99.10 or grocery comp store sales turn negative by 2026-10-31",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 102.48
+    },
+    {
+      "id": "2026-08-27:gemini:V:long",
+      "model": "gemini",
+      "name": "Gemini",
+      "date_opened": "2026-08-27",
+      "ticker": "V",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "structural",
+      "probability": 0.58,
+      "entry": 378.9,
+      "stop": 359.95,
+      "target": 424.37,
+      "stop_pct": -5,
+      "target_pct": 12,
+      "horizon_days": 50,
+      "expiry_date": "2026-10-16",
+      "thesis": "Global cross-border travel volume and non-discretionary transaction indexing provide inflation-protected tollbooth cash flows.",
+      "invalidation": "Cross-border volume growth drops below 5% YoY or price breaks below 364.50 by 2026-11-01",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 378.9
+    },
+    {
+      "id": "2026-08-27:qwen:V:long",
+      "model": "qwen",
+      "name": "Qwen",
+      "date_opened": "2026-08-27",
+      "ticker": "V",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "structural",
+      "probability": 0.5,
+      "entry": 378.9,
+      "stop": 348.59,
+      "target": 435.73,
+      "stop_pct": -8,
+      "target_pct": 15,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Structural: cross-border payment volume and duopoly network effects compound as digital spend grows.",
+      "invalidation": "V closes below 353 or cross-border volume shock emerges by 2026-10-26",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 378.9
+    },
+    {
+      "id": "2026-08-27:glm:GOOGL:long",
+      "model": "glm",
+      "name": "GLM",
+      "date_opened": "2026-08-27",
+      "ticker": "GOOGL",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "behavioral",
+      "probability": 0.57,
+      "entry": 339.99,
+      "stop": 305.99,
+      "target": 401.19,
+      "stop_pct": -10,
+      "target_pct": 18,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Cheapest mega-cap on cash-adjusted earnings with compounding cloud monetization; regulatory fear overshoots the base-rate outcome.",
+      "invalidation": "We are wrong if GOOGL closes below 307.20 or a final adverse ruling lands in the DOJ search case, by 2026-10-26.",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 339.99
+    },
+    {
+      "id": "2026-08-27:glm:XLP:long",
+      "model": "glm",
+      "name": "GLM",
+      "date_opened": "2026-08-27",
+      "ticker": "XLP",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "structural",
+      "probability": 0.55,
+      "entry": 85.29,
+      "stop": 80.17,
+      "target": 92.11,
+      "stop_pct": -6,
+      "target_pct": 8,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Mandate-constrained demand for low-vol staples provides a durable valuation floor near cycle-average multiples; this is ballast, not alpha.",
+      "invalidation": "We are wrong if XLP closes below 81.10, by 2026-10-26.",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 85.29
+    },
+    {
+      "id": "2026-08-27:llama:XLU:long",
+      "model": "llama",
+      "name": "Llama",
+      "date_opened": "2026-08-27",
+      "ticker": "XLU",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "structural",
+      "probability": 0.65,
+      "entry": 43.175,
+      "stop": 40.58,
+      "target": 47.49,
+      "stop_pct": -6,
+      "target_pct": 10,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Utilities sector remains attractive due to its defensive nature and steady cash flows.",
+      "invalidation": "Interest rates rise sharply, making yield less attractive.",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 43.175
+    },
+    {
+      "id": "2026-08-27:kimi:V:long",
+      "model": "kimi",
+      "name": "Kimi",
+      "date_opened": "2026-08-27",
+      "ticker": "V",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "analytical",
+      "probability": 0.57,
+      "entry": 378.9,
+      "stop": 356.17,
+      "target": 424.37,
+      "stop_pct": -6,
+      "target_pct": 12,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Payment-volume compounding at a reasonable multiple; consumer spending data stable.",
+      "invalidation": "Two consecutive negative monthly retail-sales prints, or close below $360, by 2026-10-26",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 378.9
+    },
+    {
+      "id": "2026-08-27:kimi:UNH:long",
+      "model": "kimi",
+      "name": "Kimi",
+      "date_opened": "2026-08-27",
+      "ticker": "UNH",
+      "side": "long",
+      "kind": "equity",
+      "edge_type": "behavioral",
+      "probability": 0.55,
+      "entry": 396.13,
+      "stop": 368.4,
+      "target": 455.55,
+      "stop_pct": -7,
+      "target_pct": 15,
+      "horizon_days": 60,
+      "expiry_date": "2026-10-26",
+      "thesis": "Managed-care pessimism overdone; defensive value with +1.1% relative strength in a weak healthcare tape.",
+      "invalidation": "XLV breaks its 200-day average, or UNH-specific adverse regulatory action, by 2026-10-26",
+      "status": "OPEN",
+      "outcome": null,
+      "resolved_date": null,
+      "resolved_price": null,
+      "last_price": 396.13
     }
   ],
   "models": {
     "fable": {
       "name": "Fable",
-      "n_resolved": 13,
-      "n_open": 2,
-      "brier": 0.2571,
-      "accuracy": 0.5385,
-      "mean_probability": 0.53,
-      "overconfidence_gap": -0.0085,
-      "brier_skill": -0.0346
+      "n_resolved": 15,
+      "n_open": 0,
+      "brier": 0.2639,
+      "accuracy": 0.4667,
+      "mean_probability": 0.5333,
+      "overconfidence_gap": 0.0667,
+      "brier_skill": -0.0604
     },
     "sol": {
       "name": "Sol",
@@ -6510,13 +6735,13 @@
     },
     "gemini": {
       "name": "Gemini",
-      "n_resolved": 40,
-      "n_open": 6,
-      "brier": 0.2763,
-      "accuracy": 0.425,
-      "mean_probability": 0.5902,
-      "overconfidence_gap": 0.1652,
-      "brier_skill": -0.1305
+      "n_resolved": 46,
+      "n_open": 3,
+      "brier": 0.2706,
+      "accuracy": 0.4783,
+      "mean_probability": 0.583,
+      "overconfidence_gap": 0.1048,
+      "brier_skill": -0.0846
     },
     "deepseek": {
       "name": "DeepSeek",
@@ -6530,53 +6755,53 @@
     },
     "qwen": {
       "name": "Qwen",
-      "n_resolved": 42,
-      "n_open": 8,
-      "brier": 0.252,
-      "accuracy": 0.4524,
-      "mean_probability": 0.5381,
-      "overconfidence_gap": 0.0857,
-      "brier_skill": -0.0171
+      "n_resolved": 50,
+      "n_open": 1,
+      "brier": 0.2604,
+      "accuracy": 0.46,
+      "mean_probability": 0.5194,
+      "overconfidence_gap": 0.0594,
+      "brier_skill": -0.0485
     },
     "glm": {
       "name": "GLM",
-      "n_resolved": 35,
-      "n_open": 6,
-      "brier": 0.2534,
-      "accuracy": 0.4857,
-      "mean_probability": 0.5669,
-      "overconfidence_gap": 0.0811,
-      "brier_skill": -0.0146
+      "n_resolved": 41,
+      "n_open": 2,
+      "brier": 0.2547,
+      "accuracy": 0.4878,
+      "mean_probability": 0.5673,
+      "overconfidence_gap": 0.0795,
+      "brier_skill": -0.0193
     },
     "llama": {
       "name": "Llama",
-      "n_resolved": 34,
-      "n_open": 6,
-      "brier": 0.2782,
-      "accuracy": 0.3824,
-      "mean_probability": 0.5974,
-      "overconfidence_gap": 0.215,
-      "brier_skill": -0.1778
+      "n_resolved": 40,
+      "n_open": 1,
+      "brier": 0.268,
+      "accuracy": 0.45,
+      "mean_probability": 0.5948,
+      "overconfidence_gap": 0.1447,
+      "brier_skill": -0.0828
     },
     "mistral": {
       "name": "Mistral",
-      "n_resolved": 18,
-      "n_open": 5,
-      "brier": 0.2545,
-      "accuracy": 0.4444,
-      "mean_probability": 0.5678,
-      "overconfidence_gap": 0.1233,
-      "brier_skill": -0.0306
+      "n_resolved": 23,
+      "n_open": 0,
+      "brier": 0.2617,
+      "accuracy": 0.4348,
+      "mean_probability": 0.5826,
+      "overconfidence_gap": 0.1478,
+      "brier_skill": -0.0647
     },
     "kimi": {
       "name": "Kimi",
-      "n_resolved": 32,
-      "n_open": 8,
-      "brier": 0.2527,
-      "accuracy": 0.4688,
-      "mean_probability": 0.5434,
-      "overconfidence_gap": 0.0747,
-      "brier_skill": -0.0149
+      "n_resolved": 40,
+      "n_open": 2,
+      "brier": 0.2561,
+      "accuracy": 0.45,
+      "mean_probability": 0.546,
+      "overconfidence_gap": 0.096,
+      "brier_skill": -0.0347
     }
   }
 }
