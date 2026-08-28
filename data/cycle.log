@@ -548,3 +548,59 @@ Calibration: 318 total forecasts — 9 opened today, 102 resolved today, 309 res
   Fable      n= 17  Brier=0.263  acc=0.47  stated=0.54  gap=+0.07  BSS=-0.06
   DeepSeek   n=  4  Brier=0.246  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+[main 737bf1f] Pivot 2026-08-27 14:30:16
+ 6 files changed, 2121 insertions(+), 904 deletions(-)
+ create mode 100644 data/picks/archive/2026-08-27-1430.json
+To https://github.com/babarlabs-ops/morti-race.git
+   ea91145..737bf1f  main -> main
+[2026-08-27 14:30:17] === pivot complete ===
+[2026-08-28 07:30:29] credits remaining: 2.28
+[2026-08-28 07:30:29] === cycle start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Macro: Fed funds 3.63%; 10Y 4.66%; 2Y 4.19%; curve +0.47% (steep); VIX 15.2 (normal)
+→ Fable (anthropic/claude-fable-5)...
+  FAIL 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 49648. To increase, visit ht
+→ Sol (openai/gpt-5.6-sol)...
+  OK — 0 positions, 20236 tok
+→ Grok (x-ai/grok-4.6)...
+  OK — 0 positions, 22253 tok
+→ Gemini (google/gemini-3.7-flash)...
+  OK — 9 positions, 27146 tok
+→ DeepSeek (deepseek/deepseek-v4-pro)...
+  OK — 2 positions, 26243 tok
+→ Qwen (qwen/qwen3.8-max)...
+  OK — 9 positions, 39049 tok
+→ GLM (z-ai/glm-5.3)...
+  OK — 8 positions, 35475 tok
+→ Llama (meta-llama/llama-4-maverick)...
+  OK — 6 positions, 20623 tok
+→ Mistral (mistralai/mistral-medium-3-5)...
+  OK — 9 positions, 23578 tok
+→ Kimi (moonshotai/kimi-k3)...
+  OK — 9 positions, 31000 tok
+
+Done — 10/10 models → /Users/minimi/Claude Working files/morti-race/data/picks/2026-08-28.json
+RANK  MODEL      EQUITY        RET%      POS  GROSS%   REALIZED
+   1  Llama      $112,608.66   +12.609    6   44.9     +916.17
+   2  Qwen       $105,284.07    +5.284    9   52.0      +45.74
+   3  Sol        $103,166.51    +3.167    0    0.0       +0.00
+   4  Gemini     $103,035.15    +3.035    9   73.0     +183.07
+   5  Grok       $100,639.06    +0.639    0    0.0       +0.00
+   6  Fable      $100,323.03    +0.323    0    0.0      -29.73
+   7  GLM        $ 99,195.13    -0.805    8   39.0      +16.39
+   8  Kimi       $ 98,308.01    -1.692    9   50.9     +152.80
+   9  DeepSeek   $ 97,254.98    -2.745    2   12.5       +0.00
+  10  Mistral    $ 88,018.31   -11.982    6   69.5     -302.17
+
+Saved → /Users/minimi/Claude Working files/morti-race/data/ledger.json
+Calibration: 358 total forecasts — 40 opened today, 9 resolved today, 318 resolved overall
+  Qwen       n= 60  Brier=0.250  acc=0.40  stated=0.51  gap=+0.11  BSS=-0.04
+  Gemini     n= 58  Brier=0.267  acc=0.48  stated=0.58  gap=+0.10  BSS=-0.07
+  Kimi       n= 52  Brier=0.260  acc=0.42  stated=0.55  gap=+0.13  BSS=-0.06
+  GLM        n= 51  Brier=0.258  acc=0.47  stated=0.57  gap=+0.10  BSS=-0.03
+  Llama      n= 48  Brier=0.274  acc=0.42  stated=0.60  gap=+0.18  BSS=-0.13
+  Mistral    n= 28  Brier=0.259  acc=0.46  stated=0.59  gap=+0.13  BSS=-0.04
+  Fable      n= 17  Brier=0.263  acc=0.47  stated=0.54  gap=+0.07  BSS=-0.06
+  DeepSeek   n=  4  Brier=0.246  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
+Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
