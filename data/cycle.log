@@ -1081,3 +1081,41 @@ Calibration: 586 total forecasts — 30 opened today, 78 resolved today, 556 res
   DeepSeek   n= 33  Brier=0.249  acc=0.52  stated=0.56  gap=+0.04  BSS=+0.00
   Fable      n= 21  Brier=0.262  acc=0.48  stated=0.54  gap=+0.06  BSS=-0.05
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+[main 45dac03] Pivot 2026-09-02 12:30:20
+ 6 files changed, 2707 insertions(+), 868 deletions(-)
+ create mode 100644 data/picks/archive/2026-09-02-1230.json
+To https://github.com/babarlabs-ops/morti-race.git
+   0c46fff..45dac03  main -> main
+[2026-09-02 12:30:22] === pivot complete ===
+[2026-09-02 14:25:17] pivot credits: 6.67
+[2026-09-02 14:25:17] archived prior picks → 2026-09-02-1425.json
+[2026-09-02 14:25:17] === pivot start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Macro: Fed funds 3.63%; 10Y 4.75%; 2Y 4.34%; curve +0.41% (steep); VIX 16.3 (normal)
+→ Fable (anthropic/claude-fable-5)...
+  OK — 3 positions, 32539 tok
+→ Sol (openai/gpt-5.6-sol)...
+  OK — 0 positions, 20307 tok
+→ Grok (x-ai/grok-4.6)...
+  OK — 0 positions, 22323 tok
+→ Gemini (google/gemini-3.7-flash)...
+  OK — 10 positions, 25821 tok
+→ DeepSeek (deepseek/deepseek-v4-pro)...
+[2026-09-02 14:30:01] pivot credits: 6.11
+[2026-09-02 14:30:01] archived prior picks → 2026-09-02-1430.json
+[2026-09-02 14:30:01] === pivot start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Macro: Fed funds 3.63%; 10Y 4.75%; 2Y 4.34%; curve +0.41% (steep); VIX 16.3 (normal)
+→ Fable (anthropic/claude-fable-5)...
+  OK — 5 positions, 31717 tok
+→ Qwen (qwen/qwen3.8-max)...
+  OK — 3 positions, 32342 tok
+→ Sol (openai/gpt-5.6-sol)...
+  OK — 0 positions, 20482 tok
+→ Grok (x-ai/grok-4.6)...
+  OK — 0 positions, 22200 tok
+→ Gemini (google/gemini-3.7-flash)...
+  OK — 9 positions, 25527 tok
+→ DeepSeek (deepseek/deepseek-v4-pro)...

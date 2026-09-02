@@ -6,12 +6,12 @@ thesis, and decides what to HOLD, SELL, or OPEN — equities, ETFs, crypto, and
 defined-risk options (long calls/puts). Robust: per-model timeout, incremental
 save, resumable.
 """
-import json, os, sys, urllib.request, urllib.error
+import json, os, sys, signal, urllib.request, urllib.error
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = "/Users/minimi/.hermes/profiles/morti/.env"
-MODEL_TIMEOUT = 90
+MODEL_TIMEOUT = 180
 
 
 def load_env(path):
@@ -42,6 +42,10 @@ def call_model(model, system, user, key):
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
         method="POST",
     )
+    def _timeout(signum, frame):
+        raise TimeoutError(f"{model} timed out after {MODEL_TIMEOUT}s")
+    prev = signal.signal(signal.SIGALRM, _timeout)
+    signal.alarm(MODEL_TIMEOUT)
     try:
         with urllib.request.urlopen(req, timeout=MODEL_TIMEOUT) as r:
             return r.status, json.loads(r.read().decode())
@@ -49,6 +53,9 @@ def call_model(model, system, user, key):
         return e.code, e.read().decode()[:400]
     except Exception as e:
         return "ERR", str(e)[:200]
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, prev)
 
 
 def extract_json(text):

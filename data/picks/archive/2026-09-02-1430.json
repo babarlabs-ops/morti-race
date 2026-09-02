@@ -1,0 +1,291 @@
+{
+  "generated_utc": "2026-09-02T18:26:57.580750+00:00",
+  "results": {
+    "fable": {
+      "model": "Fable",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Steep curve (2s10s +41bp) with 2Y above funds rate says the market is pricing tighter-for-longer into the Sept 15-16 FOMC; equities are rangebound and post-earnings software wreckage (PANW -10%, DDOG -6%, CRWD -6%) is the only fresh dislocation with a known behavioral base rate. Mostly cash is correct.",
+        "justification": "Doctrine first: review existing positions before new ideas. XLE and XLU are both intact \u2014 no invalidation triggered, small size, hold. The racing mandate does not override SOUL \u00a79: survive, measure honestly, compound \u2014 I will not manufacture trades to chase a 10x. One new position clears the three-sentence test: PANW's -10% earnings gap invokes post-earnings-announcement drift, a documented behavioral edge where dip-buying retail anchored to the pre-print price supplies the other side. NVDA's earnings are already past (Aug 26) and today's +3.5% offers no underwritable edge; crypto shows no mispricing I can name; ~81% stays in cash earning the front-end yield, which at FF 3.63% is a legitimate position.",
+        "positions": [
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "HOLD \u2014 energy underweight by generalists plus steep-curve/reflation regime; mechanism intact, marginally green, no invalidation hit.",
+            "stop_pct": -7,
+            "target_pct": 12,
+            "edge_type": "structural",
+            "probability": 0.55,
+            "invalidation": "We are wrong if XLE closes below 60.40 (-7%) or WTI-driven sector flows reverse (XLE bottom-quartile sector performer for 10 consecutive sessions) by 2026-10-15.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "XLU",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "HOLD \u2014 utilities as defensive carry into FOMC uncertainty; note the falsifier is rates: 2Y at 4.34% above funds is a headwind, so this position lives on a tight leash.",
+            "stop_pct": -5,
+            "target_pct": 8,
+            "edge_type": "structural",
+            "probability": 0.54,
+            "invalidation": "We are wrong if 10Y yield closes above 5.00% or XLU closes below 40.55 (-5%) by 2026-10-02 \u2014 a hawkish FOMC repricing kills the defensive-carry mechanism.",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "PANW",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Post-earnings-announcement drift: a -10% earnings gap historically continues in the gap direction over 2-6 weeks; alpha is supplied by retail dip-buyers anchored to the pre-print $362 price, a bias that persists because anchoring doesn't update on one print.",
+            "stop_pct": -8,
+            "target_pct": 12,
+            "edge_type": "behavioral",
+            "probability": 0.54,
+            "invalidation": "We are wrong if PANW reclaims and closes above $352 (a full close of the earnings gap) by 2026-09-23, or rises 8% from entry (~$352) at any point \u2014 gap reclamation means the market judged the reaction an overshoot and the drift mechanism is dead.",
+            "horizon_days": 21
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 30114,
+        "completion_tokens": 2425,
+        "total_tokens": 32539,
+        "cost": 0.42239,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.42239,
+          "upstream_inference_prompt_cost": 0.30114,
+          "upstream_inference_completions_cost": 0.12125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1337,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "sol": {
+      "model": "Sol",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Remain flat: a steep curve, 4.75% 10-year yield, and the September 15\u201316 FOMC create uncertain cross-asset conditions without a sufficiently validated mispricing.",
+        "justification": "There are no existing positions to hold or sell. No new position passes the evidence gate because prices are supplied by only one source, while the research feed is dated around August 26 and incorrectly frames already-reported Nvidia earnings as upcoming; the required independent price confirmation and current catalyst evidence are therefore absent. Preserve capital in cash rather than manufacture conviction from inconsistent inputs.",
+        "positions": []
+      },
+      "raw_usage": {
+        "prompt_tokens": 20006,
+        "completion_tokens": 301,
+        "total_tokens": 20307,
+        "cost": 0.0530235,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 20003,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0530235,
+          "upstream_inference_prompt_cost": 0.0500135,
+          "upstream_inference_completions_cost": 0.00301
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 173,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "grok": {
+      "model": "Grok",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Steep curve and 4.75% 10Y with VIX 16.3 price a soft-landing grind into the Sep 15\u201316 FOMC; nothing in the tape is clearly mispriced versus that, so cash is the position.",
+        "justification": "Book is flat with no open theses to re-underwrite. Headlines are stale or non-actionable (NVDA already reported Aug 26; PANW/CRWD/NET/DDOG dumps lack a stated mechanism). No three-sentence edge survives: no named payer of alpha, no falsifier tighter than a vibe, and event risk in 13 days makes chasing beta a process error. Survive-measure-compound binds over the 10x race prompt; inventing names to look busy would be drift.",
+        "positions": []
+      },
+      "raw_usage": {
+        "prompt_tokens": 20467,
+        "completion_tokens": 1856,
+        "total_tokens": 22323,
+        "cost": 0.051878,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.051878,
+          "upstream_inference_prompt_cost": 0.040742,
+          "upstream_inference_completions_cost": 0.011136
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1685,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "gemini": {
+      "model": "Gemini",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Yield curve steepening (+41 bps 2s10s) with 10Y at 4.75% into the September 15-16 FOMC favors high free-cash-flow compounders, defensive staples, and secular AI infrastructure over rate-sensitive unprofitables.",
+        "justification": "The book maintains balanced factor exposures across defensive value (XLP, WMT, UNH, V), cyclical inflation hedges (XLE, DE), liquid macro convexity (BTC), and leading cloud/AI infrastructure (ORCL, PLTR). We initiate a disciplined 10% long in META to capture digital advertising strength and AI monetization resilience while maintaining a 12% cash buffer to adhere to fractional Kelly limits and vol targeting.",
+        "positions": [
+          {
+            "ticker": "XLP",
+            "side": "long",
+            "alloc_pct": 12,
+            "thesis": "Consumer staples offer resilient pricing power and low equity beta amid elevated 10-year term premium.",
+            "stop_pct": -5.0,
+            "target_pct": 12.0,
+            "edge_type": "structural",
+            "probability": 0.61,
+            "invalidation": "We are wrong if non-farm payrolls spike causing broad cyclical rotation and XLP drops below 81.65 by 2026-10-15.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "WMT",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Market-share capture across middle-to-high income cohorts and high-margin retail media revenue acceleration.",
+            "stop_pct": -6.0,
+            "target_pct": 15.0,
+            "edge_type": "analytical",
+            "probability": 0.58,
+            "invalidation": "We are wrong if grocery deflation erodes gross margins or price closes below 100.00 by 2026-10-30.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Energy equities trade at a steep discount to spot crude cash generation with disciplined capex and supply constraints.",
+            "stop_pct": -7.0,
+            "target_pct": 18.0,
+            "edge_type": "behavioral",
+            "probability": 0.56,
+            "invalidation": "We are wrong if OPEC+ enacts unexpected volume dumping or WTI falls below $68/bbl by 2026-10-15.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "UNH",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Medical loss ratio headwinds are over-discounted by retail sentiment; institutional pricing power restores margin trajectory.",
+            "stop_pct": -6.0,
+            "target_pct": 16.0,
+            "edge_type": "behavioral",
+            "probability": 0.57,
+            "invalidation": "We are wrong if Medicare Advantage regulatory rate cuts deepen further or price breaks 375.00 by 2026-11-15.",
+            "horizon_days": 75
+          },
+          {
+            "ticker": "V",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Secular cash-to-digital tailwind and cross-border travel transaction volumes driving durable mid-teens EPS growth.",
+            "stop_pct": -6.0,
+            "target_pct": 15.0,
+            "edge_type": "structural",
+            "probability": 0.6,
+            "invalidation": "We are wrong if global cross-border volume growth slows below 5% YoY or price closes under 356.00 by 2026-10-31.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "DE",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Agricultural machinery cycle inflection and precision-ag software recurring revenue underappreciated by consensus.",
+            "stop_pct": -6.0,
+            "target_pct": 16.0,
+            "edge_type": "analytical",
+            "probability": 0.55,
+            "invalidation": "We are wrong if broad ag commodity prices tumble another 15% or DE drops below 644.00 by 2026-11-01.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "ORCL",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "OCI multi-cloud database partnerships and contracted enterprise GPU cloud backlog converting into accelerating IaaS revenue.",
+            "stop_pct": -7.0,
+            "target_pct": 18.0,
+            "edge_type": "analytical",
+            "probability": 0.58,
+            "invalidation": "We are wrong if OCI revenue growth decelerates below 40% YoY or stock closes below 134.00 by 2026-10-15.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "PLTR",
+            "side": "long",
+            "alloc_pct": 7,
+            "thesis": "AIP bootcamps driving rapid commercial customer conversion and high net revenue retention in enterprise workflow automation.",
+            "stop_pct": -10.0,
+            "target_pct": 25.0,
+            "edge_type": "behavioral",
+            "probability": 0.54,
+            "invalidation": "We are wrong if US commercial deal volume growth slips below 35% YoY or PLTR closes under 150.00 by 2026-10-31.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Liquid macro hedge against global fiat expansion and steepening sovereign yield curves with institutional ETP inflow support.",
+            "stop_pct": -10.0,
+            "target_pct": 25.0,
+            "edge_type": "structural",
+            "probability": 0.55,
+            "invalidation": "We are wrong if net weekly ETP flows turn negative for three consecutive weeks or BTC breaks below 69,500 by 2026-10-31.",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "META",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Advantage+ AI advertising suite drives superior ROAS and pricing power, capturing outsized share of global digital ad budgets.",
+            "stop_pct": -7.0,
+            "target_pct": 20.0,
+            "edge_type": "analytical",
+            "probability": 0.58,
+            "invalidation": "We are wrong if digital advertising impression pricing softens by >5% or META falls below 550.00 by 2026-11-15.",
+            "horizon_days": 75
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 22843,
+        "completion_tokens": 2978,
+        "total_tokens": 25821,
+        "cost": 0.02829975,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.02829975,
+          "upstream_inference_prompt_cost": 0.01713225,
+          "upstream_inference_completions_cost": 0.0111675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1192,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  }
+}
