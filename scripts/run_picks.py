@@ -169,7 +169,8 @@ def main():
             "Do not invent trades to look productive.\n"
         )
         return (
-            "You are racing $100,000 to $1,000,000 in one year. This is today's decision cycle.\n\n"
+            f"Today is {day} (UTC). You are racing $100,000 to $1,000,000 in one year. This is today's decision cycle.\n"
+            "Ground your thesis and invalidation in today's date — do not treat already-past events (e.g. a prior earnings report) as upcoming.\n\n"
             "YOUR CURRENT BOOK:\n" + book +
             "\nDecide today's moves: which positions to HOLD, which to SELL, and what NEW "
             "positions to OPEN (long, short, or swing).\n"
