@@ -1,0 +1,655 @@
+{
+  "generated_utc": "2026-09-04T16:42:59.471882+00:00",
+  "results": {
+    "fable": {
+      "model": "Fable",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Low vol (VIX 14.3) coexisting with a 4.79% 10Y and FOMC on 9/15-16 is a fragile mix; AI-hardware capex remains the only confirmed leadership (MU/AMD/MRVL/TSM breaking out while broad tape sags), so express small semi exposure with a cheap index tail hedge and stay mostly cash.",
+        "justification": "Cold-start discipline: this is an early cycle with no calibration history, so the book runs quarter-size (~12.5% deployed) regardless of conviction. Semis are the one cluster with cross-asset confirmation (TSM +2.4%, MU +5%, AMD +3.6%, MRVL +5.8% on a down tape) \u2014 a behavioral/structural underweight from generalists still exists, but I cap the cluster well below limits and won't chase further strength. The SPY put is defined-risk convexity priced off a 14-handle VIX into an FOMC where the term-premium repricing story (10Y 4.79%, steep curve) is under-hedged. No edge exists on the day's big losers (TSLA, ADBE post-drop drift base rates argue against fading), and BTC at 79.5k offers no declared edge \u2014 flat there is the position.",
+        "positions": [
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 6,
+            "thesis": "Structural foundry monopoly on AI accelerators; equity still re-rating slower than fabless peers despite capex confirmation across MU/AMD/AVGO prints \u2014 generalists remain underweight on geopolitical discount.",
+            "stop_pct": -8,
+            "target_pct": 15,
+            "edge_type": "structural",
+            "probability": 0.55,
+            "invalidation": "Wrong if a hyperscaler publicly cuts AI capex guidance, or TSM closes below 393 (-8%), or the semi cluster (SOX proxy) loses its September breakout by 2026-10-19.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "AMD",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Datacenter accelerator share-gain narrative has fresh flow confirmation (+3.6% on a red tape, positive options skew); momentum leadership in the only working theme, sized small because entry follows strength.",
+            "stop_pct": -10,
+            "target_pct": 18,
+            "edge_type": "behavioral",
+            "probability": 0.5,
+            "invalidation": "Wrong if AMD closes below 425 (-10%), or if relative strength vs QQQ turns negative for 5 consecutive sessions, by 2026-10-04.",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "SPY",
+            "type": "long_put",
+            "strike_pct": 4,
+            "expiry_days": 30,
+            "alloc_pct": 1.5,
+            "thesis": "VIX at 14.3 with the 10Y at 4.79%, breadth deteriorating under a semi-led surface, and FOMC 9/15-16 ahead: downside convexity is underpriced relative to the rates-repricing tail; premium fully bounded.",
+            "edge_type": "behavioral",
+            "probability": 0.25,
+            "invalidation": "Wrong if FOMC passes with 10Y back below 4.55% and VIX still under 15 by 2026-09-18 \u2014 then the vol-complacency thesis is dead and remaining premium is written off.",
+            "horizon_days": 30
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 30041,
+        "completion_tokens": 2944,
+        "total_tokens": 32985,
+        "cost": 0.44761,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.44761,
+          "upstream_inference_prompt_cost": 0.30041,
+          "upstream_inference_completions_cost": 0.1472
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1730,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "sol": {
+      "model": "Sol",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Low volatility and a steep yield curve coexist with elevated long rates, but today\u2019s unverified and time-misaligned inputs provide no sufficiently grounded edge, so cash is preferred.",
+        "justification": "No positions are open, so there is nothing to hold or sell. Execution is blocked because prices have not been confirmed by two independent sources, while several research items are dated August 26 and incorrectly frame the already-past Nvidia earnings as upcoming. The race objective does not justify bypassing data-integrity gates or inventing a trade.",
+        "positions": []
+      },
+      "raw_usage": {
+        "prompt_tokens": 20009,
+        "completion_tokens": 435,
+        "total_tokens": 20444,
+        "cost": 0.0201217,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 14891,
+          "cache_write_tokens": 5115,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0201217,
+          "upstream_inference_prompt_cost": 0.0157717,
+          "upstream_inference_completions_cost": 0.00435
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 317,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "grok": {
+      "model": "Grok",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Cash is the position: VIX 14.3 into FOMC Sep 15\u201316 and a Labor Day weekend, with a stale/unusable research tape and no three-sentence mispricing I can underwrite.",
+        "justification": "Book is already flat; SOUL hard limits (\u226450 bps risk per name, \u00bc-Kelly, no speed edge) and the quality gate (max 3 well-underwritten theses, invalidation first) forbid inventing trades from a snapshot. Semis (MU/MRVL/INTC/SMCI) are chasing today's print; TSLA/ADBE/NFLX/PLTR are one-day air pockets without a stated mechanism, persistence, or who is giving the alpha. Scheduled-event vol into FOMC is typically already in the surface (lesson: meeting-only catalysts resolve no-move ~70%). Survive, measure, compound \u2014 nothing is priced attractively enough to leave cash.",
+        "positions": []
+      },
+      "raw_usage": {
+        "prompt_tokens": 20470,
+        "completion_tokens": 2053,
+        "total_tokens": 22523,
+        "cost": 0.053066,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.053066,
+          "upstream_inference_prompt_cost": 0.040748,
+          "upstream_inference_completions_cost": 0.012318
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1848,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "gemini": {
+      "model": "Gemini",
+      "tier": "frontier",
+      "picks": {
+        "thesis": "Term premium steepening (+40 bps 2s10s) and AI hardware capex dispersion favor quality balance sheets, high free-cash-flow infrastructure, and rate-resilient value over multiple-stretched high-beta software.",
+        "justification": "We maintain a disciplined multi-cluster book (defensive cash compounders, yield-curve beneficiaries, hardware semis, and commodity/crypto hedges) while keeping a 12% cash buffer. We prune high-beta crypto proxy exposure (COIN) and rotate software momentum into leading semi infrastructure (TSM, AMD) and resilient cash generators (JPM, WMT, V, UNH), anchoring all stops at <=50 bps NAV risk per name.",
+        "positions": [
+          {
+            "ticker": "JPM",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Long JPM as the 2s10s yield curve steepening (+40 bps) and resilient deposit franchise expand net interest margin expectations ahead of the September FOMC.",
+            "stop_pct": -6.0,
+            "target_pct": 14.0,
+            "edge_type": "structural",
+            "probability": 0.61,
+            "invalidation": "We are wrong if 2s10s re-inverts below 0 bps or JPM closes below $336.00 by 2026-10-15.",
+            "horizon_days": 40
+          },
+          {
+            "ticker": "WMT",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Long WMT due to ongoing market share consolidation in nondiscretionary retail, providing recession-resistant cash flow during late-cycle deceleration.",
+            "stop_pct": -5.5,
+            "target_pct": 12.0,
+            "edge_type": "analytical",
+            "probability": 0.62,
+            "invalidation": "We are wrong if US retail comps decelerate sub-2% or WMT closes below $101.50 by 2026-10-30.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "V",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Long V as secular payment volume compounding and cross-border travel resilience offer low-beta, high-ROIC capital preservation.",
+            "stop_pct": -5.0,
+            "target_pct": 12.0,
+            "edge_type": "structural",
+            "probability": 0.63,
+            "invalidation": "We are wrong if global processed transaction volume drops YoY or V closes below $357.00 by 2026-10-31.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "MSFT",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Long MSFT exploiting short-term software multiple contraction to acquire tier-1 cloud and enterprise Copilot monetization at discounted valuation multiples.",
+            "stop_pct": -6.5,
+            "target_pct": 15.0,
+            "edge_type": "behavioral",
+            "probability": 0.58,
+            "invalidation": "We are wrong if Azure quarterly revenue growth drops below 28% or MSFT closes below $468.00 by 2026-10-25.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "ORCL",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Long ORCL based on structural enterprise cloud migration and multi-cloud database partnerships sustaining OCI infrastructure order backlog growth.",
+            "stop_pct": -6.0,
+            "target_pct": 16.0,
+            "edge_type": "analytical",
+            "probability": 0.59,
+            "invalidation": "We are wrong if OCI cloud infrastructure revenue guidance misses consensus by >3% or ORCL closes below $148.00 by 2026-10-20.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Long TSM capturing pricing power on 3nm/2nm leading-edge wafer fabrication driven by sustained accelerator buildouts across all major hyperscalers.",
+            "stop_pct": -7.0,
+            "target_pct": 18.0,
+            "edge_type": "structural",
+            "probability": 0.6,
+            "invalidation": "We are wrong if monthly revenue prints decline sequentially or TSM closes below $397.00 by 2026-10-15.",
+            "horizon_days": 40
+          },
+          {
+            "ticker": "AMD",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Long AMD as enterprise data center AI compute adoption broadens beyond single-vendor architectures into open ecosystem deployments.",
+            "stop_pct": -7.5,
+            "target_pct": 20.0,
+            "edge_type": "behavioral",
+            "probability": 0.56,
+            "invalidation": "We are wrong if DC GPU order commentary indicates cancellation or AMD closes below $437.00 by 2026-10-20.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 9,
+            "thesis": "Long XLE as capital discipline and mid-single-digit free-cash-flow yields provide a structural inflation and geopolitical supply shock hedge.",
+            "stop_pct": -5.5,
+            "target_pct": 14.0,
+            "edge_type": "structural",
+            "probability": 0.57,
+            "invalidation": "We are wrong if WTI crude breaks below $68/bbl on sustained global demand degradation or XLE closes below $60.50 by 2026-10-15.",
+            "horizon_days": 40
+          },
+          {
+            "ticker": "UNH",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Long UNH on medical loss ratio stabilization and demographic Medicare Advantage repricing providing defensive multi-quarter earnings recovery.",
+            "stop_pct": -6.0,
+            "target_pct": 15.0,
+            "edge_type": "analytical",
+            "probability": 0.58,
+            "invalidation": "We are wrong if medical loss ratio expands >100 bps above guidance or UNH closes below $374.00 by 2026-11-01.",
+            "horizon_days": 50
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "Long BTC as an institutional sovereign balance-sheet and term-premium hedge against ongoing US Treasury debt issuance and steepening curve dynamics.",
+            "stop_pct": -8.0,
+            "target_pct": 22.0,
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "We are wrong if spot ETF net cumulative flows turn negative for 3 consecutive weeks or BTC breaks below $73,000 by 2026-10-15.",
+            "horizon_days": 40
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 22879,
+        "completion_tokens": 2901,
+        "total_tokens": 25780,
+        "cost": 0.028038,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.028038,
+          "upstream_inference_prompt_cost": 0.01715925,
+          "upstream_inference_completions_cost": 0.01087875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1058,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "deepseek": {
+      "model": "DeepSeek",
+      "tier": "open",
+      "picks": {
+        "thesis": "Markets are in a pre-FOMC/pre-NVDA earnings holding pattern with low vol; the edge is in fading the overreaction in AI-linked names where sentiment has become euphoric and in harvesting a behavioral mean-reversion in a high-quality name that sold off sharply on no structural news.",
+        "justification": "The macro snapshot shows a steep yield curve, low VIX, and a market awaiting catalysts (NVDA earnings on Aug 26, FOMC Sep 15-16). This creates a 'priced for perfection' environment in AI hardware. The behavioral edge is fading retail euphoria in SMCI and taking the other side of an oversold, high-quality SaaS name (ADBE) where the -6.3% move lacks a fundamental catalyst, likely driven by sector rotation or profit-taking. We are also closing the AMD calls to realize gains, as the thesis has played out and we do not want to hold through NVDA's binary event. HOOD is held as it shows relative strength and a constructive technical setup.",
+        "positions": [
+          {
+            "ticker": "AMD",
+            "side": "sell",
+            "alloc_pct": 0,
+            "thesis": "Closing existing LONG CALL position. The thesis of a tactical rebound into NVDA earnings has played out with AMD up 3.63% today. We do not hold speculative long premium through a binary event for a peer.",
+            "stop_pct": 0,
+            "target_pct": 0,
+            "edge_type": "behavioral",
+            "probability": 1.0,
+            "invalidation": "N/A - closing trade",
+            "horizon_days": 0
+          },
+          {
+            "ticker": "HOOD",
+            "side": "hold",
+            "alloc_pct": 25,
+            "thesis": "Holding existing LONG position. The stock is consolidating near highs with crypto tailwinds and a constructive technical breakout narrative. No invalidation has been triggered.",
+            "stop_pct": -8,
+            "target_pct": 20,
+            "edge_type": "behavioral",
+            "probability": 0.6,
+            "invalidation": "Close below $112 (the breakout level) on high volume invalidates the momentum thesis.",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "ADBE",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 45,
+            "alloc_pct": 8,
+            "thesis": "ADBE's -6.3% drop is a behavioral overreaction in a high-quality name with no company-specific news. We are long a slightly OTM call to capture mean reversion as the market re-focuses on its sticky enterprise base and AI monetization story.",
+            "edge_type": "behavioral",
+            "probability": 0.58,
+            "invalidation": "ADBE closes below $255 (pre-drop support) or a negative pre-announcement surfaces by Sep 18, 2026.",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "SMCI",
+            "side": "short",
+            "alloc_pct": 10,
+            "thesis": "SMCI's +7.2% move is retail-driven AI hype ahead of NVDA earnings, ignoring lingering accounting concerns. We are shorting into this euphoria as a tactical fade, expecting profit-taking or a 'sell the news' reaction post-NVDA.",
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "SMCI closes above $44 (post-pop high) or NVDA reports a blowout quarter with guidance raise that lifts the entire AI server basket by >10% by Sep 11, 2026.",
+            "horizon_days": 14
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 20517,
+        "completion_tokens": 845,
+        "total_tokens": 21362,
+        "cost": 0.025116117,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.025116117,
+          "upstream_inference_prompt_cost": 0.023204727,
+          "upstream_inference_completions_cost": 0.00191139
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "qwen": {
+      "model": "Qwen",
+      "tier": "open",
+      "error": "qwen/qwen3.8-max timed out after 180s"
+    },
+    "glm": {
+      "model": "GLM",
+      "tier": "open",
+      "error": "z-ai/glm-5.3 timed out after 180s"
+    },
+    "llama": {
+      "model": "Llama",
+      "tier": "open",
+      "picks": {
+        "thesis": "Markets are in a cautious, event-driven mode ahead of Nvidia earnings and key inflation readings, with a mix of tech rebound and global positive cues.",
+        "justification": "The current market environment is characterized by caution due to upcoming significant events such as Nvidia earnings and inflation data. This cautiousness is reflected in rangebound futures and mixed global cues. The market is sensitive to tech sector movements and macroeconomic indicators.",
+        "positions": [
+          {
+            "ticker": "TSM",
+            "side": "long",
+            "alloc_pct": 8,
+            "thesis": "TSM benefits from Nvidia earnings tailwinds and AI/data-center momentum.",
+            "stop_pct": -5,
+            "target_pct": 15,
+            "edge_type": "behavioral",
+            "probability": 0.58,
+            "invalidation": "Close below $410 by 2026-09-11",
+            "horizon_days": 15
+          },
+          {
+            "ticker": "SMCI",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "SMCI rides AI-server play tied to NVIDIA, with technicals and Cisco partnership as sparks.",
+            "stop_pct": -8,
+            "target_pct": 20,
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "Close below $36 by 2026-09-11",
+            "horizon_days": 15
+          },
+          {
+            "ticker": "NVDA",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 30,
+            "alloc_pct": 5,
+            "thesis": "NVDA earnings expected to drive tech sector momentum.",
+            "edge_type": "behavioral",
+            "probability": 0.52,
+            "invalidation": "Earnings report disappoints by 2026-08-26",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Energy sector stability amid geopolitical tensions and oil price movements.",
+            "stop_pct": -6,
+            "target_pct": 12,
+            "edge_type": "structural",
+            "probability": 0.6,
+            "invalidation": "Oil price drops below $80 by 2026-09-18",
+            "horizon_days": 20
+          },
+          {
+            "ticker": "VXX",
+            "side": "short",
+            "alloc_pct": 5,
+            "thesis": "Low volatility environment persists with VIX at 14.3.",
+            "stop_pct": 10,
+            "target_pct": -15,
+            "edge_type": "analytical",
+            "probability": 0.65,
+            "invalidation": "VIX spikes above 18 by 2026-09-11",
+            "horizon_days": 15
+          },
+          {
+            "ticker": "AAPL",
+            "side": "hold",
+            "alloc_pct": 10,
+            "thesis": "Maintaining exposure to stable tech giant amid market caution.",
+            "stop_pct": -8,
+            "target_pct": 12,
+            "edge_type": "analytical",
+            "probability": 0.62,
+            "invalidation": "Close below $290 by 2026-09-18",
+            "horizon_days": 20
+          },
+          {
+            "ticker": "TSLA",
+            "side": "hold",
+            "alloc_pct": 8,
+            "thesis": "Continued exposure to high-growth tech despite recent downturn.",
+            "stop_pct": -10,
+            "target_pct": 15,
+            "edge_type": "behavioral",
+            "probability": 0.58,
+            "invalidation": "Close below $320 by 2026-09-18",
+            "horizon_days": 20
+          },
+          {
+            "ticker": "HOOD",
+            "side": "hold",
+            "alloc_pct": 5,
+            "thesis": "Retaining position amid recent momentum and Goldman Sachs target.",
+            "stop_pct": -8,
+            "target_pct": 12,
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "Close below $110 by 2026-09-11",
+            "horizon_days": 15
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 20095,
+        "completion_tokens": 855,
+        "total_tokens": 20950,
+        "cost": 0.00461408,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00461408,
+          "upstream_inference_prompt_cost": 0.004019,
+          "upstream_inference_completions_cost": 0.00059508
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "mistral": {
+      "model": "Mistral",
+      "tier": "open",
+      "picks": {
+        "thesis": "Market in consolidation ahead of Nvidia earnings (Aug 26) and CPI data (mid-Sept); energy and AI infrastructure underpriced relative to structural demand, while high-flyers (SMCI, COIN) show exhaustion.",
+        "justification": "Current book is overconcentrated in high-beta names (SMCI +7.2% today, COIN -3.75%) and lacks structural edges. Energy (XLE) and semis (AMD, INTC) show stronger fundamentals with lower narrative saturation. Reducing exposure to momentum-driven names (SMCI, COIN, HOOD) and reallocating to undervalued structural plays (XLE, AMD) aligns with SOUL.md's edge doctrine. Cash is a valid position given macro uncertainty.",
+        "positions": [
+          {
+            "ticker": "XLE",
+            "side": "long",
+            "alloc_pct": 20,
+            "thesis": "Energy sector underpriced relative to OPEC+ discipline and geopolitical risk premium; structural demand from AI/data centers.",
+            "stop_pct": -8,
+            "target_pct": 20,
+            "edge_type": "structural",
+            "probability": 0.65,
+            "invalidation": "Brent crude < $80 or OPEC+ production increase by 2026-10-01",
+            "horizon_days": 60
+          },
+          {
+            "ticker": "AMD",
+            "side": "long",
+            "alloc_pct": 15,
+            "thesis": "AI server demand and Lisa Su's execution underappreciated; technical breakout with volume confirmation.",
+            "stop_pct": -7,
+            "target_pct": 25,
+            "edge_type": "analytical",
+            "probability": 0.6,
+            "invalidation": "AMD closes below $450 or Nvidia guidance misses by >10% on Aug 26",
+            "horizon_days": 45
+          },
+          {
+            "ticker": "INTC",
+            "side": "long",
+            "alloc_pct": 10,
+            "thesis": "Turnaround play: AI PC and foundry momentum; heavily shorted with potential squeeze.",
+            "stop_pct": -10,
+            "target_pct": 30,
+            "edge_type": "behavioral",
+            "probability": 0.55,
+            "invalidation": "INTC closes below $90 or Q3 guidance misses by 2026-09-30",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "SMCI",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Reduced allocation: AI server tailwinds but overbought; holding for Cisco partnership catalyst.",
+            "stop_pct": -12,
+            "target_pct": 15,
+            "edge_type": "behavioral",
+            "probability": 0.5,
+            "invalidation": "SMCI closes below $35 or fails to hold $40 by 2026-09-15",
+            "horizon_days": 15
+          },
+          {
+            "ticker": "COIN",
+            "side": "long",
+            "alloc_pct": 0,
+            "thesis": "Exit: Momentum exhausted; crypto tailwinds priced in after -3.75% drop.",
+            "stop_pct": 0,
+            "target_pct": 0,
+            "edge_type": "behavioral",
+            "probability": 0.4,
+            "invalidation": "N/A (exiting)",
+            "horizon_days": 0
+          },
+          {
+            "ticker": "HOOD",
+            "side": "long",
+            "alloc_pct": 0,
+            "thesis": "Exit: Overbought conditions and valuation concerns after 9%+ run; no defined edge.",
+            "stop_pct": 0,
+            "target_pct": 0,
+            "edge_type": "behavioral",
+            "probability": 0.45,
+            "invalidation": "N/A (exiting)",
+            "horizon_days": 0
+          },
+          {
+            "ticker": "XLRE",
+            "side": "long",
+            "alloc_pct": 0,
+            "thesis": "Exit: No catalyst; real estate under structural pressure from high rates.",
+            "stop_pct": 0,
+            "target_pct": 0,
+            "edge_type": "structural",
+            "probability": 0.4,
+            "invalidation": "N/A (exiting)",
+            "horizon_days": 0
+          },
+          {
+            "ticker": "BTC",
+            "side": "long",
+            "alloc_pct": 5,
+            "thesis": "Structural adoption and ETF flows; reduced allocation due to macro uncertainty.",
+            "stop_pct": -15,
+            "target_pct": 20,
+            "edge_type": "structural",
+            "probability": 0.55,
+            "invalidation": "BTC closes below $75,000 by 2026-10-01",
+            "horizon_days": 30
+          },
+          {
+            "ticker": "NVDA",
+            "type": "long_call",
+            "strike_pct": 5,
+            "expiry_days": 30,
+            "alloc_pct": 5,
+            "thesis": "Post-earnings momentum play; defined-risk option structure limits downside.",
+            "edge_type": "behavioral",
+            "probability": 0.5,
+            "invalidation": "NVDA closes below $220 or fails to hold $240 by 2026-09-15",
+            "horizon_days": 15
+          }
+        ]
+      },
+      "raw_usage": {
+        "prompt_tokens": 22309,
+        "completion_tokens": 1347,
+        "total_tokens": 23656,
+        "cost": 0.043566,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16640,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.043566,
+          "upstream_inference_prompt_cost": 0.0334635,
+          "upstream_inference_completions_cost": 0.0101025
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "kimi": {
+      "model": "Kimi",
+      "tier": "open",
+      "error": "moonshotai/kimi-k3 timed out after 180s"
+    }
+  }
+}

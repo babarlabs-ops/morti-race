@@ -7,6 +7,7 @@ defined-risk options (long calls/puts). Robust: per-model timeout, incremental
 save, resumable.
 """
 import json, os, sys, signal, urllib.request, urllib.error
+from retry_call import retry_call
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -230,7 +231,9 @@ def main():
             print(f"✓ skip {m['name']} (done)")
             continue
         print(f"→ {m['name']} ({m['model']})...", flush=True)
-        status, resp = call_model(m["model"], system, user_prompt(mid), key)
+        def _call():
+            return call_model(m["model"], system, user_prompt(mid), key)
+        status, resp = retry_call(_call, max_attempts=3)
         if status != 200:
             print(f"  FAIL {status}: {str(resp)[:160]}")
             results[mid] = {"model": m["name"], "tier": m["tier"], "error": str(resp)[:200]}

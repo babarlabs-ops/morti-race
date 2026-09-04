@@ -167,8 +167,21 @@ def main():
         equity = prev_equity + realized
 
         # 2. establish today's book from desired allocation
+        # dedup: merge positions by (ticker, side, kind) — models sometimes emit duplicates
+        raw = p_dict.get("positions", []) or []
+        merged = {}
+        for pos in raw:
+            ticker = (pos.get("ticker") or "").upper()
+            side = (pos.get("side") or "long").lower()
+            kind = pos.get("type") or pos.get("kind") or ("option" if pos.get("strike_pct") else "equity")
+            key = (ticker, side, kind)
+            if key not in merged:
+                merged[key] = pos.copy()
+            else:
+                # merge alloc_pct (simple sum, cap at 100 later)
+                merged[key]["alloc_pct"] = merged[key].get("alloc_pct", 0) + pos.get("alloc_pct", 0)
         positions = []
-        for pos in p_dict.get("positions", []):
+        for pos in merged.values():
             ticker = (pos.get("ticker") or "").upper()
             side = (pos.get("side") or "long").lower()
             kind = pos.get("type") or pos.get("kind") or ("option" if pos.get("strike_pct") else "equity")
