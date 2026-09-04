@@ -1,0 +1,27 @@
+{
+  "fetched_utc": "2026-09-04T16:31:08.412627+00:00",
+  "events": [
+    {
+      "date": "2026-09-15",
+      "event": "CPI Release",
+      "impact": "high"
+    },
+    {
+      "date": "2026-09-17",
+      "event": "FOMC Decision",
+      "impact": "high"
+    },
+    {
+      "date": "2026-09-18",
+      "event": "Fed Press Conference",
+      "impact": "high"
+    },
+    {
+      "date": "2026-08-26",
+      "event": "NVDA Earnings (reported)",
+      "impact": "high",
+      "status": "past"
+    }
+  ],
+  "summary": "NVDA reported 2026-08-26 (past). Next high-impact: CPI Sep 15, FOMC Sep 17."
+}
