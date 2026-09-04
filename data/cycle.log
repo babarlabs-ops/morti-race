@@ -1505,3 +1505,8 @@ Calibration: 736 total forecasts — 12 opened today, 52 resolved today, 724 res
   DeepSeek   n= 49  Brier=0.248  acc=0.47  stated=0.56  gap=+0.09  BSS=+0.00
   Fable      n= 28  Brier=0.256  acc=0.54  stated=0.54  gap=+0.01  BSS=-0.03
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+[main e38b42a] Daily cycle 2026-09-04
+ 6 files changed, 971 insertions(+), 606 deletions(-)
+To https://github.com/babarlabs-ops/morti-race.git
+   dc177c8..e38b42a  main -> main
+[2026-09-04 13:04:39] === cycle complete ===
