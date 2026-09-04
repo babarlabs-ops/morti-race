@@ -1422,3 +1422,38 @@ Calibration: 707 total forecasts — 17 opened today, 18 resolved today, 690 res
   DeepSeek   n= 46  Brier=0.249  acc=0.46  stated=0.56  gap=+0.10  BSS=-0.00
   Fable      n= 26  Brier=0.259  acc=0.50  stated=0.54  gap=+0.04  BSS=-0.03
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+[main 81bbba7] Daily cycle 2026-09-04
+ 10 files changed, 2172 insertions(+), 976 deletions(-)
+ create mode 100644 data/events.json
+ create mode 100644 data/picks/2026-09-04.json
+ create mode 100644 scripts/fetch_events.py
+ create mode 100644 scripts/validate_theses.py
+To https://github.com/babarlabs-ops/morti-race.git
+   2fa3c86..81bbba7  main -> main
+[2026-09-04 12:42:52] === cycle complete ===
+  FAIL ERR: moonshotai/kimi-k3 timed out after 180s
+
+Done — 10/10 models → /Users/minimi/Claude Working files/morti-race/data/picks/2026-09-04.json
+RANK  MODEL      EQUITY        RET%      POS  GROSS%   REALIZED
+   1  Llama      $110,854.18   +10.854    8   55.6       -1.67
+   2  DeepSeek   $108,490.49    +8.490    3   42.6       +0.00
+   3  Gemini     $103,184.67    +3.185   10   88.0       +1.31
+   4  Sol        $103,166.51    +3.167    0    0.0       +0.00
+   5  Qwen       $101,221.37    +1.221    0    0.0       +0.00
+   6  Grok       $100,639.06    +0.639    0    0.0       +0.00
+   7  Fable      $100,539.70    +0.540    2   11.0       +2.54
+   8  GLM        $ 98,837.48    -1.163    0    0.0       +3.66
+   9  Kimi       $ 97,527.16    -2.473    0    0.0       +0.00
+  10  Mistral    $ 81,502.36   -18.498    6   60.0       +2.84
+
+Saved → /Users/minimi/Claude Working files/morti-race/data/ledger.json
+Calibration: 724 total forecasts — 17 opened today, 35 resolved today, 707 resolved overall
+  Gemini     n=138  Brier=0.253  acc=0.53  stated=0.58  gap=+0.05  BSS=-0.02
+  Qwen       n=113  Brier=0.257  acc=0.39  stated=0.52  gap=+0.13  BSS=-0.08
+  GLM        n=111  Brier=0.255  acc=0.48  stated=0.55  gap=+0.07  BSS=-0.02
+  Kimi       n=100  Brier=0.259  acc=0.44  stated=0.55  gap=+0.11  BSS=-0.05
+  Llama      n= 87  Brier=0.267  acc=0.46  stated=0.59  gap=+0.13  BSS=-0.07
+  Mistral    n= 84  Brier=0.250  acc=0.49  stated=0.59  gap=+0.10  BSS=-0.00
+  DeepSeek   n= 46  Brier=0.249  acc=0.46  stated=0.56  gap=+0.10  BSS=-0.00
+  Fable      n= 28  Brier=0.256  acc=0.54  stated=0.54  gap=+0.01  BSS=-0.03
+Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
