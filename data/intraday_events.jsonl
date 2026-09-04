@@ -1,1 +1,2 @@
 {"ts": "2026-09-01T09:40:11.994803-04:00", "model": "DeepSeek", "ticker": "MSTR", "side": "long", "exit": 124.7, "entry": 133.24, "pnl": -460.0, "reason": "STOP"}
+{"ts": "2026-09-04T12:50:08.467593-04:00", "model": "DeepSeek", "ticker": "SMCI", "side": "short", "exit": 40.75, "entry": 40.62, "pnl": -34.72, "reason": "STOP"}

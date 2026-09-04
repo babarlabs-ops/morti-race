@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-04T16:42:59.899916+00:00",
+  "as_of": "2026-09-04T16:50:08.467593+00:00",
   "start_capital": 100000,
   "target": 1000000,
   "models": {
@@ -342,16 +342,16 @@
       "tier": "open",
       "thesis": "Markets are in a pre-FOMC/pre-NVDA earnings holding pattern with low vol; the edge is in fading the overreaction in AI-linked names where sentiment has become euphoric and in harvesting a behavioral mean-reversion in a high-quality name that sold off sharply on no structural news.",
       "justification": "The macro snapshot shows a steep yield curve, low VIX, and a market awaiting catalysts (NVDA earnings on Aug 26, FOMC Sep 15-16). This creates a 'priced for perfection' environment in AI hardware. The behavioral edge is fading retail euphoria in SMCI and taking the other side of an oversold, high-quality SaaS name (ADBE) where the -6.3% move lacks a fundamental catalyst, likely driven by sector rotation or profit-taking. We are also closing the AMD calls to realize gains, as the thesis has played out and we do not want to hold through NVDA's binary event. HOOD is held as it shows relative strength and a constructive technical setup.",
-      "realized_pnl": 0.0,
-      "cash": 62253.23,
-      "invested": 46237.26,
-      "alloc_pct": 42.6,
+      "realized_pnl": -34.72,
+      "cash": 73067.56,
+      "invested": 35388.21,
+      "alloc_pct": 32.6,
       "net_pct": -2.4,
       "unrealized_pnl": 0.0,
       "prev_equity": 108490.49,
-      "equity": 108490.49,
+      "equity": 108455.77,
       "return_pct": 8.49,
-      "n_positions": 3,
+      "n_positions": 2,
       "positions": [
         {
           "ticker": "HOOD",
@@ -397,28 +397,6 @@
           "probability": 0.58,
           "invalidation": "ADBE closes below $255 (pre-drop support) or a negative pre-announcement surfaces by Sep 18, 2026.",
           "horizon_days": 45
-        },
-        {
-          "ticker": "SMCI",
-          "side": "short",
-          "kind": "equity",
-          "alloc_pct": 10,
-          "dollar": 10849.05,
-          "shares": 267.0864,
-          "entry": 40.62,
-          "last": 40.62,
-          "stop": 40.62,
-          "target": 40.62,
-          "stop_pct": 0,
-          "target_pct": 0,
-          "unrealized_pnl": 0.0,
-          "unrealized_pnl_pct": 0.0,
-          "is_crypto": false,
-          "thesis": "SMCI's +7.2% move is retail-driven AI hype ahead of NVDA earnings, ignoring lingering accounting concerns. We are shorting into this euphoria as a tactical fade, expecting profit-t",
-          "edge_type": "behavioral",
-          "probability": 0.55,
-          "invalidation": "SMCI closes above $44 (post-pop high) or NVDA reports a blowout quarter with guidance raise that lifts the entire AI server basket by >10% by Sep 11, 2026.",
-          "horizon_days": 14
         }
       ]
     },
