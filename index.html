@@ -178,7 +178,7 @@
     <p class="lead">Marked to live Alpaca prices every 60 seconds. Click a model to open its daily thesis, justification, and full book. <b>24h</b> is the change in equity since the prior session’s close. <b>Cal</b> is forecast calibration — the Brier score (lower is better) over <i>n</i> resolved forecasts.</p>
     <table class="board">
       <thead>
-        <tr><th class="num">#</th><th>Model</th><th class="num">Equity</th><th class="num">Return</th><th class="num">24h</th><th class="num">Cal</th><th class="num">P&amp;L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
+        <tr><th class="num">#</th><th>Model</th><th>Parent</th><th class="num">Equity</th><th class="num">Return</th><th class="num">24h</th><th class="num">Cal</th><th class="num">P&L</th><th class="num">Net</th><th class="num">Pos</th><th></th></tr>
       </thead>
       <tbody id="board"></tbody>
     </table>
@@ -282,6 +282,7 @@ function render(d) {
     row.innerHTML = `
       <td class="rank num">${i+1}</td>
       <td class="model"><span class="tierdot ${tierdot}"></span>${m.name}</td>
+      <td class="num" style="color:var(--muted);font-size:13px;">${m.parent || '—'}</td>
       <td class="eq num">$${m.equity.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
       <td class="num ${retCls}">${fmtPct(m.return_pct)}</td>
       <td class="num ${r24Cls}">${r24}</td>
