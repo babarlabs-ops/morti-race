@@ -1743,3 +1743,78 @@ Calibration: 802 total forecasts — 19 opened today, 14 resolved today, 783 res
   Fable      n= 34  Brier=0.264  acc=0.59  stated=0.53  gap=-0.06  BSS=-0.09
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
 theses validated: all current
+[main dbfbfbc] Daily cycle 2026-09-07
+ 7 files changed, 1889 insertions(+), 785 deletions(-)
+ create mode 100644 data/picks/2026-09-07.json
+To https://github.com/babarlabs-ops/morti-race.git
+   b469dcf..dbfbfbc  main -> main
+[2026-09-07 07:57:05] === cycle complete ===
+[2026-09-09 12:30:03] pivot credits: 10.00
+[2026-09-09 12:30:03] === pivot start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Traceback (most recent call last):
+  File "/Users/minimi/Claude Working files/morti-race/scripts/fetch_macro.py", line 88, in <module>
+    main()
+  File "/Users/minimi/Claude Working files/morti-race/scripts/fetch_macro.py", line 68, in main
+    parts.append(f"10Y {s['us10y']['value']:.2f}%")
+                        ~~~~~~~~~~^^^^^^^^^
+KeyError: 'value'
+[2026-09-09 12:30:21] (macro fetch failed — continuing)
+Events: 4 — NVDA reported 2026-08-26 (past). Next high-impact: CPI Sep 15, FOMC Sep 17.
+Saved → /Users/minimi/Claude Working files/morti-race/data/events.json
+→ Fable (anthropic/claude-fable-5)...
+  OK — 2 positions, 32198 tok
+→ Sol (openai/gpt-5.6-sol)...
+  OK — 0 positions, 20362 tok
+→ Grok (x-ai/grok-4.6)...
+  OK — 0 positions, 23370 tok
+→ Gemini (google/gemini-3.7-flash)...
+  OK — 10 positions, 25869 tok
+→ DeepSeek (deepseek/deepseek-v4-pro)...
+  OK — 0 positions, 22530 tok
+→ Qwen (qwen/qwen3.8-max)...
+  FAIL ERR: qwen/qwen3.8-max timed out after 180s
+→ GLM (z-ai/glm-5.3)...
+  FAIL ERR: z-ai/glm-5.3 timed out after 180s
+→ Llama (meta-llama/llama-4-maverick)...
+  OK — 10 positions, 21161 tok
+→ Mistral (mistralai/mistral-medium-3-5)...
+  OK — 8 positions, 23862 tok
+→ Kimi (moonshotai/kimi-k3)...
+  OK — 3 positions, 24502 tok
+→ Astra Pro (openai/gpt-6-astra-pro)...
+  OK — 0 positions, 63557 tok
+→ Fable 5.1 (anthropic/claude-fable-5.1)...
+  OK — 0 positions, 33438 tok
+→ Gemini 3.8 (google/gemini-3.8-flash)...
+  OK — 2 positions, 25461 tok
+
+Done — 13/13 models → /Users/minimi/Claude Working files/morti-race/data/picks/2026-09-09.json
+RANK  MODEL      EQUITY        RET%      POS  GROSS%   REALIZED
+   1  Llama      $111,186.43   +11.186   10   76.8   +1,154.82
+   2  DeepSeek   $106,652.02    +6.652    0    0.0       +0.00
+   3  Gemini     $103,726.09    +3.726   10   82.0     +625.51
+   4  Sol        $103,166.51    +3.167    0    0.0       +0.00
+   5  Qwen       $101,221.37    +1.221    0    0.0       +0.00
+   6  Grok       $100,639.06    +0.639    0    0.0       +0.00
+   7  Fable      $100,501.72    +0.502    2    9.5       +0.00
+   8  Astra Pro  $100,000.00    +0.000    0    0.0       +0.00
+   9  Fable 5.1  $100,000.00    +0.000    0    0.0       +0.00
+  10  Gemini 3.8 $100,000.00    +0.000    2   20.0       +0.00
+  11  GLM        $ 98,837.48    -1.163    0    0.0       +0.00
+  12  Kimi       $ 97,623.43    -2.377    3   24.6       +0.00
+  13  Mistral    $ 80,991.05   -19.009    7   69.8     +596.62
+
+Saved → /Users/minimi/Claude Working files/morti-race/data/ledger.json
+Calibration: 817 total forecasts — 15 opened today, 19 resolved today, 802 resolved overall
+  Gemini     n=168  Brier=0.252  acc=0.54  stated=0.58  gap=+0.04  BSS=-0.01
+  Qwen       n=113  Brier=0.257  acc=0.39  stated=0.52  gap=+0.13  BSS=-0.08
+  GLM        n=111  Brier=0.255  acc=0.48  stated=0.55  gap=+0.07  BSS=-0.02
+  Llama      n=109  Brier=0.264  acc=0.49  stated=0.58  gap=+0.10  BSS=-0.06
+  Mistral    n=108  Brier=0.247  acc=0.52  stated=0.58  gap=+0.06  BSS=+0.01
+  Kimi       n=105  Brier=0.264  acc=0.46  stated=0.54  gap=+0.09  BSS=-0.06
+  DeepSeek   n= 54  Brier=0.245  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
+  Fable      n= 34  Brier=0.264  acc=0.59  stated=0.53  gap=-0.06  BSS=-0.09
+Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+theses validated: all current
