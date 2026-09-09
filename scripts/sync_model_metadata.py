@@ -13,6 +13,20 @@ cfg = json.loads(CONFIG.read_text())
 ledger = json.loads(LEDGER.read_text())
 by_id = {m["id"]: m for m in cfg["models"]}
 updated = 0
+for mid, meta in by_id.items():
+    if mid not in ledger.get("models", {}):
+        ledger.setdefault("models", {})[mid] = {
+            "name": meta["name"], "parent": meta.get("parent", ""),
+            "model_id": meta["model"], "cohort": meta.get("cohort", ""),
+            "start_date": meta.get("start_date", ""), "tier": meta["tier"],
+            "status": "awaiting_first_cycle", "thesis": "", "justification": "",
+            "realized_pnl": 0.0, "cash": 100000.0, "invested": 0.0,
+            "alloc_pct": 0.0, "net_pct": 0.0, "unrealized_pnl": 0.0,
+            "prev_equity": 100000.0, "equity": 100000.0, "return_pct": 0.0,
+            "n_positions": 0, "positions": []
+        }
+        updated += 1
+
 for mid, row in ledger.get("models", {}).items():
     meta = by_id.get(mid)
     if not meta:
