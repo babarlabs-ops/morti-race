@@ -1,6 +1,9 @@
 {
   "seen": [
     "anthropic/claude-fable-5.1",
+    "google/gemini-3.8-flash",
+    "openai/gpt-6-astra",
+    "openai/gpt-6-astra-pro",
     "qwen/qwen3.8-flash",
     "z-ai/glm-5.3-flash"
   ]

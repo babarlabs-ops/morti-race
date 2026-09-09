@@ -9,15 +9,18 @@
     "season_start": "2026-08-22"
   },
   "models": [
-    {"id": "fable",    "name": "Fable",    "tier": "frontier", "model": "anthropic/claude-fable-5",      "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "sol",      "name": "Sol",      "tier": "frontier", "model": "openai/gpt-5.6-sol",           "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "grok",     "name": "Grok",     "tier": "frontier", "model": "x-ai/grok-4.6",               "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "gemini",   "name": "Gemini",   "tier": "frontier", "model": "google/gemini-3.7-flash",     "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "deepseek", "name": "DeepSeek", "tier": "open",     "model": "deepseek/deepseek-v4-pro",    "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "qwen",     "name": "Qwen",     "tier": "open",     "model": "qwen/qwen3.8-max",            "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "glm",      "name": "GLM",      "tier": "open",     "model": "z-ai/glm-5.3",                "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "llama",    "name": "Llama",    "tier": "open",     "model": "meta-llama/llama-4-maverick", "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "mistral",  "name": "Mistral",  "tier": "open",     "model": "mistralai/mistral-medium-3-5", "cohort": "season1", "start_date": "2026-08-22"},
-    {"id": "kimi",     "name": "Kimi",     "tier": "open",     "model": "moonshotai/kimi-k3",          "cohort": "season1", "start_date": "2026-08-22"}
+    {"id":"fable","name":"Fable","parent":"Anthropic","tier":"frontier","model":"anthropic/claude-fable-5","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"sol","name":"Sol","parent":"OpenAI","tier":"frontier","model":"openai/gpt-5.6-sol","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"grok","name":"Grok","parent":"xAI","tier":"frontier","model":"x-ai/grok-4.6","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"gemini","name":"Gemini","parent":"Google","tier":"frontier","model":"google/gemini-3.7-flash","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"deepseek","name":"DeepSeek","parent":"DeepSeek","tier":"open","model":"deepseek/deepseek-v4-pro","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"qwen","name":"Qwen","parent":"Alibaba","tier":"open","model":"qwen/qwen3.8-max","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"glm","name":"GLM","parent":"Z.ai","tier":"open","model":"z-ai/glm-5.3","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"llama","name":"Llama","parent":"Meta","tier":"open","model":"meta-llama/llama-4-maverick","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"mistral","name":"Mistral","parent":"Mistral AI","tier":"open","model":"mistralai/mistral-medium-3-5","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"kimi","name":"Kimi","parent":"Moonshot AI","tier":"open","model":"moonshotai/kimi-k3","cohort":"season1","start_date":"2026-08-22"},
+    {"id":"astra","name":"Astra Pro","parent":"OpenAI","tier":"frontier","model":"openai/gpt-6-astra-pro","cohort":"challenger-2026-09","start_date":"2026-09-09"},
+    {"id":"fable51","name":"Fable 5.1","parent":"Anthropic","tier":"frontier","model":"anthropic/claude-fable-5.1","cohort":"challenger-2026-09","start_date":"2026-09-09"},
+    {"id":"gemini38","name":"Gemini 3.8","parent":"Google","tier":"frontier","model":"google/gemini-3.8-flash","cohort":"challenger-2026-09","start_date":"2026-09-09"}
   ]
 }

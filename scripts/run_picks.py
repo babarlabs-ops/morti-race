@@ -236,7 +236,7 @@ def main():
         status, resp = retry_call(_call, max_attempts=3)
         if status != 200:
             print(f"  FAIL {status}: {str(resp)[:160]}")
-            results[mid] = {"model": m["name"], "tier": m["tier"], "error": str(resp)[:200]}
+            results[mid] = {"model": m["name"], "parent": m.get("parent", ""), "model_id": m["model"], "cohort": m.get("cohort", ""), "start_date": m.get("start_date", ""), "tier": m["tier"], "error": str(resp)[:200]}
         else:
             try:
                 msg = resp["choices"][0].get("message", {}) or {}
@@ -244,16 +244,16 @@ def main():
                 usage = resp.get("usage", {})
                 if not content.strip():
                     print(f"  EMPTY content — recording as error")
-                    results[mid] = {"model": m["name"], "tier": m["tier"], "error": "empty response content"}
+                    results[mid] = {"model": m["name"], "parent": m.get("parent", ""), "model_id": m["model"], "cohort": m.get("cohort", ""), "start_date": m.get("start_date", ""), "tier": m["tier"], "error": "empty response content"}
                     save()
                     continue
                 picks = extract_json(content)
                 n = len(picks.get("positions", [])) if isinstance(picks, dict) else "?"
                 print(f"  OK — {n} positions, {usage.get('total_tokens')} tok")
-                results[mid] = {"model": m["name"], "tier": m["tier"], "picks": picks, "raw_usage": usage}
+                results[mid] = {"model": m["name"], "parent": m.get("parent", ""), "model_id": m["model"], "cohort": m.get("cohort", ""), "start_date": m.get("start_date", ""), "tier": m["tier"], "picks": picks, "raw_usage": usage}
             except Exception as e:
                 print(f"  PARSE FAIL: {e}")
-                results[mid] = {"model": m["name"], "tier": m["tier"], "error": str(e)}
+                results[mid] = {"model": m["name"], "parent": m.get("parent", ""), "model_id": m["model"], "cohort": m.get("cohort", ""), "start_date": m.get("start_date", ""), "tier": m["tier"], "error": str(e)}
         save()
 
     print(f"\nDone — {len(results)}/{len(cfg['models'])} models → {out}")

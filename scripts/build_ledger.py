@@ -254,7 +254,8 @@ def main():
         long_d = sum(x["dollar"] for x in positions if x["side"] == "long")
         short_d = sum(x["dollar"] for x in positions if x["side"] == "short")
         ledger["models"][mid] = {
-            "name": name, "tier": tier,
+            "name": name, "parent": r.get("parent", ""), "model_id": r.get("model_id", ""),
+            "cohort": r.get("cohort", ""), "start_date": r.get("start_date", ""), "tier": tier,
             "thesis": (p_dict.get("thesis") or "").strip(),
             "justification": (p_dict.get("justification") or "").strip(),
             "realized_pnl": round(realized, 2),
