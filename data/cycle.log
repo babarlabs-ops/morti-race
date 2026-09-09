@@ -1818,3 +1818,73 @@ Calibration: 817 total forecasts — 15 opened today, 19 resolved today, 802 res
   Fable      n= 34  Brier=0.264  acc=0.59  stated=0.53  gap=-0.06  BSS=-0.09
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
 theses validated: all current
+[main 2f37632] Pivot 2026-09-09 12:54:47
+ 6 files changed, 2406 insertions(+), 947 deletions(-)
+ create mode 100644 data/picks/2026-09-09.json
+To https://github.com/babarlabs-ops/morti-race.git
+   649de1c..2f37632  main -> main
+[2026-09-09 12:54:49] === pivot complete ===
+[2026-09-09 14:30:07] pivot credits: 7.80
+[2026-09-09 14:30:07] archived prior picks → 2026-09-09-1430.json
+[2026-09-09 14:30:07] === pivot start ===
+Universe: 83 symbols (equities + crypto)
+Saved → /Users/minimi/Claude Working files/morti-race/data/market_snapshot.json
+Macro: Fed funds 3.63%; 10Y 4.78%; 2Y 4.37%; curve +0.41% (steep); VIX 15.7 (normal)
+Events: 4 — NVDA reported 2026-08-26 (past). Next high-impact: CPI Sep 15, FOMC Sep 17.
+Saved → /Users/minimi/Claude Working files/morti-race/data/events.json
+→ Fable (anthropic/claude-fable-5)...
+  OK — 1 positions, 32154 tok
+→ Sol (openai/gpt-5.6-sol)...
+  OK — 0 positions, 20419 tok
+→ Grok (x-ai/grok-4.6)...
+  OK — 0 positions, 23009 tok
+→ Gemini (google/gemini-3.7-flash)...
+  OK — 10 positions, 25790 tok
+→ DeepSeek (deepseek/deepseek-v4-pro)...
+  OK — 0 positions, 22587 tok
+→ Qwen (qwen/qwen3.8-max)...
+  FAIL ERR: qwen/qwen3.8-max timed out after 180s
+→ GLM (z-ai/glm-5.3)...
+  OK — 2 positions, 46845 tok
+→ Llama (meta-llama/llama-4-maverick)...
+  OK — 10 positions, 21231 tok
+→ Mistral (mistralai/mistral-medium-3-5)...
+  OK — 9 positions, 23898 tok
+→ Kimi (moonshotai/kimi-k3)...
+  FAIL ERR: moonshotai/kimi-k3 timed out after 180s
+→ Astra Pro (openai/gpt-6-astra-pro)...
+  OK — 0 positions, 63800 tok
+→ Fable 5.1 (anthropic/claude-fable-5.1)...
+  OK — 0 positions, 32852 tok
+→ Gemini 3.8 (google/gemini-3.8-flash)...
+  OK — 2 positions, 25772 tok
+
+Done — 13/13 models → /Users/minimi/Claude Working files/morti-race/data/picks/2026-09-09.json
+RANK  MODEL      EQUITY        RET%      POS  GROSS%   REALIZED
+   1  Llama      $110,685.26   +10.685   10   76.8     -501.17
+   2  DeepSeek   $106,652.02    +6.652    0    0.0       +0.00
+   3  Gemini     $103,693.59    +3.694   10   82.0      -32.50
+   4  Sol        $103,166.51    +3.167    0    0.0       +0.00
+   5  Qwen       $101,221.37    +1.221    0    0.0       +0.00
+   6  Grok       $100,639.06    +0.639    0    0.0       +0.00
+   7  Fable      $100,508.52    +0.509    1    6.0       +6.80
+   8  Gemini 3.8 $100,047.88    +0.048    2   20.0      +47.88
+   9  Astra Pro  $100,000.00    +0.000    0    0.0       +0.00
+  10  Fable 5.1  $100,000.00    +0.000    0    0.0       +0.00
+  11  GLM        $ 98,837.48    -1.163    2    7.0       +0.00
+  12  Kimi       $ 97,642.09    -2.358    0    0.0      +18.66
+  13  Mistral    $ 80,853.93   -19.146    7   94.8     -137.12
+
+Saved → /Users/minimi/Claude Working files/morti-race/data/ledger.json
+Calibration: 839 total forecasts — 22 opened today, 34 resolved today, 817 resolved overall
+  Gemini     n=172  Brier=0.253  acc=0.53  stated=0.58  gap=+0.05  BSS=-0.02
+  Qwen       n=113  Brier=0.257  acc=0.39  stated=0.52  gap=+0.13  BSS=-0.08
+  GLM        n=111  Brier=0.255  acc=0.48  stated=0.55  gap=+0.07  BSS=-0.02
+  Llama      n=111  Brier=0.264  acc=0.49  stated=0.58  gap=+0.10  BSS=-0.06
+  Mistral    n=110  Brier=0.250  acc=0.51  stated=0.58  gap=+0.07  BSS=+0.00
+  Kimi       n=108  Brier=0.262  acc=0.45  stated=0.54  gap=+0.09  BSS=-0.06
+  DeepSeek   n= 54  Brier=0.245  acc=0.50  stated=0.56  gap=+0.06  BSS=+0.02
+  Fable      n= 36  Brier=0.258  acc=0.58  stated=0.52  gap=-0.06  BSS=-0.06
+  Gemini 3.8 n=  2  Brier=0.190  acc=1.00  stated=0.56  gap=-0.43  BSS=+0.00
+Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
+theses validated: all current
