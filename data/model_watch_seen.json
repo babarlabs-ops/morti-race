@@ -1,6 +1,7 @@
 {
   "seen": [
     "anthropic/claude-fable-5.1",
+    "deepseek/deepseek-v4.1-flash",
     "google/gemini-3.8-flash",
     "openai/gpt-6-astra",
     "openai/gpt-6-astra-pro",
