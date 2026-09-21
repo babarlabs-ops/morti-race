@@ -31,6 +31,8 @@ def main():
     led = json.load(open(LEDGER))
     bad = []
     for mid, m in led.get("models", {}).items():
+        if m.get("status") in ("data_blocked", "awaiting_first_cycle"):
+            continue
         thesis = m.get("thesis", "")
         reason = is_stale(thesis)
         if reason:

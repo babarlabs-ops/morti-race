@@ -36,7 +36,7 @@ def call_model(model, system, user, key):
     payload = {"model": model, "messages": [
         {"role": "system", "content": system},
         {"role": "user", "content": user},
-    ], "temperature": 0.4}
+    ], "temperature": 0.4, "max_tokens": 4096}
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
         data=json.dumps(payload).encode(),
@@ -227,9 +227,13 @@ def main():
 
     for m in cfg["models"]:
         mid = m["id"]
-        if mid in results:
-            print(f"✓ skip {m['name']} (done)")
+        existing = results.get(mid)
+        if existing and isinstance(existing.get("picks"), dict) and existing["picks"].get("thesis"):
+            print(f"✓ skip {m['name']} (valid result already saved)")
             continue
+        if existing:
+            print(f"↻ retry {m['name']} (prior result was invalid/error)")
+            results.pop(mid, None)
         print(f"→ {m['name']} ({m['model']})...", flush=True)
         def _call():
             return call_model(m["model"], system, user_prompt(mid), key)
@@ -248,7 +252,9 @@ def main():
                     save()
                     continue
                 picks = extract_json(content)
-                n = len(picks.get("positions", [])) if isinstance(picks, dict) else "?"
+                if not isinstance(picks, dict) or not str(picks.get("thesis", "")).strip() or not isinstance(picks.get("positions"), list):
+                    raise ValueError("invalid decision JSON: requires non-empty thesis and positions list")
+                n = len(picks["positions"])
                 print(f"  OK — {n} positions, {usage.get('total_tokens')} tok")
                 results[mid] = {"model": m["name"], "parent": m.get("parent", ""), "model_id": m["model"], "cohort": m.get("cohort", ""), "start_date": m.get("start_date", ""), "tier": m["tier"], "picks": picks, "raw_usage": usage}
             except Exception as e:

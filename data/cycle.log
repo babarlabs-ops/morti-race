@@ -2170,3 +2170,9 @@ Calibration: 915 total forecasts — 23 opened today, 75 resolved today, 892 res
   Fable 5.1  n=  1  Brier=0.250  acc=0.00  stated=0.50  gap=+0.50  BSS=+0.00
 Saved → /Users/minimi/Claude Working files/morti-race/data/calibration.json
 theses validated: all current
+[main 78b9149] Pivot 2026-09-10 14:44:22
+ 8 files changed, 2784 insertions(+), 1279 deletions(-)
+ create mode 100644 data/picks/archive/2026-09-10-1430.json
+To https://github.com/babarlabs-ops/morti-race.git
+   1df638f..78b9149  main -> main
+[2026-09-10 14:44:24] === pivot complete ===

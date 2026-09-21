@@ -8,7 +8,7 @@ Supports equities, ETFs, crypto, and defined-risk options (long calls/puts).
 Persistent state lives in data/ledger.json: each run reads the prior ledger
 (equity + positions), realizes P&L at live prices, then writes the new ledger.
 """
-import json, os, math, urllib.request, urllib.parse
+import json, os, math, copy, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -148,7 +148,34 @@ def main():
         p = r.get("picks")
         p_dict = p if isinstance(p, dict) else {}
 
-        # 1. realize P&L on the prior book
+        # A failed model call must never flatten the prior book or masquerade as
+        # an active empty thesis. Carry the last published state forward and
+        # label it DATA_BLOCKED until a valid decision replaces it.
+        if r.get("error") or not str(p_dict.get("thesis", "")).strip() or not isinstance(p_dict.get("positions"), list):
+            if prev and mid in prev.get("models", {}):
+                carried = copy.deepcopy(prev["models"][mid])
+            else:
+                carried = {
+                    "thesis": "", "justification": "", "realized_pnl": 0.0,
+                    "cash": START, "invested": 0.0, "alloc_pct": 0.0,
+                    "net_pct": 0.0, "unrealized_pnl": 0.0,
+                    "prev_equity": START, "equity": START, "return_pct": 0.0,
+                    "n_positions": 0, "positions": [],
+                }
+            carried.update({
+                "name": name, "parent": r.get("parent", carried.get("parent", "")),
+                "model_id": r.get("model_id", carried.get("model_id", "")),
+                "cohort": r.get("cohort", carried.get("cohort", "")),
+                "start_date": r.get("start_date", carried.get("start_date", "")),
+                "tier": tier, "status": "data_blocked",
+                "decision_error": str(r.get("error") or "invalid/missing decision")[:300],
+            })
+            ledger["models"][mid] = carried
+            print(f"DATA_BLOCKED {name}: carried previous book ({carried.get('n_positions', 0)} positions)")
+            continue
+
+        # Valid decision clears any prior blocked state.
+
         prev_equity = START
         realized = 0.0
         if prev and mid in prev["models"]:
@@ -256,6 +283,7 @@ def main():
         ledger["models"][mid] = {
             "name": name, "parent": r.get("parent", ""), "model_id": r.get("model_id", ""),
             "cohort": r.get("cohort", ""), "start_date": r.get("start_date", ""), "tier": tier,
+            "status": "active",
             "thesis": (p_dict.get("thesis") or "").strip(),
             "justification": (p_dict.get("justification") or "").strip(),
             "realized_pnl": round(realized, 2),

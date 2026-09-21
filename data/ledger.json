@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10T18:44:22.545163+00:00",
+  "as_of": "2026-09-21T13:30:05.545573+00:00",
   "start_capital": 100000,
   "target": 1000000,
   "models": {
@@ -671,16 +671,16 @@
       "tier": "open",
       "thesis": "Market in consolidation ahead of CPI/FOMC; selective long bias on oversold AI leaders with defined risk, paired with energy/volatility hedges",
       "justification": "NVDA, AMD, and XLE are down 2-3% today but remain in structural uptrends (AI capex, energy supply constraints). CPI/FOMC next week introduces binary risk, so positions are sized conservatively with tight stops. SOL and QQQ puts act as tail hedges against a hawkish surprise. Existing MRVL short offsets semiconductor beta.",
-      "realized_pnl": -33.98,
-      "cash": 20603.07,
-      "invested": 60059.09,
-      "alloc_pct": 74.5,
+      "realized_pnl": -407.85,
+      "cash": 24262.31,
+      "invested": 56025.98,
+      "alloc_pct": 69.8,
       "net_pct": 64.5,
       "unrealized_pnl": 0.0,
       "prev_equity": 80696.14,
-      "equity": 80662.16,
+      "equity": 80288.29,
       "return_pct": -19.338,
-      "n_positions": 7,
+      "n_positions": 6,
       "positions": [
         {
           "ticker": "NVDA",
@@ -747,28 +747,6 @@
           "probability": 0.58,
           "invalidation": "WTI crude < $75 or XLE closes below $60 by 2026-10-10",
           "horizon_days": 60
-        },
-        {
-          "ticker": "MRVL",
-          "side": "short",
-          "kind": "equity",
-          "alloc_pct": 5,
-          "dollar": 4033.11,
-          "shares": 17.5033,
-          "entry": 230.42,
-          "last": 230.42,
-          "stop": 248.85,
-          "target": 184.34,
-          "stop_pct": 8,
-          "target_pct": -20,
-          "unrealized_pnl": 0.0,
-          "unrealized_pnl_pct": 0.0,
-          "is_crypto": false,
-          "thesis": "Overvalued vs. peers on AI revenue multiple; inventory digestion at hyperscalers. Behavioral edge from retail long bias ignoring margin compression.",
-          "edge_type": "behavioral",
-          "probability": 0.55,
-          "invalidation": "MRVL closes above $250 by 2026-09-20",
-          "horizon_days": 30
         },
         {
           "ticker": "QQQ",
