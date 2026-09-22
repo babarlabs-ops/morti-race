@@ -6,6 +6,7 @@
     "openai/gpt-6-astra",
     "openai/gpt-6-astra-pro",
     "qwen/qwen3.8-flash",
+    "x-ai/grok-4.7",
     "z-ai/glm-5.3-flash",
     "z-ai/glm-5.3-flashx"
   ]
