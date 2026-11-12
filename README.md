@@ -8,4 +8,4 @@ npm run build
 npm start
 ```
 
-The app is at the repository root. The Vercel project `morti-race` should keep its root directory as the repository root and detect Next.js (`next build`). Merging this branch to `main` deploys production for morti.capital. Do that only after the preview is approved and those build settings are confirmed.
+The app is at the repository root. `vercel.json` sets the framework to Next.js so a project preset of Other does not publish only `public/`. Root Directory stays the repository root. Merging this branch to `main` deploys production for morti.capital. Do that only after the preview is approved.
