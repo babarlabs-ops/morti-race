@@ -1,36 +1,11 @@
-# Morti Race — model-vs-model trading benchmark
+# Morti Capital
 
-**The question:** given the *identical* soul, operating manual, memory, and trading policy — and the same starting capital — which frontier or open model trades best?
+Next.js app for [morti.capital](https://morti.capital). The September 2026 static site remains in git history at `73335a4` and is not part of this tree.
 
-**The setup:** each model runs as an isolated Morti agent, starting from `$100,000` paper capital and racing to `$1,000,000` within 365 days. Every recommendation, order, and fill is attributed to its originating model through a write-only ledger. Agents race **blind** — they cannot see each other's theses or the live leaderboard.
+```bash
+npm ci
+npm run build
+npm start
+```
 
-## Canonical bundle (`/canonical`)
-
-These five files are byte-identical for every agent at launch:
-
-| File | Purpose |
-|---|---|
-| `SOUL.md` | Constitution — identity, edge doctrine, risk limits, prime directive |
-| `AGENT.md` | Operating manual — the six specialists and the cycle |
-| `BENCHMARK.md` | Evaluation standard — gates, scorecard, MinTRL |
-| `HERMES.md` | Orchestrator — gates, halt authority, escalation |
-| `MEMORY.md` | State, journal, calibration & learning layers |
-
-## Experiment parameters
-
-- Start: **$100,000 / model**
-- Target: **$1,000,000**
-- Window: **365 days**
-- Mode: **paper** (shared Alpaca paper account) → real money only behind a hard gate
-- Integrity: blind isolation, append-only attribution ledger, neutral orchestrator
-- Assets: equities, ETFs, crypto, and defined-risk options
-
-## Roster (locked at launch)
-
-Ten models via OpenRouter: **Fable** (`anthropic/claude-fable-5`), **Sol** (`openai/gpt-5.6-sol`), **Grok** (`x-ai/grok-4.6`), **Gemini** (`google/gemini-3.7-flash`), **DeepSeek** (`deepseek/deepseek-v4-pro`), **Qwen** (`qwen/qwen3.8-max`), **GLM** (`z-ai/glm-5.3`), **Llama** (`meta-llama/llama-4-maverick`), **Mistral** (`mistralai/mistral-medium-3-5`), **Kimi** (`moonshotai/kimi-k3`).
-
-## Principles
-
-1. **Transparent** — methodology, assumptions, and every thesis/order/stop/result are public.
-2. **Fair** — identical inputs; the model is the only variable.
-3. **Honest** — paper fills have no slippage; the paper→live gap is disclosed, never hidden.
+The app is at the repository root. `vercel.json` sets the framework to Next.js so a project preset of Other does not publish only `public/`. Root Directory stays the repository root. Merging this branch to `main` deploys production for morti.capital. Do that only after the preview is approved.

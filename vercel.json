@@ -1,7 +1,4 @@
 {
-  "functions": {
-    "api/ledger.js": {
-      "includeFiles": "data/ledger.json"
-    }
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs"
 }

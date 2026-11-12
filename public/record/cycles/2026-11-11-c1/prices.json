@@ -1,0 +1,208 @@
+{
+  "as_of_et": "2026-11-11 10:25:43 EST",
+  "source": "Yahoo Finance chart v8 (query1.finance.yahoo.com)",
+  "note": "Free public endpoint, no API key. Paper fills use these snapshot prices.",
+  "prices": [
+    {
+      "ticker": "SPY",
+      "price": 755.98,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:32 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "QQQ",
+      "price": 686.32,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:29 EST",
+      "currency": "USD",
+      "exchange": "NGM"
+    },
+    {
+      "ticker": "IWM",
+      "price": 281.86,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:34 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "DIA",
+      "price": 520.32,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "TLT",
+      "price": 80.5,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:31 EST",
+      "currency": "USD",
+      "exchange": "NGM"
+    },
+    {
+      "ticker": "IEF",
+      "price": 90.775,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:27 EST",
+      "currency": "USD",
+      "exchange": "NGM"
+    },
+    {
+      "ticker": "GLD",
+      "price": 367.25,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "SLV",
+      "price": 47.135,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "USO",
+      "price": 144.89,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "XLK",
+      "price": 173.475,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:34 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "XLF",
+      "price": 58.2,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "XLE",
+      "price": 63.17,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:33 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "XLV",
+      "price": 187.5,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "XLI",
+      "price": 170.0,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:35 EST",
+      "currency": "USD",
+      "exchange": "PCX"
+    },
+    {
+      "ticker": "SMH",
+      "price": 502.5,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:38 EST",
+      "currency": "USD",
+      "exchange": "NGM"
+    },
+    {
+      "ticker": "AAPL",
+      "price": 353.385,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:37 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "MSFT",
+      "price": 520.67,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:40 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "NVDA",
+      "price": 173.28,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:39 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "GOOGL",
+      "price": 290.6,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:39 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "AMZN",
+      "price": 267.23,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:40 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "META",
+      "price": 636.905,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:41 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "TSLA",
+      "price": 394.08,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:41 EST",
+      "currency": "USD",
+      "exchange": "NMS"
+    },
+    {
+      "ticker": "JPM",
+      "price": 341.809,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:41 EST",
+      "currency": "USD",
+      "exchange": "NYQ"
+    },
+    {
+      "ticker": "BTC-USD",
+      "price": 73424.02,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:39 EST",
+      "currency": "USD",
+      "exchange": "CCC"
+    },
+    {
+      "ticker": "ETH-USD",
+      "price": 2051.37,
+      "source": "Yahoo Finance chart v8 (query1)",
+      "timestamp_et": "2026-11-11 10:25:40 EST",
+      "currency": "USD",
+      "exchange": "CCC"
+    }
+  ],
+  "dropped": []
+}

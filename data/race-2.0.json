@@ -1,0 +1,97 @@
+{
+ "as_of": "2026-09-22T13:30:11.155596+00:00",
+ "source": "github.com/babarlabs-ops/morti-race data/ledger.json",
+ "models": [
+  {
+   "name": "Llama",
+   "lab": "Meta",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 112217.28
+  },
+  {
+   "name": "DeepSeek",
+   "lab": "DeepSeek",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 106369.05
+  },
+  {
+   "name": "Sol",
+   "lab": "OpenAI",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 103166.51
+  },
+  {
+   "name": "Gemini",
+   "lab": "Google",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 103103.22
+  },
+  {
+   "name": "Qwen",
+   "lab": "Alibaba",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 101221.37
+  },
+  {
+   "name": "Grok",
+   "lab": "xAI",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 100639.06
+  },
+  {
+   "name": "Fable",
+   "lab": "Anthropic",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 100617.46
+  },
+  {
+   "name": "Astra Pro",
+   "lab": "OpenAI",
+   "cohort": "challenger-2026-09",
+   "start": "2026-09-09",
+   "equity": 100000.0
+  },
+  {
+   "name": "Fable 5.1",
+   "lab": "Anthropic",
+   "cohort": "challenger-2026-09",
+   "start": "2026-09-09",
+   "equity": 99979.8
+  },
+  {
+   "name": "Gemini 3.8",
+   "lab": "Google",
+   "cohort": "challenger-2026-09",
+   "start": "2026-09-09",
+   "equity": 99606.88
+  },
+  {
+   "name": "GLM",
+   "lab": "Z.ai",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 98753.07
+  },
+  {
+   "name": "Kimi",
+   "lab": "Moonshot AI",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 97560.63
+  },
+  {
+   "name": "Mistral",
+   "lab": "Mistral AI",
+   "cohort": "season1",
+   "start": "2026-08-22",
+   "equity": 80288.29
+  }
+ ]
+}
