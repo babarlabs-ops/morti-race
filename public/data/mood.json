@@ -1,0 +1,126 @@
+{
+  "cycle": "2026-11-11-c3",
+  "round_time_et": "2026-11-11 14:28:20 EST",
+  "updated_et": "2026-11-12 08:57:49 EST",
+  "stance": null,
+  "stance_label": null,
+  "counts": {
+    "risk-on": 0,
+    "neutral": 0,
+    "risk-off": 0,
+    "not-given": 10
+  },
+  "team_hypothesis": null,
+  "seats": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "lab": "OpenAI",
+      "mark": "OA",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "lab": "Anthropic",
+      "mark": "AN",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "lab": "DeepSeek",
+      "mark": "DS",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": false
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "lab": "Google",
+      "mark": "GO",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    },
+    {
+      "id": "glm",
+      "name": "GLM",
+      "lab": "Z.ai",
+      "mark": "Z",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": false
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "lab": "xAI",
+      "mark": "xA",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "lab": "Moonshot AI",
+      "mark": "MO",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": false
+    },
+    {
+      "id": "llama",
+      "name": "Llama",
+      "lab": "Meta",
+      "mark": "ME",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": false
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "lab": "Mistral AI",
+      "mark": "MI",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "lab": "Alibaba",
+      "mark": "AL",
+      "mood": null,
+      "mood_label": "Not given",
+      "hypothesis": null,
+      "round_time_et": "2026-11-11 14:28:20 EST",
+      "answered": true
+    }
+  ]
+}

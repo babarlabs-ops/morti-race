@@ -1,0 +1,4 @@
+Model: Gemini (Auto, gemini.google.com), reply received 2026-11-09 ~2:15 PM ET after one format follow-up
+```json
+{"trades":[{"ticker":"GLD","side":"long","pct":10.0,"thesis":"Gold remains a robust macro hedge against late-cycle equity volatility and persistent inflation pressure; invalid if GLD breaks key technical support at $355 by end of month.","stop":354.50,"target":410.00},{"ticker":"QQQ","side":"short","pct":10.0,"thesis":"Tech valuations look stretched relative to rising yields; setup favors shorting mega-cap tech momentum into resistance, invalid if QQQ closes above $700 before year-end.","stop":701.00,"target":620.00},{"ticker":"XLE","side":"long","pct":10.0,"thesis":"Energy sector offers strong value and cash flow yields amid supply tightness; trade fails if crude oil breaks down and XLE drops below key support by Dec 1.","stop":57.50,"target":70.00}]}
+```
